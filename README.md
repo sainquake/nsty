@@ -1,3 +1,10 @@
+https://miktex.org/download 
+https://www.texstudio.org/
+
+## TODO
+
+
+
 LaTeX-шаблон для русской кандидатской диссертации и её автореферата.
 
 ## Особенности
