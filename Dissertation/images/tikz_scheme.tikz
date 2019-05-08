@@ -174,11 +174,41 @@
 
 \begin{tikzpicture}[%
     start chain=going below,    % General flow is top-to-bottom
-    node distance=6mm and 60mm, % Global setup of box spacing
+    node distance=6mm and 150mm, % Global setup of box spacing
         ]
         \node [cloud] (start) {Начало};
-        \node [block, join] (phase1) {Этап 1};
-        \node [cyclebegin, join=by red] (phase2) {Этап 2};
+        \node [block, join] (phase1) {1,2};
+        \node [block, join] (phase3) {3};
+        \node [block, join] (phase4) {4567};
+        \node [block, join] (phase8) {8};
+        \node [block, join] (phase9) {9};
+        \node [block, join] (phase10) {10};
+        \node [block, join] (phase11) {11};
+        \node [decision, join, right of = phase11, node distance = 4cm] (condition12) {12};
+        \node [block, join, left of = condition12, node distance = 4cm] (phase13) {13,14};
+        \node [decision, join, right of = phase13, node distance = 4cm] (condition15) {15};
+        \node [block, join, left of = condition15, node distance = 4cm] (phase16) {16};
+        \node [decision, join, right of = phase16, node distance = 4cm] (condition17) {17};
+        \node [block, join, left of = condition17, node distance = 4cm] (phase18) {18};
+        \node [decision, right of = phase18, node distance = 4cm] (condition19) {19};
+        \node [cloud] (fin) {Конец};
+        
+        \node [block, right of = phase1, node distance = 4cm] (print26) {26};
+        \node [block, right of = phase3, node distance = 4cm] (print23) {23};
+        \node [block, right of = phase8, node distance = 4cm] (print21) {21};
+        \node [decision, right of = condition12, node distance = 4cm] (print20) {20};
+        \node [decision, right of = condition15, node distance = 4cm] (print24) {24};
+        \node [decision, right of = condition17, node distance = 4cm] (print25) {25};
+        \node [decision, right of = condition19, node distance = 4cm] (print27) {27};
+        
+        \path [line, red] (condition12) -| node [u,near start] {Нет} (print20);
+        \path [line, red] (condition15) -| node [u,near start] {Нет} (print24);
+        \path [line, red] (condition17) -| node [u,near start] {Нет} (print25);
+        \path [line, red] (condition19) -| node [u,near start] {Нет} (print27);
+        
+        \path [line, green] (condition19) to node [r] {Да}(fin);
+        
+        \node [cyclebegin] (phase2) {Этап 2};
         \node [block, join=by green] (phase3) {Этап 3};
         \node [cycleend, join] (phase4) {Этап 4};
         \node [subroutine, join, subrtshape w = 3mm, fxd] (phase5) {Этап 5 1 2 3 4 5 6 7 8 9 0};
