@@ -125,6 +125,46 @@ T_{\Sigma{}}^{\textit{доп}}\left(N\right)=\exp{\left(-2{\pi{}}^2{\sigma{}}^2N
 \end{alignedat}
 \end{equation}
 
+где 
+Тоэп(N) – ФПМ ОЭП, N – пространственная частота, 
+отношение сигнал/шум, 
+угловой размер источника излучения, 
+угловое разрешение ОЭП, 
+Тоэпдоп(N) – допустимая ФПМ ОЭП, 
+Тат(N) – ФПМ атмосферы, 
+Toб(N) – ФПМ объектива, 
+Тфп(N) – ФПМ фотоприемника, 
+Тпои(N) – ФПМ преобразования оптической информации, вид которых можно найти  в [12], 
+– ФПМ сдвига изображения (динамической погрешности САУ), зависящая от вида динамического смещения изображения: линейного (Л) - x(t) = Vt, 
+гармонического (Г) - x(t)=a0sin и 
+случайного (СЛ) [12], [22].
+
+Тогда в частном случае допустимая ФПМ САУ (системы слежения (Л, Г), системы виброзащиты (СВ), автоматической фокусировки (САФ)) определится соответственно: 
+
+\begin{equation}
+\label{eq:p2:5}
+\begin{alignedat}{2}
+T_{САУ}\left(N\right)=
+T_\textit{Л}\left(N\right)T_\textit{Г}\left(N\right)T_{\textit{СВ}}\left(N\right)T_{\textit{САФ}}\left(N\right)\geq{}T_{\textit{САУ}}^{\textit{доп}}(N)=
+\frac{T_{\textit{оэп}}^{\textit{доп}}(N)}{T_{\textit{ат}}\left(N\right)T_{\textit{об}}\left(N\right)T_{\textit{фп}}\left(N\right)T_{\textit{пои}}\left(N\right)},
+\end{alignedat}
+\end{equation}
+
+\begin{equation}
+\label{eq:p2:6}
+\begin{alignedat}{2}
+T_\textit{Л}\left(N\right)=
+Sinc(\pi{}VtN),
+
+T_\textit{Г}\left(N\right)=
+J_0\left(2\pi{}a_0N\right),
+
+T_{\textit{СВ}}\left(N\right)=
+exp\left[-2{\left(\pi{}a_{\textit{ср}}N\right)}^2\right]
+\end{alignedat}
+\end{equation}
+
+
 
 
 \section{Разработка математической модели} \label{sec:ch2/sec3}
