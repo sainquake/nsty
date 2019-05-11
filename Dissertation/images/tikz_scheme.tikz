@@ -207,19 +207,5 @@
         \path [line, red] (condition19) -| node [u,near start] {Нет} (print27);
         
         \path [line, green] (condition19) to node [r] {Да}(fin);
-        
-        \node [cyclebegin] (phase2) {Этап 2};
-        \node [block, join=by green] (phase3) {Этап 3};
-        \node [cycleend, join] (phase4) {Этап 4};
-        \node [subroutine, join, subrtshape w = 3mm, fxd] (phase5) {Этап 5 1 2 3 4 5 6 7 8 9 0};
-        \node [io, join, fxd] (input) {Этап 6 "--- ввод данных};
-        \node [block, join] (phase7) {Этап 7};
-        \node [decision, join] (condition) {Условие};
-        \node [connector] (finish) {Конец};
-        \node [block, left of = phase4, node distance = 4cm] (correction) {Коррекция};
-        \node [print_block, right of = phase4, node distance = 4cm] (print) {Print};
-        \path [line, red] (condition) -| node [u,near start] {Нет} (correction);
-        \path [line] (correction) |- (phase1);
-        \path [line] (phase2) -| node [r,near end] {Печать} (print);
-        \path [line, green] (condition) to node [r] {Да}(finish);
+
 \end{tikzpicture}
