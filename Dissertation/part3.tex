@@ -1,4 +1,4 @@
-\chapter{Математическая модель БОЭП как объекта управления} \label{ch:ch3}
+\chapter{Математическая модель БОЭП и его составных частей как объекта управления} \label{ch:ch3}
 
 Оптико-электронный прибор (ОЭП) вертолетного базирования имеет тепловизионный и телевизионный каналы, лазерный дальномер. Кроме того, на борту устанавливают оптико-электронную систему постановки помех (СОЭП).  Управление направлением линии визирования осуществляется перемещением всего оптико-электронного блока. Для ОЭП и СОЭП конструктивно оптико-электронный блок представляет собой блок, в котором размещены оптические приборы, вращающийся по углу места внутри вилки, вращающейся по углу азимута 
 (рисунок~\ref{fig:device}, кинематическая схема на рисунке~\ref{fig:kinematic}). 
@@ -621,14 +621,194 @@ T=\frac{1}{2} \left\{  \left( B_{1}+B \left(  \beta  \right)  \right)  \alpha ^{
 
 \subsection{Составление уравнений динамической модели ОУ} \label{sec:ch3/sec8}
 
+При нахождении производных при составлении уравнений Лагранжа II-го рода будем учитывать следующие соотношения:
+
+
+\( A \left(  \beta  \right) =\frac{A_{2}+B_{2}}{2}+\frac{A_{2}-B_{2}}{2}cos \left( 2 \beta  \right) +F_{2}sin \left( 2 \beta  \right)  \) ,\par
+
+\( B \left(  \beta  \right) =\frac{A_{2}+B_{2}}{2}-\frac{A_{2}-B_{2}}{2}cos \left( 2 \beta  \right) -F_{2}sin \left( 2 \beta  \right)  \) ,\par
+
+\( A_{2} \left(  \beta  \right) =\frac{A_{2}-B_{2}}{2}cos \left( 2 \beta  \right) +F_{2}sin \left( 2 \beta  \right)  \) ,\par
+
+\( \frac{dB \left(  \beta  \right) }{d \beta }=-2F \left(  \beta  \right)  \) ,\ \ \   \( \frac{dA \left(  \beta  \right) }{d \beta }=2F \left(  \beta  \right)  \) ,\ \ \   \( \frac{dF \left(  \beta  \right) }{d \beta }=-2A_{2} \left(  \beta  \right)  \) ,\par
+
+\( \frac{dD \left(  \beta  \right) }{d \beta }=E \left(  \beta  \right)  \) ,\ \ \   \( \frac{dE \left(  \beta  \right) }{d \beta }=-D \left(  \beta  \right)  \) ,\par
+
+\( A \left(  \alpha , \beta  \right) =\frac{A_{1}+A \left(  \beta  \right) +C_{1}+C_{2}}{2}+\frac{A_{1}+A \left(  \beta  \right) -C_{1}-C_{2}}{2}cos \left( 2 \alpha  \right) - \left( E_{1}+E \left(  \beta  \right)  \right) sin \left( 2 \alpha  \right)  \right)  \) ,\par
+
+\( C \left(  \alpha , \beta  \right) =\frac{A_{1}+A \left(  \beta  \right) +C_{1}+C_{2}}{2}-\frac{A_{1}+A \left(  \beta  \right) -C_{1}+C_{2}}{2}cos \left( 2 \alpha  \right) + \left( E_{1}+E \left(  \beta  \right)  \right) sin \left( 2 \alpha  \right)  \) ,\par
+
+\( A_{1} \left(  \alpha , \beta  \right) =\frac{A_{1}+A \left(  \beta  \right) -C_{1}-C_{2}}{2}cos \left( 2 \alpha  \right) - \left( E_{1}+E \left(  \beta  \right)  \right) sin \left( 2 \alpha  \right)  \right)  \) ,\par
+
+\( \frac{ \partial A \left(  \alpha , \beta  \right) }{ \partial  \alpha }=-2E \left(  \alpha , \beta  \right)  \) ,\ \   \( \frac{ \partial С \left(  \alpha , \beta  \right) }{ \partial  \alpha }=2E \left(  \alpha , \beta  \right)  \) ,\ \   \( \frac{ \partial E \left(  \alpha , \beta  \right) }{ \partial  \alpha }=2A_{1} \left(  \alpha , \beta  \right)  \) ,\par
+
+\( \frac{ \partial F \left(  \alpha , \beta  \right) }{ \partial  \alpha }=D \left(  \alpha , \beta  \right)  \) ,\ \ \ \   \( \frac{ \partial D \left(  \alpha , \beta  \right) }{ \partial  \alpha }=-F \left(  \alpha , \beta  \right)  \) ,\par
+
+\( \frac{ \partial A \left(  \alpha , \beta  \right) }{ \partial  \beta }=F \left(  \beta  \right)  \left( 1+cos \left( 2 \alpha  \right)  \right) +D \left(  \beta  \right) sin \left( 2 \alpha  \right)  \) ,\par
+
+\( \frac{ \partial C \left(  \alpha , \beta  \right) }{ \partial  \beta }=F \left(  \beta  \right)  \left( 1-cos \left( 2 \alpha  \right)  \right) -D \left(  \beta  \right) sin \left( 2 \alpha  \right)  \) ,\par
+
+\( \frac{ \partial E \left(  \alpha , \beta  \right) }{ \partial  \beta }=F \left(  \beta  \right) sin \left( 2 \alpha  \right) -D \left(  \beta  \right) cos \left( 2 \alpha  \right)  \) ,\par
+
+\( \frac{ \partial F \left(  \alpha , \beta  \right) }{ \partial  \beta }=-2A_{2} \left(  \beta  \right) cos \left(  \alpha  \right) +E \left(  \beta  \right) sin \left(  \alpha  \right)  \) ,\par
+
+\( \frac{ \partial D \left(  \alpha , \beta  \right) }{ \partial  \beta }=E \left(  \beta  \right) cos \left(  \alpha  \right) +2A_{2} \left(  \beta  \right) sin \left(  \alpha  \right)  \) .\par
+
+Кинетическая энергия ОУ определяется выражением (3.28). Проведем над ней действия в соответствии с уравнениями Лагранжа II-го рода (\colorbox{Yellow}{3.24}) с учетом приведенных выше равенств:\par
+
+
+
+
+
+
+
+
+
+
+\section{Линеаризованная система} \label{ch:ch3/sect10}
 
 \section{Модель привода} \label{ch:ch3/sect9}
 
-\section{Линеаризованная система} \label{ch:ch3/sect10}
+В этом разделе описывается математическая модель привода. Так как электродвигатель является электромеханическим устройством, то далее будут рассмотрены уравнения двигателя как механической системы и как электрической системы.
+
+\subsection{Конструкция} \label{sec:ch3/sec9/sub1}
+
+\todo{( https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D0%BD%D1%82%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8C )}
+
+
+Бесколлекторный двигатель с постоянными магнитами (ДБМ) состоят из электромеханической части (синхронной машины и датчика положения ротора) и из управляющей части (микроконтроллер и силовой мост). Синхронная машина, используемая в ВД, состоит из шихтованного (собранного из отдельных электрически изолированных листов электротехнической стали — для снижения вихревых токов) статора, в котором расположена многофазная (обычно двух- или трёхфазная) обмотка, и ротора (обычно на постоянных магнитах).
+
+В качестве датчиков положения ротора в БДПТ применяются датчики Холла, а в ВД — вращающиеся трансформаторы и накапливающие датчики. В т. н. «бездатчиковых» системах информация о положении определяется системой управления по мгновенным значениям фазных токов.
+
+Информация о положении ротора обрабатывается микропроцессором, который, согласно программе управления, вырабатывает управляющие ШИМ-сигналы. Низковольтные ШИМ-сигналы микроконтроллера затем преобразуются усилителем мощности (обычно транзисторным мостом) в силовые напряжения, подаваемые на двигатель.
+
+Совокупность датчика положения ротора и электронного узла в ВД и БДПТ можно с определённой долей достоверности сравнить с щёточно-коллекторным узлом ДПТ. Однако следует помнить, что двигатели редко применяются вне электропривода. Таким образом, электронная аппаратура характерна для ВД почти в той же степени, что и для ДПТ.[]
+
+ДБМ имеют множество конфигураций, но наиболее распространенной является трехфазная компановка.
+
+На рисунке показана схема моментного двигателя
+
+\subsection{Электрическая модель} \label{sec:ch3/sec9/sub4}
+Трехфазный ДБМ собраный по схеме звезда может быть описан тремя уравнениями:
+
+\begin{equation}
+\label{eq:p3:9.1}
+\begin{alignedat}{2}
+u_ab = R (i_a - i_b) + L \dfrac{d}{dt} (i_a - i_b) + e_a - e_b \\
+u_bc = R (i_b - i_c) + L \dfrac{d}{dt} (i_b - i_c) + e_b - e_c \\
+u_ca = R (i_c - i_a) + L \dfrac{d}{dt} (i_c - i_a) + e_c - e_a
+\end{alignedat}
+\end{equation}
+где 
+$U$ - межфазнеое напряжение, 
+$e$ - обратнонаведенное ЭДС,  
+$i$ - фазовый ток, 
+$R$ - сопротивление фазы постоянному току, 
+$L$ - индуктивность приведенная к фазе.
+
+Обратнонаведенное ЭДС описывается следующим уравнением:
+\begin{equation}
+\label{eq:p3:9.2}
+\begin{alignedat}{2}
+\overline{e} = (e_a, e_b, e_c) = C_e \dot{\alpha}_m \overline{F}(\frac{\textit{P}}{2}\alpha_m)\\
+\end{alignedat}
+\end{equation}
+где 
+$\overline{e}$ - вектор обратнонаведенных эдс, 
+$C_e$ - приведенный к фазе коэффициент ЭДС $[\frac{\textit{В с}}{\textit{рад}} ]$,
+$\alpha_m$ - положение вращения ротора, 
+$\dot{\alpha}_m$ - угловая скорость вращения ротора, 
+$\textit{P}$ - количество пар полюсов электродвигателя, 
+вектор-функция распределения магнитного между фазами описывается следующим образом
+ [https://www.mathworks.com/help/physmod/sps/ref/pmsm.html]
+ :
+
+\begin{equation}
+\label{eq:p3:9.3}
+\begin{alignedat}{2}
+\overline{F}(\alpha) = \left( \begin{matrix}
+\cos (\alpha) \\
+\cos (\alpha - \frac{2 \pi}{3}) \\
+\cos (\alpha + \frac{2 \pi}{3}) \\
+\end{matrix}
+\right) \\
+\end{alignedat}
+\end{equation}
+
+Электрический крутящий момент запишется в следующем виде:
+\begin{equation}
+\label{eq:p3:9.4}
+\begin{alignedat}{2}
+M_e = C_m <\overline{F}(\frac{\textit{P}}{2}\alpha_m),\overline{i}>
+\end{alignedat}
+\end{equation}
+где
+$C_m$ - приведенный к фазе коэффициент момента $[\frac{\textit{Н м}}{\textit{А}} ]$,
+$\overline{i} = (i_a, i_b, i_c)$ - вектор фазовых токов
+
+\subsection{Механическая модель} \label{sec:ch3/sec9/sub3}
+
+\todo{привести в соответствие с 3.3.2}
+\todo{литература}
+С точки зрения механики электродивгатель рассматривается как система с одной степенью свободы. Запишем уравнение (3.48) относительно привода:
+
+\begin{equation}
+\label{eq:p3:9.5}
+\begin{alignedat}{2}
+M_e - M_{\textit{L}} - M_{\textit{тр}} = J \ddot{\alpha}_m 
+\end{alignedat}
+\end{equation}
+где 
+$M_{\textit{L}} = M_{\textit{дб}} + M_{\textit{н}}$ - крутящий момент нагрузки, складывается из момента дисбаланса ($M_{\textit{дб}}$) и момента обусловленного движением носителя ($M_{\textit{н}}$), 
+$M_{\textit{тр}}$ - момент трения, 
+$J = J_{p} + J_{H}$ - суммарный момент инерции, складывается из момента инерции ротора ($J_{p}$) и нагрузки ($J_{H}$), 
+$\ddot{\alpha}_m $ - угловое ускорение вращения ротора.
+
+Момент силы трения определяется по формуле: 
+\begin{equation}
+\label{eq:p3:9.6}
+\begin{alignedat}{2}
+M_{\textit{тр}} = M_{\textit{тр}}^{\textit{max}} sign( \dot{\alpha}_m ) ,
+\end{alignedat}
+\end{equation}
+где
+$M_{\textit{тр}}^{\textit{max}} = (2..5) 10^{-3} m$ - максимальный момент трения [26],
+$m$ - масса подвижной части.
+
+Момент силы дисбаланса нагрузки определим по формуле:
+\begin{equation}
+\label{eq:p3:9.7}
+\begin{alignedat}{2}
+\vec{M}_{\textit{дб}} = 
+m\left[{\vec {r_0}}\times {(\vec {a} + \vec {g})}\right],} 
+\end{alignedat}
+\end{equation}
+где
+$\vec{a}$ - ускорение носителя,
+$\vec{g}$ - ускорение свободного падения,
+$\vec {r_0} = ( x^2_0, y^2_0) $ - положение центра масс относительно оси вращения.
+
+Момент силы обусловленный движением носителя:
+\begin{equation}
+\label{eq:p3:9.8}
+\begin{alignedat}{2}
+M_{\textit{н}} = J \ddot{\alpha_{\textit{ла}}}
+\end{alignedat}
+\end{equation}
+где 
+$\ddot{\alpha_{\textit{ла}}}$ - угловое ускорение носителя
+
 
 \section{Выводы по главе} \label{ch:ch3/sect11}
 
 
 Некоторый текст.
+
+\begin{enumerate}
+	\item Описана механическая модель БОЭП
+	\item Получены уравнения динамики системы
+	\item Произведена линеаризация системы
+	\item Описана механическая и электрическая модель привода
+\end{enumerate}
 
 \clearpage
