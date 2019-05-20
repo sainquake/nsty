@@ -493,10 +493,16 @@ K_{z_{y}}^{r} \left( q,\dot{q} \right) =
 
 \begin{equation} %\tag{3.16}
 \label{eq:p3:16}
-\omega = \omega_{ЛА}+ \omega_{вибр}=e_{c} \omega_{c}+e_{y} \omega_{вибр}=e_{y} \left( A_{y} \omega_{c}+ \omega_{вибр} \right) =e_{y} \omega ==e_{y} \left( \begin{matrix}
+\begin{multlined}
+\bar{\omega} = 
+\bar{\omega}_{\textit{ЛА}}+ \bar{\omega}_{\textit{вибр}}=
+\bar{e}_{c} \tilde{\omega}_{c}+\bar{e}_{\textit{y}} \tilde{\omega}_{\textit{вибр}}=
+\bar{e}_{y} \left( A_{y} \tilde{\omega}_{c}+ \tilde{\omega}_{\textit{вибр}} \right) = \\
+\bar{e}_{y} \omega =\bar{e}_{y} \left( \begin{matrix}
 \omega_{x_{y}}  &   \omega_{y_{y}}  &   \omega_{z_{y}}\\
 \end{matrix}
 \right) ^{T}.
+\end{multlined}
 \end{equation}
 С учетом (\labelcref{eq:p3:15}) и (\labelcref{eq:p3:16}) определим кинетическую энергию\par
 
@@ -504,9 +510,9 @@ K_{z_{y}}^{r} \left( q,\dot{q} \right) =
 \begin{equation} %\tag{3.17}
 \label{eq:p3:17}
 T_{e}= 
-\sum_{j=1}^{2} \omega \left( K_{O}^{r} \right)^{ \left( j \right) }= 
-\omega K_{O}^{r}= 
-\omega^{T}K_{O}^{r}= 
+\sum_{j=1}^{2} \bar{\omega} \left( \bar{K}_{O}^{r} \right)^{ \left( j \right) }= 
+\bar{\omega} \bar{K}_{O}^{r}= 
+\tilde{\omega}^{T}\tilde{K}_{O}^{r}= 
 \omega_{x_{y}}K_{x_{y}}^{r}+ \omega_{y_{y}}K_{y_{y}}^{r}+ \omega_{z_{y}}K_{z_{y}}^{r}
 \end{equation}
 Вычислим составляющую кинетической энергии \par
@@ -514,21 +520,22 @@ T_{e}=
 
 \begin{equation} %\tag{3.18}
 \label{eq:p3:18}
-T^{\ast}= \sum_{j=1}^{2}\frac{1}{2} \omega_{j}^{T}J^{ \left( j \right) } \omega_{j}
+T^{\ast}= \sum_{j=1}^{2}\frac{1}{2} \tilde{\omega}_{j}^{T}J^{ \left( j \right) } \tilde{\omega}_{j}
 \end{equation}
 Запишем вектор угловой скорости переносного движения в базисах, связанных с 1–м, 2–м телами:\par
 
 
 \begin{equation} %\tag{3.19}
 \label{eq:p3:19}
-\omega =e_{y} \omega =e_{1}A_{1} \omega =e_{2}A_{2} \omega 
+\bar{\omega} =\bar{e}_{y} \tilde{\omega} =\bar{e}_{1}A_{1} \tilde{\omega} =\bar{e}_{2}A_{2} \tilde{\omega} 
 \end{equation}
 С учетом (\labelcref{eq:p3:19}) выражение (\labelcref{eq:p3:18}) запишется в следующем виде\par
 
 
 \begin{equation} %\tag{3.20}
 \label{eq:p3:20}
-T^{\ast}=\frac{1}{2} \omega ^{T} \left\{ A_{1}^{T} \left( J^{ \left( 1 \right) }+A_{2}^{T}J^{ \left( 2 \right) }A_{2} \right) A_{1} \right}  \omega 
+T^{\ast}=
+\frac{1}{2} \tilde{\omega} ^{T} [ A_{1}^{T} ( J^{ ( 1 ) }+A_{2}^{T}J^{ ( 2 ) }A_{2} ) A_{1} ]  \tilde{\omega}
 \end{equation}
 Обозначим\par
 
@@ -581,23 +588,51 @@ A \left(  \alpha , \beta  \right)   &  -F \left(  \alpha , \beta  \right)   &  -
 \right) 
 \end{equation}
 где\par
-
-\( A \left(  \alpha , \beta  \right) = \left( A_{1}+A \left(  \beta  \right)  \right) cos^{2} \left(  \alpha  \right) + \left( C_{1}+C_{2} \right) sin^{2} \left(  \alpha  \right) - \left( E_{1}+E \left(  \beta  \right)  \right) sin \left( 2 \alpha  \right)  \right)  \) ,\par
-
-\( F \left(  \alpha , \beta  \right) = \left( F_{1}+F \left(  \beta  \right)  \right) cos \left(  \alpha  \right) + \left( D_{1}+D \left(  \beta  \right)  \right) sin \left(  \alpha  \right)  \) ,\par
-
-\( E \left(  \alpha , \beta  \right) =\frac{A_{1}+A \left(  \beta  \right) -C_{1}-C_{2}}{2}sin \left( 2 \alpha  \right) + \left( E_{1}+E \left(  \beta  \right)  \right) cos \left( 2 \alpha  \right)  \) ,\par
-
-\( D \left(  \alpha , \beta  \right) = \left( D_{1}+D \left(  \beta  \right)  \right) cos \left(  \alpha  \right) - \left( F_{1}+F \left(  \beta  \right)  \right) sin \left(  \alpha  \right)  \) ,\par
-
-\( C \left(  \alpha , \beta  \right) = \left( C_{1}+C_{2} \right) cos^{2} \left(  \alpha  \right) + \left( A_{1}+A \left(  \beta  \right)  \right) sin^{2} \left(  \alpha  \right) + \left( E_{1}+E \left(  \beta  \right)  \right) sin \left( 2 \alpha  \right)  \) .\par
-
+\begin{equation}
+\begin{multlined}
+ A (  \alpha , \beta  ) = 
+ ( A_{1}+A (  \beta  )  ) cos^{2} (  \alpha  ) + 
+ ( C_{1}+C_{2} ) sin^{2} (  \alpha  ) - \nonumber \\
+ ( E_{1}+E (  \beta  )  ) sin ( 2 \alpha  )    ,\nonumber \\
+\end{multlined}
+\end{equation}
+\begin{equation}
+\begin{multlined}
+ F \left(  \alpha , \beta  \right) = \left( F_{1}+F \left(  \beta  \right)  \right) cos \left(  \alpha  \right) + \left( D_{1}+D \left(  \beta  \right)  \right) sin \left(  \alpha  \right)   ,\nonumber \\
+\end{multlined}
+\end{equation}
+\begin{equation}
+\begin{multlined}
+ E \left(  \alpha , \beta  \right) =\frac{A_{1}+A \left(  \beta  \right) -C_{1}-C_{2}}{2}sin \left( 2 \alpha  \right) + \left( E_{1}+E \left(  \beta  \right)  \right) cos \left( 2 \alpha  \right)  ,\nonumber \\
+\end{multlined}
+\end{equation}
+\begin{equation}
+\begin{multlined}
+ D \left(  \alpha , \beta  \right) = \left( D_{1}+D \left(  \beta  \right)  \right) cos \left(  \alpha  \right) - \left( F_{1}+F \left(  \beta  \right)  \right) sin \left(  \alpha  \right)   ,\ \nonumber \\
+\end{multlined}
+\end{equation}
+\begin{equation}
+\begin{multlined}
+ C \left(  \alpha , \beta  \right) = \left( C_{1}+C_{2} \right) cos^{2} \left(  \alpha  \right) + \left( A_{1}+A \left(  \beta  \right)  \right) sin^{2} \left(  \alpha  \right) + \left( E_{1}+E \left(  \beta  \right)  \right) sin \left( 2 \alpha  \right)   . \nonumber \\
+\end{multlined}
+\end{equation}
 Используя обозначения (\labelcref{eq:p3:24}), выражение (\labelcref{eq:p3:20}) для кинетической энергии запишется в следующем виде:\par
 
 
 \begin{equation} %\tag{3.25}
 \label{eq:p3:25}
-T^{\ast}=\frac{1}{2} \left\{ A \left(  \alpha , \beta  \right)  \omega_{x_{y}}^{2} \left( t \right) + \left( B_{1}+B \left(  \beta  \right)  \right)  \omega_{y_{y}}^{2} \left( t \right) +C \left(  \alpha , \beta  \right)  \omega_{z_{y}}^{2} \left( t \right) - - \left( 2F \left(  \alpha , \beta  \right)  \omega_{x_{y}} \left( t \right)  \omega_{y_{y}} \left( t \right) -2E \left(  \alpha , \beta  \right)  \omega_{x_{y}} \left( t \right)  \omega_{z_{y}} \left( t \right) -2D \left(  \alpha , \beta  \right)  \omega_{y_{y}} \left( t \right)  \omega_{z_{y}} \left( t \right)  \right} .
+\begin{multlined}
+T^{\ast}=
+\frac{1}{2} 
+[ 
+	A (  \alpha , \beta  )  \omega_{x_{y}}^{2} ( t ) + 
+	( B_{1}+B (  \beta  )  )  \omega_{y_{y}}^{2} ( t ) +
+	C (  \alpha , \beta  )  \omega_{z_{y}}^{2} ( t ) - \\
+	2F (  \alpha , \beta  )  \omega_{x_{y}} ( t )  \omega_{y_{y}} ( t ) -
+	2E (  \alpha , \beta  )  \omega_{x_{y}} ( t )  \omega_{z_{y}} ( t ) -
+	2D (  \alpha , \beta  )  \omega_{y_{y}} ( t )  \omega_{z_{y}} ( t )  
+] .
+\end{multlined}
 \end{equation}
 С учетом введенных обозначений (\labelcref{eq:p3:4}) выражение для кинетической энергии (\labelcref{eq:p3:11}) запишется компактнее:\par
 
