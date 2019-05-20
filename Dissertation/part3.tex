@@ -61,7 +61,7 @@
 	\bar{r}_0 = \bar{e}_y\tilde{r}_0 ,
 	\end{alignedat}
 	\end{equation}
-	где $\tilde{r}_0 = (0 -l 0)^T$.
+	где $\tilde{r}_0 = \left( \begin{matrix}	0  &  -l  &  0 \end{matrix} \right)^T$.
 	
 	Орты осей $O_{x_1y_1z_1}$ обозначим $\bar{i}_1$, $\bar{j}_1$, $\bar{k}_1$ и составим из них базисную строку $\bar{e}_1 = (\bar{i}_1 \bar{j}_1 \bar{k}_1)$. Связь между базисными строками $\bar{e}_y$ и $\bar{e}_1$ определяются матрицей $A_1$:
 	\begin{equation}
@@ -82,12 +82,12 @@
 	\begin{equation}
 	\label{eq:p3:3}
 	\begin{alignedat}{2}
-	r_{с_{1}}=e_{1}r_{с_{1}},
+	\bar{r}_{c_{1}}=\bar{e}_{1}\tilde{r}_{c_{1}},
 	\end{alignedat}
 	\end{equation}
 	
-	где  \( r_{с_{1}}= \left( \begin{matrix}
-	x_{с_{1}}  &  y_{с_{1}}  &  z_{с_{1}}\\
+	где  \( \tilde{r}_{c_{1}}= \left( \begin{matrix}
+	x_{c_{1}}  &  y_{c_{1}}  &  z_{c_{1}}\\
 	\end{matrix}
 	\right) ^{T} \) .\par
 	Введем следующие обозначения для осевых и центробежных моментов инерции 1-го тела:\par
@@ -108,17 +108,16 @@
 	\end{alignedat}
 	\end{equation}
 		
-	\item Оси  \( Oxyz \)  (рисунок \ref{fig:coord/3.4}) жестко связаны с телом 2: ось  \( Ox \)  направлена по оптической оси, ось  \( Oz \)  совпадает с осью вращения \textit{CD}, ось  \( Oy \)  дополняет указанные оси до правой системы координат.\par
+	\item Оси  \( O_{xyz} \)  (рисунок \ref{fig:coord/3.4}) жестко связаны с телом 2: ось  \( O_x \)  направлена по оптической оси, ось  \( O_z \)  совпадает с осью вращения \textit{CD}, ось  \( O_y \)  дополняет указанные оси до правой системы координат.\par
 	
-	Орты осей  \( Ox_{1}y_{1}z_{1} \)  обозначим  \( i,j,k_{1} \)  и составим из них базисную строку  \( е= \left( \begin{matrix}
-	i  &  j  &  k\\
-	\end{matrix}
-	\right)  \) . Связь между базисными строками  \( e \)  и  \( e_{1} \)  определяется матрицей  \( A_{2} \) :\par
+	Орты осей  \( O_{x_{1}y_{1}z_{1}} \)  обозначим  \( \bar{i},\bar{j},\bar{k}_{1} \)  и составим из них базисную строку  
+	\( \bar{e}= \left( \begin{matrix}	\bar{i}  &  \bar{j}  &  \bar{k}\\	\end{matrix}
+	\right)  \) . Связь между базисными строками  \( \bar{e} \)  и  \( \bar{e}_{1} \)  определяется матрицей  \( A_{2} \) :\par
 	
 	\begin{equation}
 	\label{eq:p3:5}
 	\begin{alignedat}{2}
-	e_{1}=eA_{2},
+	\bar{e}_{1}=\bar{e}A_{2},
 	\end{alignedat}
 	\end{equation}
 	
@@ -129,17 +128,17 @@
 	\end{matrix}
 	\right)  \) .\par
 	
-	Масса 2-го тела равна  \( m_{2} \) , положение центра масс в системе координат  \( Oxyz \)  определяется радиусом-вектором\par
+	Масса 2-го тела равна  \( m_{2} \) , положение центра масс в системе координат  \( O_{xyz} \)  определяется радиусом-вектором\par
 	
 	\begin{equation}
 	\label{eq:p3:6}
 	\begin{alignedat}{2}
-	r_{с_{2}}=e r_{с_{2}},
+	\bar{r}_{c_{2}}=\bar{e} \tilde{r}_{c_{2}},
 	\end{alignedat}
 	\end{equation}
 	
-	где  \( r_{с_{2}}= \left( \begin{matrix}
-	x_{с_{2}}  &  y_{с_{2}}  &  z_{с_{2}}\\
+	где  \( \tilde{r}_{c_{2}}= \left( \begin{matrix}
+	x_{c_{2}}  &  y_{c_{2}}  &  z_{c_{2}}\\
 	\end{matrix}
 	\right) ^{T} \) .\par
 	
@@ -306,20 +305,22 @@
 
 \subsection{Вычисление кинетической энергии} \label{sec:ch3/sec6}
 
-В соответствии с выражением (3.23) вычислим кинетическую энергию ОУ, находящемся на ЛА, совершающем произвольный маневр, в соответствии с уравнениями (\labelcref{eq:p3:1}). Вектор ускорения центра масс ЛА, вектор угловой скорости и вектор углового ускорения определяются соответственно выражениями (\labelcref{eq:p3:5,eq:p3:7}). Будем учитывать вибрацию установочной системы координат, которая задается уравнениями (\labelcref{eq:p3:9}).
+Вычислим кинетическую энергию ОУ, находящемся на ЛА, совершающем произвольный маневр, в соответствии с уравнениями (\labelcref{eq:p3:1}). Вектор ускорения центра масс ЛА, вектор угловой скорости и вектор углового ускорения определяются соответственно выражениями (\labelcref{eq:p3:5,eq:p3:6,eq:p3:7}). Будем учитывать вибрацию установочной системы координат, которая задается уравнениями (\labelcref{eq:p3:9}).
 
 Кинетическая энергия ОЭС в относительном движении в установочных осях  \( Ox_{y}y_{y}z_{y} \)  (тело 1 совершает вращательное движение, тело 2 – сферическое) определяется следующим образом:\par
 
 \begin{equation}
 \label{eq:p3:8}
 \begin{alignedat}{2}
-T_{r}= \sum_{j=1}^{2}T_{r}^{ \left( j \right) }= \sum_{j=1}^{2}\frac{1}{2} \left(  \omega_{j}^{r} \right) ^{T}J_{j} \omega_{j}^{r}
+T_{r}= 
+\sum_{j=1}^{2}T_{r}^{ \left( j \right) }= 
+\sum_{j=1}^{2}\frac{1}{2} \left(  \tilde{\omega}_{j}^{r} \right) ^{T}J_{j} \tilde{\omega}_{j}^{r}
 \end{alignedat}
 \end{equation}
 
 здесь  
 \( J_{j} \) – тензор инерции и  
-\(  \omega_{j}^{r} \) – координатный вектор относительной угловой скорости \textit{j}–го тела в системе координат, связанной с этим телом.\par
+\(  \tilde{\omega}_{j}^{r} \) – координатный вектор относительной угловой скорости \textit{j}–го тела в системе координат, связанной с этим телом.\par
 
 
 Векторы угловых скоростей 1-го и 2-го тел в установочной системе координат  \( Ox_{y}y_{y}z_{y} \)  определяются в соответствии с изображением систем координат (рисунок~\ref{fig:coord/3.4}). Угловая скорость 1-го тела \par
@@ -327,9 +328,9 @@ T_{r}= \sum_{j=1}^{2}T_{r}^{ \left( j \right) }= \sum_{j=1}^{2}\frac{1}{2} \left
 \begin{equation}
 \label{eq:p3:9}
 \begin{alignedat}{2}
-\omega_{1}^{r}=e_{1} \omega_{1}^{r}=e_{1} \left( \begin{matrix}
+\bar{\omega}_{1}^{r}=e_{1} \tilde{\omega}_{1}^{r}=e_{1} \left( \begin{matrix}
 0\\
-\alpha \\
+\dot{\alpha} \\
 0\\
 \end{matrix}
 \right) ,
@@ -341,10 +342,10 @@ T_{r}= \sum_{j=1}^{2}T_{r}^{ \left( j \right) }= \sum_{j=1}^{2}\frac{1}{2} \left
 \begin{equation}
 \label{eq:p3:10}
 \begin{alignedat}{2}
- \omega_{2}^{r}=e_{2} \omega_{2}^{r}=e_{2} \left( \begin{matrix}
-\alpha sin \beta \\
-\alpha cos \beta \\
-\beta \\
+ \bar{\omega}_{2}^{r}=\bar{e}_{2} \tilde{\omega}_{2}^{r}=\bar{e}_{2} \left( \begin{matrix}
+\dot{\alpha} sin \beta \\
+\dot{\alpha} cos \beta \\
+\dot{\beta} \\
 \end{matrix}
 \right) .
 \end{alignedat}
@@ -401,7 +402,7 @@ e_{y}A_{1}^{T}A_{2}^{T} ,
 \begin{equation}
 \label{eq:p3:14}
 \begin{alignedat}{2}
-\dot{K}_{O}^{r}=e_{y} [ 
+\bar{K}_{O}^{r}=\bar{e}_{y} [ 
 	A_{1}^{T}J_{1} \tilde{\omega}_{1}^{r} + A_{1}^{T} A_{2}^{T} J_{2} \tilde{\omega}_{2}^{r} 
 ] 
 \end{alignedat}
@@ -413,9 +414,9 @@ e_{y}A_{1}^{T}A_{2}^{T} ,
 \label{eq:p3:15}
 \begin{alignedat}{2}
 \bar{K}_{O}^{r}=\bar{e}_{y}\tilde{K}_{O}^{r}=\bar{e}_{y} \left( \begin{matrix}
-K_{x_{y}}^{r} \left( q,q \right) \\
-K_{y_{y}}^{r} \left( q,q \right) \\
-K_{z_{y}}^{r} \left( q,q \right) \\
+K_{x_{y}}^{r} \left( q,\dot{q} \right) \\
+K_{y_{y}}^{r} \left( q,\dot{q} \right) \\
+K_{z_{y}}^{r} \left( q,\dot{q} \right) \\
 \end{matrix}
 \right) 
 \end{alignedat}
@@ -431,39 +432,59 @@ K_{z_{y}}^{r} \left( q,q \right) \\
 \dot{\alpha} \\
 \dot{\beta} \\
 \end{matrix}
-\right)  \) \par
-
-\[
+\right)  \) , \par
+\begin{equation}
+\begin{multlined}
 K_{x_{y}}^{r} ( q,\dot{q} ) = 
 [
 	-( 
 		F_{1}cos (  \alpha  ) +
 		D_{1}sin (  \alpha  )  
-	) +  \]\\ \[
+	) +   \nonumber \\
 	( 
 		\frac{A_{2}-B_{2}}{2}sin ( 2 \beta  ) -
 		F_{2}cos ( 2 \beta  )  
-	) cos (  \alpha  ) \]\\ \[
+	) cos (  \alpha  ) \nonumber \\
 	- ( 
 		E_{2}sin (  \beta  ) +
 		D_{2}cos (  \beta  )  
 	) sin (  \alpha  )  
-] \dot{\alpha} + \]\\ \[
+] \dot{\alpha} + \nonumber \\
 [
 	- ( 
 		E_{2}cos (  \beta  ) -
 		D_{2}sin (  \beta  )  
 	) cos (  \alpha  ) +
 	C_{2}sin (  \alpha  )  
-]  \dot{\beta}	
-\]
+]  \dot{\beta}	,\nonumber
+\end{multlined}
+\end{equation}
 
-\[ K_{y_{y}}^{r} \left( q,q \right) = \left\{ B_{1}+A_{2}sin^{2} \left(  \beta  \right) +B_{2}cos^{2} \left(  \beta  \right) -F_{2}sin \left( 2 \beta  \right)  \right}  \alpha - \] \\ \[ - \left( E_{2}sin \left(  \beta  \right) +D_{2}cos \left(  \beta  \right)  \right)  \beta ; \] \par
+\begin{equation}
+\begin{multlined}
+ K_{y_{y}}^{r} \left( q,\dot{q} \right) = 
+ [ B_{1}+A_{2}sin^{2} (  \beta  ) +B_{2}cos^{2} (  \beta  ) -F_{2}sin ( 2 \beta  )  ]  \dot{\alpha} - \nonumber \\
+ ( E_{2}sin (  \beta  ) +D_{2}cos (  \beta  )  )  \beta  ,  \nonumber
+\end{multlined}
+\end{equation}
 
-\[ K_{z_{y}}^{r} \left( q,q \right) = \left\{  \left( F_{1}sin \left(  \alpha  \right) \frac{}{}D_{1}cos \left(  \alpha  \right)  \right) -  \] \\ \[ - \left( \frac{A_{2}-B_{2}}{2}sin \left( 2 \beta  \right) -F_{2}cos \left( 2 \beta  \right)  \right) sin \left(  \alpha  \right)  \left( \frac{}{} \left( E_{2}sin \left(  \beta  \right) +D_{2}cos \left(  \beta  \right)  \right) cos \left(  \alpha  \right)  \right}  \alpha + \] \\ \[ + \left\{ \frac{}{} \left( E_{2}cos \left(  \beta  \right) -D_{2}sin \left(  \beta  \right)  \right) sin \left(  \alpha  \right) +C_{2}cos \left(  \alpha  \right)  \right}  \beta . \] \par
+\begin{equation}
+\begin{multlined}
+K_{z_{y}}^{r} \left( q,\dot{q} \right) = 
+[  
+	\left( F_{1}sin (  \alpha  ) -D_{1}cos (  \alpha  )  \right) -  \nonumber \\
+	\left( \frac{A_{2}-B_{2}}{2}sin ( 2 \beta  ) -F_{2}cos ( 2 \beta  )  \right) sin (  \alpha  ) - \nonumber \\
+	\left( E_{2}sin (  \beta  ) +D_{2}cos (  \beta  )  \right) cos (  \alpha  )
+]
+\dot{\alpha} + \nonumber \\
+[ 
+	- \left( E_{2}cos (  \beta  ) -D_{2}sin (  \beta  )  \right) sin (  \alpha  ) +C_{2}cos (  \alpha  )  
+]  
+\dot{\beta}  \nonumber
+\end{multlined}
+\end{equation}
 
-
-Вектор угловой скорости установочной системы координат  \( Ox_{y}y_{y}z_{y} \)  в системе координат  \( OXYZ \) \ (переносного движения) определяется суммой угловых скоростей ЛА  и вибрацией установочной системы координат:\par
+Вектор угловой скорости установочной системы координат  \( O_{x_{y}y_{y}z_{y}} \)  в системе координат  \( O_{XYZ} \) \ (переносного движения) определяется суммой угловых скоростей ЛА  и вибрацией установочной системы координат:\par
 
 
 
@@ -749,7 +770,9 @@ $\overline{i} = (i_a, i_b, i_c)$ - вектор фазовых токов
 \subsection{Механическая модель} \label{sec:ch3/sec9/sub3}
 
 \todo{привести в соответствие с 3.3.2}
+
 \todo{литература}
+
 С точки зрения механики электродивгатель рассматривается как система с одной степенью свободы. Запишем уравнение (3.48) относительно привода:
 
 \begin{equation}
