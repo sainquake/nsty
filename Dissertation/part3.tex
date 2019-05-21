@@ -752,7 +752,14 @@ T=\frac{1}{2}
 Для вычисления составляющих обобщенных сил, характеризующих действие переносных сил инерции (\labelcref{eq:p3:22}), нужно знать ускорение точки \textit{О}. Силы (\labelcref{eq:p3:22}) вызывают появление обобщенных сил\par
 
 \begin{equation} %\tag{3.29}
-Q_{i}^{'}= \sum _{j=1}^{2} \sum _{k=1}^{\infty} \left( -m_{k}^{ \left( j \right) }a_{o}⋅\frac{ \partial r_{k}^{ \left( j \right) }}{ \partial q_{i}} \right) = \sum _{j=1}^{2} \sum _{k=1}^{\infty} \left( -a_{o}⋅\frac{ \partial  \left( m_{k}^{ \left( j \right) }r_{k}^{ \left( j \right) } \right) }{ \partial q_{i}} \right) ==- \sum _{j=1}^{2}a_{o}⋅ \left( \frac{ \partial  \left(  \sum _{k=1}^{\infty} \left( m_{k}^{ \left( j \right) }r_{k}^{ \left( j \right) } \right)  \right) }{ \partial q_{i}} \right) =- \sum _{j=1}^{2} \left( m_{j}a_{o}⋅\frac{ \partial r_{C}^{ \left( j \right) }}{ \partial q_{i}} \right)  \left( i=1,2 \right) ,
+\label{eq:p3:29}
+\begin{multlined}
+Q_{i}^{`}= 
+\sum _{j=1}^{2} \sum _{k=1}^{\infty} \left( -m_{k}^{ \left( j \right) }\bar{a}_{0} \frac{ \partial \bar{r}_{k}^{ \left( j \right) }}{ \partial q_{i}} \right) = 
+\sum _{j=1}^{2} \sum _{k=1}^{\infty} \left( -\bar{a}_{0} \frac{ \partial  \left( m_{k}^{ \left( j \right) }\bar{r}_{k}^{ \left( j \right) } \right) }{ \partial q_{i}} \right) = \\
+- \sum _{j=1}^{2}\bar{a}_{0}  \left( \frac{ \partial  \left(  \sum _{k=1}^{\infty} \left( m_{k}^{ \left( j \right) }\bar{r}_{k}^{ \left( j \right) } \right)  \right) }{ \partial q_{i}} \right) =
+- \sum _{j=1}^{2} \left( m_{j}\bar{a}_{0} \frac{ \partial \bar{r}_{C}^{ \left( j \right) }}{ \partial q_{i}} \right)  \left( i=1,2 \right) ,
+\end{multlined}
 \end{equation}
 здесь  \( r_{C}^{ \left( j \right) } \) –\ радиус-вектор центра масс  \textit{j-}го\  тела в системе координат  \( Ox_{y}y_{y}z_{y} \) ,  \( m_{j} \) – масса \textit{j - }го тела,  \( q_{i} \) – \textit{i}–я обобщенная координата. \par
 
@@ -805,7 +812,7 @@ x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right) \\
 
 
 \begin{equation} %\tag{3.34}
-Q_{i}^{ \left( p \right) }= \sum _{j=1}^{2} \left( m_{j}g⋅\frac{ \partial r_{C}^{ \left( j \right) }}{ \partial q_{i}} \right) ,
+Q_{i}^{ \left( p \right) }= \sum _{j=1}^{2} \left( m_{j}g \frac{ \partial r_{C}^{ \left( j \right) }}{ \partial q_{i}} \right) ,
 \end{equation}
 Здесь\par
 
