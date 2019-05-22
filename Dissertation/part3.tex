@@ -761,13 +761,13 @@ Q_{i}^{`}=
 - \sum _{j=1}^{2} \left( m_{j}\bar{a}_{0} \frac{ \partial \bar{r}_{C}^{ \left( j \right) }}{ \partial q_{i}} \right)  \left( i=1,2 \right) ,
 \end{multlined}
 \end{equation}
-здесь  \( r_{C}^{ \left( j \right) } \) –\ радиус-вектор центра масс  \textit{j-}го\  тела в системе координат  \( Ox_{y}y_{y}z_{y} \) ,  \( m_{j} \) – масса \textit{j - }го тела,  \( q_{i} \) – \textit{i}–я обобщенная координата. \par
+здесь  \( \bar{r}_{C}^{ \left( j \right) } \) –\ радиус-вектор центра масс  \textit{j-}го\  тела в системе координат  \( Ox_{y}y_{y}z_{y} \) ,  \( m_{j} \) – масса \textit{j - }го тела,  \( q_{i} \) – \textit{i}–я обобщенная координата. \par
 
 Запишем радиусы-векторы центров масс 1–го и 2–го тел в базисе установочной системы координат: \par
 
 
 \begin{equation} %\tag{3.30}
-r_{C_{1}}=e_{1}r_{C_{1}}=e_{y}A_{1}^{T}r_{C_{1}}=e_{y} \left( \begin{matrix}
+\bar{r}_{C_{1}}=\bar{e}_{1}\tilde{r}_{C_{1}}=\bar{e}_{y}A_{1}^{T}\tilde{r}_{C_{1}}=\bar{e}_{y} \left( \begin{matrix}
 x_{C_{1}}cos \left(  \alpha  \right) +z_{C_{1}}sin \left(  \alpha  \right) \\
 y_{C_{1}}\\
 -x_{C_{1}}sin \left(  \alpha  \right) +z_{C_{1}}cos \left(  \alpha  \right) \\
@@ -776,32 +776,42 @@ y_{C_{1}}\\
 \end{equation}
 
 \begin{equation} %\tag{3.31}
-r_{C_{2}}=er_{C_{2}}=e_{y}A_{1}^{T}A_{2}^{T}r_{C_{2}}=e_{y} \left( \begin{matrix}
+\bar{r}_{C_{2}}=\bar{e}\tilde{r}_{C_{2}}=\bar{e}_{y}A_{1}^{T}A_{2}^{T}\tilde{r}_{C_{2}}=\bar{e}_{y} \left( \begin{matrix}
 \left( x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right)  \right) cos \left(  \alpha  \right) +z_{C_{2}}sin \left(  \alpha  \right) \\
 x_{C_{2}}sin \left(  \beta  \right) +y_{C_{2}}cos \left(  \beta  \right) \\
 - \left( x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right)  \right) sin \left(  \alpha  \right) +z_{C_{2}}cos \left(  \alpha  \right) \\
 \end{matrix}
 \right) 
 \end{equation}
-В соответствии с выражением (3.29) находим\par
-
+В соответствии с выражением (\labelcref{eq:p3:29}) находим
 
 \begin{equation} %\tag{3.32}
-Q_{ \alpha }^{'}=-a_{O}^{T} \left( t \right)  \left\{ m_{1} \left( \begin{matrix}
--x_{C_{1}}sin \left(  \alpha  \right) +z_{C_{1}}cos \left(  \alpha  \right) \\
-0\\
--x_{C_{1}}cos \phi _{1}-z_{C_{1}}sin \left(  \alpha  \right) \\
+\label{eq:p3:32}
+\begin{multlined}
+Q_{ \alpha }^{'}=
+-\tilde{a}_{O}^{T} ( t )  
+\left\lbrace  
+m_{1} \left(  
+\begin{matrix}
+	-x_{C_{1}}sin \left(  \alpha  \right) +z_{C_{1}}cos \left(  \alpha  \right) \\
+	0\\
+	-x_{C_{1}}cos \phi _{1}-z_{C_{1}}sin \left(  \alpha  \right) \\
 \end{matrix}
-\right) +  \left( +m_{2} \left( \begin{matrix}
-- \left( x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right)  \right) sin \left(  \alpha  \right) +z_{C_{2}}cos \left(  \alpha  \right) \\
-0\\
-- \left( x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right)  \right) cos \left(  \alpha  \right) -z_{C_{2}}sin \left(  \alpha  \right) \\
+\right)  + \\ 
+ m_{2} 
+\left(  
+\begin{matrix}
+	- \left( x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right)  \right) sin \left(  \alpha  \right) +z_{C_{2}}cos \left(  \alpha  \right) \\
+	0 \\
+	- \left( x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right)  \right) cos \left(  \alpha  \right) -z_{C_{2}}sin \left(  \alpha  \right) \\
 \end{matrix}
-\right)  \right} ,
+\right)   
+\right\rbrace  ,
+\end{multlined}
 \end{equation}
 
 \begin{equation} %\tag{3.33}
-Q_{ \beta }^{'}=-a_{O}^{T} \left( t \right) m_{2} \left( \begin{matrix}
+Q_{ \beta }^{'}=-\tilde{a}_{O}^{T} \left( t \right) m_{2} \left( \begin{matrix}
 \left( -x_{C_{2}}sin \left(  \beta  \right) -y_{C_{2}}cos \left(  \beta  \right)  \right) cos \left(  \alpha  \right) \\
 x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right) \\
 \left( x_{C_{2}}sin \left(  \beta  \right) +y_{C_{2}}cos \left(  \beta  \right)  \right) sin \left(  \alpha  \right) \\
