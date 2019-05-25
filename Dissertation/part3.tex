@@ -1135,16 +1135,55 @@ E(\beta)\dot{\alpha}\dot{\beta}+
 \label{eq:p3:45}
 \begin{multlined}
 \frac{ \partial T}{ \partial  \beta }=-F \left(  \beta  \right) \dot \alpha ^{2}-E \left(  \beta  \right)  \dot \alpha \dot \beta +\\ 
-\{  \omega _{x_{y}} \left( t \right)  \left[  \left( 2A_{2} \left(  \beta  \right) cos \left(  \alpha  \right) -E \left(  \beta  \right) sin \left(  \alpha  \right)  \right)  \alpha +D \left(  \beta  \right) cos \left(  \alpha  \right)  \beta  \right] - \\
- \omega _{y_{y}} \left( t \right)  \left[ 2F \left(  \beta  \right)  \alpha +E \left(  \beta  \right)  \beta  \right] - \Omega _{z_{y}} \left( t \right)  \left[  \left( E \left(  \beta  \right) cos \left(  \alpha  \right) +2A_{2} \left(  \beta  \right) sin \left(  \alpha  \right)  \right)  \alpha +D \left(  \beta  \right) sin \left(  \alpha  \right)  \beta  \right]  \} +\\ 
-\frac{1}{2} \{  \left[ F \left(  \beta  \right)  \left( 1+cos \left( 2 \alpha  \right)  \right) +D \left(  \beta  \right) sin \left( 2 \alpha  \right)  \right]  \omega _{x_{y}}^{2} \left( t \right) -2F \left(  \beta  \right)  \omega _{y_{y}}^{2} \left( t \right) + \\ \left[ F \left(  \beta  \right)  \left( 1-cos \left( 2 \alpha  \right)  \right) -D \left(  \beta  \right) sin \left( 2 \alpha  \right)  \right]  \omega _{z_{y}}^{2} \left( t \right) +2 \left[ 2A_{2} \left(  \beta  \right) cos \left(  \alpha  \right) -E \left(  \beta  \right) sin \left(  \alpha  \right)  \right]  \omega _{x_{y}} \left( t \right)  \omega _{y_{y}} \left( t \right) -\\2 \left[ F \left(  \beta  \right) sin \left( 2 \alpha  \right) -D \left(  \beta  \right) cos \left( 2 \alpha  \right)  \right]  \omega _{x_{y}} \left( t \right)  \omega _{z_{y}} \left( t \right) -2 \left[ E \left(  \beta  \right) cos \left(  \alpha  \right) +2A_{2} \left(  \beta  \right) sin \left(  \alpha  \right)  \right]  \omega _{y_{y}} \left( t \right)  \omega _{z_{y}} \left( t \right)  \} .
+\{  
+	\omega _{x_{y}} 
+		\left( t \right)  \left[  \left( 2A_{2} \left(  \beta  \right) cos \left(  \alpha  \right) -E \left(  \beta  \right) sin \left(  \alpha  \right)  \right)  \dot \alpha +
+		D \left(  \beta  \right) cos \left(  \alpha  \right) \dot \beta  \right] - \\
+ 	\omega _{y_{y}} 
+ 		\left( t \right)  \left[ 2F \left(  \beta  \right) \dot \alpha +E \left(  \beta  \right) \dot \beta  \right] - \\
+ 	\omega_{z_{y}} 
+ 		\left( t \right)  \left[  \left( E \left(  \beta  \right) cos \left(  \alpha  \right) +2A_{2} \left(  \beta  \right) sin \left(  \alpha  \right)  \right) \dot \alpha +
+ 		D \left(  \beta  \right) sin \left(  \alpha  \right) \dot \beta  \right]  
+\} +\\ 
+\frac{1}{2} 
+\{  
+	\left[ 
+		F \left(  \beta  \right)  \left( 1+cos \left( 2 \alpha  \right)  \right) +D \left(  \beta  \right) sin \left( 2 \alpha  \right)  \right]  \omega _{x_{y}}^{2} \left( t \right) -2F \left(  \beta  \right)  \omega _{y_{y}}^{2} \left( t \right) + \\ 
+	\left[ 
+		F \left(  \beta  \right)  \left( 1-cos \left( 2 \alpha  \right)  \right) -D \left(  \beta  \right) sin \left( 2 \alpha  \right)  \right]  \omega _{z_{y}}^{2} \left( t \right) +\\
+	2 \left[ 
+		2A_{2} \left(  \beta  \right) cos \left(  \alpha  \right) -E \left(  \beta  \right) sin \left(  \alpha  \right)  \right]  \omega _{x_{y}} \left( t \right)  \omega _{y_{y}} \left( t \right) -\\
+	2 \left[ 
+		F \left(  \beta  \right) sin \left( 2 \alpha  \right) -D \left(  \beta  \right) cos \left( 2 \alpha  \right)  \right]  \omega _{x_{y}} \left( t \right)  \omega _{z_{y}} \left( t \right) -\\
+	2 \left[ 
+		E \left(  \beta  \right) cos \left(  \alpha  \right) +2A_{2} \left(  \beta  \right) sin \left(  \alpha  \right)  \right]  \omega _{y_{y}} \left( t \right)  \omega _{z_{y}} \left( t \right)  
+\} .
 \end{multlined}
 \end{equation}
 
 
-После подстановки (3.42)-(3.45) и (3.40),(3.41) в уравнения (\colorbox{Yellow}{3.24}), получим\par
+После подстановки (\labelcref{eq:p3:40,eq:p3:41,eq:p3:42,eq:p3:43,eq:p3:44,eq:p3:45}) в уравнения (\labelcref{eq:p3:24}), получим
+
+\(  \left( B_{1}+B \left(  \beta  \right)  \right)  \alpha -D \left(  \beta  \right)  \beta -2F \left(  \beta  \right)  \alpha  \beta -E \left(  \beta  \right)  \beta ^{2}++ \left\{ - \omega _{x_{y}} \left( t \right)  \left[  \left(  \left( C_{2}-2A_{2} \left(  \beta  \right)  \right) cos \left(  \alpha  \right) +2E \left(  \beta  \right) sin \left(  \alpha  \right)  \right)  \right]  -- \left(  \omega _{y_{y}} \left( t \right) 2F \left(  \beta  \right) - \omega _{z_{y}} \left( t \right)  \left[  \left( 2E \left(  \beta  \right) cos \left(  \alpha  \right) - \left( C_{2}-2A_{2} \left(  \beta  \right)  \right) sin \left(  \alpha  \right)  \right)  \right]  \right}  \beta ++ \left\{ - \omega _{x_{y}} \left( t \right) F \left(  \alpha , \beta  \right)  + \left(  \omega _{y_{y}} \left( t \right)  \left( B_{1}+B \left(  \beta  \right)  \right) - \omega _{z_{y}} \left( t \right) D \left(  \alpha , \beta  \right)  \right} ++ \left\{ E \left(  \alpha , \beta  \right)  \omega _{x_{y}}^{2} \left( t \right) -E \left(  \alpha , \beta  \right)  \omega _{z_{y}}^{2} \left( t \right) + + \left( D \left(  \alpha , \beta  \right)  \omega _{x_{y}} \left( t \right)  \omega _{y_{y}} \left( t \right) +2A_{1} \left(  \alpha , \beta  \right)  \omega _{x_{y}} \left( t \right)  \omega _{z_{y}} \left( t \right) -F \left(  \alpha , \beta  \right)  \omega _{y_{y}} \left( t \right)  \omega _{z_{y}} \left( t \right)  \right} ==- \left( a_{O}^{T} \left( t \right) +g^{T}A_{c}^{T}A_{y}^{T} \right)  \left\{ m_{1} \left( \begin{matrix}
+-x_{C_{1}}sin \left(  \alpha  \right) +z_{C_{1}}cos \left(  \alpha  \right) \\
+0\\
+-x_{C_{1}}cos \left(  \alpha  \right) -z_{C_{1}}sin \left(  \alpha  \right) \\
+\end{matrix}
+\right) +  \)
 
 
+
+
+
+
+\( C_{2} \beta -D \left(  \beta  \right)  \alpha +F \left(  \beta  \right)  \alpha ^{2}+ \)  \( + \left\{  \omega _{x_{y}} \left( t \right)  \left[  \left( 2E \left(  \beta  \right) sin \left(  \alpha  \right) + \left( C_{2}-2A_{2} \left(  \beta  \right)  \right) cos \left(  \alpha  \right)  \right)  \right]  + \left( + \omega _{y_{y}} \left( t \right) 2F \left(  \beta  \right) + \omega _{z_{y}} \left( t \right)  \left[ 2E \left(  \beta  \right) cos \left(  \alpha  \right) - \left( C_{2}-2A_{2} \left(  \beta  \right)  \right) sin \left(  \alpha  \right)  \right]  \right}  \alpha ++ \left\{ - \omega _{x_{y}} \left( t \right)  \left[ E \left(  \beta  \right) cos \left(  \alpha  \right) -C_{2}^{}sin \left(  \alpha  \right)  \right]  - \left( - \omega _{y_{y}} \left( t \right) D \left(  \beta  \right) + \omega _{z_{y}} \left( t \right)  \left[ E \left(  \beta  \right) sin \left(  \alpha  \right) +C_{2}cos \left(  \alpha  \right)  \right]  \right} --\frac{1}{2} \left\{  \left[ F \left(  \beta  \right)  \left( 1+cos \left( 2 \alpha  \right)  \right) +D \left(  \beta  \right) sin \left( 2 \alpha  \right)  \right]  \omega _{x_{y}}^{2} \left( t \right) -2F \left(  \beta  \right)  \omega _{y_{y}}^{2} \left( t \right) + + \left[ F \left(  \beta  \right)  \left( 1-cos \left( 2 \alpha  \right)  \right) -D \left(  \beta  \right) sin \left( 2 \alpha  \right)  \right]  \omega _{z_{y}}^{2} \left( t \right) +2 \left[ 2A_{2} \left(  \beta  \right) cos \left(  \alpha  \right) -E \left(  \beta  \right) sin \left(  \alpha  \right)  \right]  \omega _{x_{y}} \left( t \right)  \omega _{y_{y}} \left( t \right) --2 \left[ F \left(  \beta  \right) sin \left( 2 \alpha  \right) -D \left(  \beta  \right) cos \left( 2 \alpha  \right)  \right]  \omega _{x_{y}} \left( t \right)  \omega _{z_{y}} \left( t \right) - \left( -2 \left[ E \left(  \beta  \right) cos \left(  \alpha  \right) +2A_{2} \left(  \beta  \right) sin \left(  \alpha  \right)  \right]  \omega _{y_{y}} \left( t \right)  \omega _{z_{y}} \left( t \right)  \right} = \)  \par  \( =- \left( a_{O}^{T} \left( t \right) +g^{T}A_{c}^{T}A_{y}^{T} \right) m_{2} \left( \begin{matrix}
+\left( -x_{C_{2}}sin \left(  \beta  \right) -y_{C_{2}}cos \left(  \beta  \right)  \right) cos \left(  \alpha  \right) \\
+x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right) \\
+\left( x_{C_{2}}sin \left(  \beta  \right) +y_{C_{2}}cos \left(  \beta  \right)  \right) sin \left(  \alpha  \right) \\
+\end{matrix}
+\right) +M_{дв.2}-M_{тр.2}sign \left(  \beta  \right) . \)
+
+Уравнения (3.46),(3.47) определяют движение ОУ, установленного на ЛА, совершающем любой маневр с учетом вибрации установочной системы координат. Представим эти уравнения в матричном виде:
 
 
 \section{Линеаризованная система} \label{ch:ch3/sect10}
