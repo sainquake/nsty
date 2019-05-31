@@ -1,6 +1,6 @@
 \chapter{Математическая модель БОЭП и его составных частей как объекта управления} \label{ch:ch3}
 
-Оптико-электронный прибор (ОЭП) вертолетного базирования имеет тепловизионный и телевизионный каналы, лазерный дальномер. Кроме того, на борту устанавливают оптико-электронную систему постановки помех (СОЭП).  Управление направлением линии визирования осуществляется перемещением всего оптико-электронного блока. Для ОЭП и СОЭП конструктивно оптико-электронный блок представляет собой блок, в котором размещены оптические приборы, вращающийся по углу места внутри вилки, вращающейся по углу азимута 
+Оптико-электронный прибор (ОЭП) вертолетного базирования имеет тепловизионный и телевизионный каналы, лазерный дальномер. Кроме того, на борту устанавливают оптико-электронную систему постановки помех (СОЭП). Управление направлением линии визирования осуществляется перемещением всего оптико-электронного блока. Для ОЭП и СОЭП конструктивно оптико-электронный блок представляет собой блок, в котором размещены оптические приборы, вращающийся по углу места внутри вилки, вращающейся по углу азимута 
 (рисунок~\ref{fig:device}, кинематическая схема на рисунке~\ref{fig:kinematic}). 
 На осях вращения размещены моментные двигатели и датчики углов. ОЭП установлен в носовой части вертолета, СОЭП устанавливается в хвостовой части и на балках 
 (рисунок~\ref{fig:helicopter}).
@@ -45,7 +45,7 @@
 		\item 2–е тело (оптико-электронный блок) объединяет все элементы, вращающиеся по углу места вокруг оси CD (рисунок \ref{fig:device}). Тело 2 (оптико-электронный блок) вращается относительно тела 1 вокруг оси CD под действием вращающего момента, создаваемого другим моментным двигателем.
 	\end{itemize}
 	\item Ось вращения 2-го тела перпендикулярна оси вращения 1-го тела и пересекается с ней: $AB\perp CD$, т.$O \in AB$, т.$O \in CD$
-	\item Инерциальная система координат, система координат связанная с вертолетом (ЛА) и установочная система координат выбраны в соответствии с принципиальной схемой расположения на борту (рисунок \ref{fig:helicopter}). Их положение и кинематические характеристики  определены выражениями (3.1)-(3.14).
+	\item Инерциальная система координат, система координат связанная с вертолетом (ЛА) и установочная система координат выбраны в соответствии с принципиальной схемой расположения на борту (рисунок \ref{fig:helicopter}). Их положение и кинематические характеристики определены выражениями (3.1)-(3.14).
 	\item Система координат $O_{x_1y_1z_1}$ (рисунок \ref{fig:coord/3.4}) жестко связана с 1-м телом. 
 	\begin{figure}[ht]
 		\centering
@@ -58,26 +58,26 @@
 	\begin{equation}
 	\label{eq:p3:1}
 	\begin{alignedat}{2}
-	\bar{r}_0 = \bar{e}_y\tilde{r}_0 ,
+	\bar{r}_0 = \bar{e}_y\tilde{r}_0,
 	\end{alignedat}
 	\end{equation}
-	где $\tilde{r}_0 = \left( \begin{matrix}	0  &  -l  &  0 \end{matrix} \right)^T$.
+	где $\tilde{r}_0 = \left( \begin{matrix}	0 & -l & 0 \end{matrix} \right)^T$.
 	
 	Орты осей $O_{x_1y_1z_1}$ обозначим $\bar{i}_1$, $\bar{j}_1$, $\bar{k}_1$ и составим из них базисную строку $\bar{e}_1 = (\bar{i}_1 \bar{j}_1 \bar{k}_1)$. Связь между базисными строками $\bar{e}_y$ и $\bar{e}_1$ определяются матрицей $A_1$:
 	\begin{equation}
 	\label{eq:p3:2}
 	\begin{alignedat}{2}
-	\bar{e}_y = \bar{e}_1	A_1 ,
+	\bar{e}_y = \bar{e}_1	A_1,
 	\end{alignedat}
 	\end{equation}
-	где  \( A_{1}= \left( \begin{matrix}
-	cos \alpha   &  0  &  -sin \alpha \\
-	0  &  1  &  0\\
-	sin \alpha   &  0  &  cos \alpha \\
+	где \( A_{1}= \left( \begin{matrix}
+	cos \alpha & 0 & -sin \alpha \\
+	0 & 1 & 0\\
+	sin \alpha & 0 & cos \alpha \\
 	\end{matrix}
-	\right)  \) .\par
+	\right) \) . 
 	
-	Масса 1-го тела равна  \( m_{1} \) , положение центра масс в системе координат  \( Ox_{1}y_{1}z_{1} \)  определяется радиусом-вектором\par
+	Масса 1-го тела равна \( m_{1} \), положение центра масс в системе координат \( Ox_{1}y_{1}z_{1} \) определяется радиусом-вектором 
 	
 	\begin{equation}
 	\label{eq:p3:3}
@@ -86,33 +86,33 @@
 	\end{alignedat}
 	\end{equation}
 	
-	где  \( \tilde{r}_{c_{1}}= \left( \begin{matrix}
-	x_{c_{1}}  &  y_{c_{1}}  &  z_{c_{1}}\\
+	где \( \tilde{r}_{c_{1}}= \left( \begin{matrix}
+	x_{c_{1}} & y_{c_{1}} & z_{c_{1}}\\
 	\end{matrix}
-	\right) ^{T} \) .\par
-	Введем следующие обозначения для осевых и центробежных моментов инерции 1-го тела:\par
+	\right) ^{T} \) . 
+	Введем следующие обозначения для осевых и центробежных моментов инерции 1-го тела: 
 	
-	\( J_{x_{1}}=A_{1},J_{y_{1}}=B_{1},J_{z_{1}}=C_{1},J_{x_{1}y_{1}}=F_{1},J_{x_{1}z_{1}}=E_{1},J_{y_{1}z_{1}}=D_{1} \) ,\par
+	\( J_{x_{1}}=A_{1},J_{y_{1}}=B_{1},J_{z_{1}}=C_{1},J_{x_{1}y_{1}}=F_{1},J_{x_{1}z_{1}}=E_{1},J_{y_{1}z_{1}}=D_{1} \), 
 	
-	тогда его тензор инерции\par
+	тогда его тензор инерции 
 	
 	\begin{equation}
 	\label{eq:p3:4}
 	\begin{alignedat}{2}
 	J_{1}= \left( \begin{matrix}
-	A_{1}  &  -F_{1}  &  -E_{1}\\
-	-F_{1}  &  B_{1}  &  -D_{1}\\
-	-E_{1}  &  -D_{1}  &  C_{1}\\
+	A_{1} & -F_{1} & -E_{1}\\
+	-F_{1} & B_{1} & -D_{1}\\
+	-E_{1} & -D_{1} & C_{1}\\
 	\end{matrix}
 	\right) 
 	\end{alignedat}
 	\end{equation}
 		
-	\item Оси  \( O_{xyz} \)  (рисунок \ref{fig:coord/3.4}) жестко связаны с телом 2: ось  \( O_x \)  направлена по оптической оси, ось  \( O_z \)  совпадает с осью вращения \textit{CD}, ось  \( O_y \)  дополняет указанные оси до правой системы координат.\par
+	\item Оси \( O_{xyz} \) (рисунок \ref{fig:coord/3.4}) жестко связаны с телом 2: ось \( O_x \) направлена по оптической оси, ось \( O_z \) совпадает с осью вращения \textit{CD}, ось \( O_y \) дополняет указанные оси до правой системы координат. 
 	
-	Орты осей  \( O_{x_{1}y_{1}z_{1}} \)  обозначим  \( \bar{i},\bar{j},\bar{k}_{1} \)  и составим из них базисную строку  
-	\( \bar{e}= \left( \begin{matrix}	\bar{i}  &  \bar{j}  &  \bar{k}\\	\end{matrix}
-	\right)  \) . Связь между базисными строками  \( \bar{e} \)  и  \( \bar{e}_{1} \)  определяется матрицей  \( A_{2} \) :\par
+	Орты осей \( O_{x_{1}y_{1}z_{1}} \) обозначим \( \bar{i},\bar{j},\bar{k}_{1} \) и составим из них базисную строку 
+	\( \bar{e}= \left( \begin{matrix}	\bar{i} & \bar{j} & \bar{k}\\	\end{matrix}
+	\right) \) . Связь между базисными строками \( \bar{e} \) и \( \bar{e}_{1} \) определяется матрицей \( A_{2} \): 
 	
 	\begin{equation}
 	\label{eq:p3:5}
@@ -121,14 +121,14 @@
 	\end{alignedat}
 	\end{equation}
 	
-	где  \( A_{2}= \left( \begin{matrix}
-	cos \beta   &  sin \beta   &  0\\
-	-sin \beta   &  cos \beta   &  0\\
-	0  &  0  &  1\\
+	где \( A_{2}= \left( \begin{matrix}
+	cos \beta & sin \beta & 0\\
+	-sin \beta & cos \beta & 0\\
+	0 & 0 & 1\\
 	\end{matrix}
-	\right)  \) .\par
+	\right) \) . 
 	
-	Масса 2-го тела равна  \( m_{2} \) , положение центра масс в системе координат  \( O_{xyz} \)  определяется радиусом-вектором\par
+	Масса 2-го тела равна \( m_{2} \), положение центра масс в системе координат \( O_{xyz} \) определяется радиусом-вектором 
 	
 	\begin{equation}
 	\label{eq:p3:6}
@@ -137,24 +137,24 @@
 	\end{alignedat}
 	\end{equation}
 	
-	где  \( \tilde{r}_{c_{2}}= \left( \begin{matrix}
-	x_{c_{2}}  &  y_{c_{2}}  &  z_{c_{2}}\\
+	где \( \tilde{r}_{c_{2}}= \left( \begin{matrix}
+	x_{c_{2}} & y_{c_{2}} & z_{c_{2}}\\
 	\end{matrix}
-	\right) ^{T} \) .\par
+	\right) ^{T} \) . 
 	
-	Введем следующие обозначения для осевых и центробежных моментов инерции 2-го тела:\par
+	Введем следующие обозначения для осевых и центробежных моментов инерции 2-го тела: 
 	
-	\( J_{x_{}}=A_{2},J_{y}=B_{2},J_{z}=C_{2},J_{x_{2}y_{2}}=F_{2},J_{x_{2}z_{2}}=E_{2},J_{y_{2}z_{2}}=D_{2} \) ,\par
+	\( J_{x_{}}=A_{2},J_{y}=B_{2},J_{z}=C_{2},J_{x_{2}y_{2}}=F_{2},J_{x_{2}z_{2}}=E_{2},J_{y_{2}z_{2}}=D_{2} \), 
 	
-	тогда его тензор инерции\par
+	тогда его тензор инерции 
 	
 	\begin{equation}
 	\label{eq:p3:7}
 	\begin{alignedat}{2}
 	J_{2}= \left( \begin{matrix}
-	A_{2}  &  -F_{2}  &  -E_{2}\\
-	-F_{2}  &  B_{2}  &  -D_{2}\\
-	-E_{2}  &  -D_{2}  &  C_{2}\\
+	A_{2} & -F_{2} & -E_{2}\\
+	-F_{2} & B_{2} & -D_{2}\\
+	-E_{2} & -D_{2} & C_{2}\\
 	\end{matrix}
 	\right) 
 	\end{alignedat}
@@ -192,11 +192,11 @@
 		\hline
 		%row no:3
 		\multicolumn{1}{|p{0.66in}}{1} & 
-		\multicolumn{1}{|p{1.94in}}{Координаты центра прибора относительно центра масс носителя \par } & 
-		\multicolumn{1}{|p{0.71in}}{Y\textsubscript{0} \par X\textsubscript{0} \par Z\textsubscript{0}} & 
-		\multicolumn{1}{|p{0.29in}}{-0.5 \par -0.5 \par -2} & 
-		\multicolumn{1}{|p{0.49in}}{0 \par -8.422 \par 0} & 
-		\multicolumn{1}{|p{0.39in}}{-0.5 \par -0.5 \par 2} & 
+		\multicolumn{1}{|p{1.94in}}{Координаты центра прибора относительно центра масс носителя } & 
+		\multicolumn{1}{|p{0.71in}}{Y\textsubscript{0} X\textsubscript{0} Z\textsubscript{0}} & 
+		\multicolumn{1}{|p{0.29in}}{-0.5 -0.5 -2} & 
+		\multicolumn{1}{|p{0.49in}}{0 -8.422 0} & 
+		\multicolumn{1}{|p{0.39in}}{-0.5 -0.5 2} & 
 		\multicolumn{1}{|p{0.66in}|}{\textit{м}} \\
 		\hline
 		%row no:4
@@ -297,7 +297,7 @@
 
 \section{Составление уравнений динамической модели ОУ} \label{ch:ch3/sect5}
 
-ОУ моделируется двумя абсолютно твердыми телами (тело 1 и тело 2), установленными в корпусе, который закреплен на ЛА. Положение этих тел относительно корпуса однозначно определяется углами поворотов:  \(  \alpha  \)  и  \(  \beta  \) . К активным силам, действующим на ОЭП, отнесем силы тяжести, момент от азимутального привода – моментного двигателя, момент от угломестного привода – второго моментного двигателя, моменты трения. Тогда связи, ограничивающие перемещения указанных тел, можно считать идеальными. Кроме того, связи являются голономными, удерживающими и стационарными. Для построения математической модели относительного движения ОУ в установочной системе координат (движения относительно корпуса) будем использовать уравнения Лагранжа II-го рода. Метод их составления для относительного движения объекта, установленного на подвижном основании, описан в разделе \ref{ch:ch3/sect1}. Механическая модель. Он состоит из трех этапов: вычисления кинетической энергии, вычисления обобщенных сил и составления уравнений движения (проведения действий в соответствии с уравнениями Лагранжа II-го рода). За обобщенные координаты принимаются углы поворота:  \( q_{1}= \alpha ,q_{2}= \beta  \) .\par
+ОУ моделируется двумя абсолютно твердыми телами (тело 1 и тело 2), установленными в корпусе, который закреплен на ЛА. Положение этих тел относительно корпуса однозначно определяется углами поворотов: \( \alpha \) и \( \beta \) . К активным силам, действующим на ОЭП, отнесем силы тяжести, момент от азимутального привода – моментного двигателя, момент от угломестного привода – второго моментного двигателя, моменты трения. Тогда связи, ограничивающие перемещения указанных тел, можно считать идеальными. Кроме того, связи являются голономными, удерживающими и стационарными. Для построения математической модели относительного движения ОУ в установочной системе координат (движения относительно корпуса) будем использовать уравнения Лагранжа II-го рода. Метод их составления для относительного движения объекта, установленного на подвижном основании, описан в разделе \ref{ch:ch3/sect1}. Механическая модель. Он состоит из трех этапов: вычисления кинетической энергии, вычисления обобщенных сил и составления уравнений движения (проведения действий в соответствии с уравнениями Лагранжа II-го рода). За обобщенные координаты принимаются углы поворота: \( q_{1}= \alpha, q_{2}= \beta \) . 
 
 
 
@@ -307,23 +307,23 @@
 
 Вычислим кинетическую энергию ОУ, находящемся на ЛА, совершающем произвольный маневр, в соответствии с уравнениями (\labelcref{eq:p3:1}). Вектор ускорения центра масс ЛА, вектор угловой скорости и вектор углового ускорения определяются соответственно выражениями (\labelcref{eq:p3:5,eq:p3:6,eq:p3:7}). Будем учитывать вибрацию установочной системы координат, которая задается уравнениями (\labelcref{eq:p3:9}).
 
-Кинетическая энергия ОЭС в относительном движении в установочных осях  \( Ox_{y}y_{y}z_{y} \)  (тело 1 совершает вращательное движение, тело 2 – сферическое) определяется следующим образом:\par
+Кинетическая энергия ОЭС в относительном движении в установочных осях \( Ox_{y}y_{y}z_{y} \) (тело 1 совершает вращательное движение, тело 2 – сферическое) определяется следующим образом: 
 
 \begin{equation}
 \label{eq:p3:8}
 \begin{alignedat}{2}
 T_{r}= 
 \sum_{j=1}^{2}T_{r}^{ \left( j \right) }= 
-\sum_{j=1}^{2}\frac{1}{2} \left(  \tilde{\omega}_{j}^{r} \right) ^{T}J_{j} \tilde{\omega}_{j}^{r}
+\sum_{j=1}^{2}\frac{1}{2} \left( \tilde{\omega}_{j}^{r} \right) ^{T}J_{j} \tilde{\omega}_{j}^{r}
 \end{alignedat}
 \end{equation}
 
-здесь  
-\( J_{j} \) – тензор инерции и  
-\(  \tilde{\omega}_{j}^{r} \) – координатный вектор относительной угловой скорости \textit{j}–го тела в системе координат, связанной с этим телом.\par
+здесь 
+\( J_{j} \) – тензор инерции и 
+\( \tilde{\omega}_{j}^{r} \) – координатный вектор относительной угловой скорости \textit{j}–го тела в системе координат, связанной с этим телом. 
 
 
-Векторы угловых скоростей 1-го и 2-го тел в установочной системе координат  \( Ox_{y}y_{y}z_{y} \)  определяются в соответствии с изображением систем координат (рисунок~\ref{fig:coord/3.4}). Угловая скорость 1-го тела \par
+Векторы угловых скоростей 1-го и 2-го тел в установочной системе координат \( Ox_{y}y_{y}z_{y} \) определяются в соответствии с изображением систем координат (рисунок~\ref{fig:coord/3.4}). Угловая скорость 1-го тела 
 
 \begin{equation}
 \label{eq:p3:9}
@@ -333,11 +333,11 @@ T_{r}=
 \dot{\alpha} \\
 0\\
 \end{matrix}
-\right) ,
+\right),
 \end{alignedat}
 \end{equation}
 
-угловая скорость 2-го тела\par
+угловая скорость 2-го тела 
 
 \begin{equation}
 \label{eq:p3:10}
@@ -351,31 +351,31 @@ T_{r}=
 \end{alignedat}
 \end{equation}
 
-С учетом принятых обозначений (\labelcref{eq:p3:4}) и (\labelcref{eq:p3:7}), а также выражений (\labelcref{eq:p3:9}),(\labelcref{eq:p3:10}), после проведения действий в соответствии с (\labelcref{eq:p3:8}) находим\par
+С учетом принятых обозначений (\labelcref{eq:p3:4}) и (\labelcref{eq:p3:7}), а также выражений (\labelcref{eq:p3:9}),(\labelcref{eq:p3:10}), после проведения действий в соответствии с (\labelcref{eq:p3:8}) находим 
 
 \begin{equation}
 \label{eq:p3:11}
 \begin{alignedat}{2}
 T_{r}=
 \frac{1}{2} 
-[  
+[ 
 	( 
 		B_{1}+
-		A_{2}sin^{2} (  \beta  ) +
-		B_{2}cos^{2} (  \beta  ) -
-		F_{2}sin ( 2 \beta  )  
-	)  \dot{\alpha}^{2} + \\
-	C_{2} \dot{\beta}^{2} -  
+		A_{2}sin^{2} ( \beta ) +
+		B_{2}cos^{2} ( \beta ) -
+		F_{2}sin ( 2 \beta ) 
+	) \dot{\alpha}^{2} + \\
+	C_{2} \dot{\beta}^{2} - 
 	2 ( 
-		E_{2}sin (  \beta  ) +
-		D_{2}cos (  \beta  )  
-	)  
-	\dot{\alpha}  \dot{\beta}  
+		E_{2}sin ( \beta ) +
+		D_{2}cos ( \beta ) 
+	) 
+	\dot{\alpha} \dot{\beta} 
 ] 
 \end{alignedat}
 \end{equation}
 
-Кинетический момент ОУ относительно точки \textit{О} в относительном движении в установочных осях  \( Ox_{y}y_{y}z_{y} \)  равен\par
+Кинетический момент ОУ относительно точки \textit{О} в относительном движении в установочных осях \( Ox_{y}y_{y}z_{y} \) равен 
 
 \begin{equation}
 \label{eq:p3:12}
@@ -384,20 +384,20 @@ T_{r}=
 \end{alignedat}
 \end{equation}
 
-Из выражений (\labelcref{eq:p3:2}), (\labelcref{eq:p3:5}), учитывая то, что матрицы в этих выражениях являются ортогональными, имеем\par
+Из выражений (\labelcref{eq:p3:2}), (\labelcref{eq:p3:5}), учитывая то, что матрицы в этих выражениях являются ортогональными, имеем 
 
 \begin{equation}
 \label{eq:p3:13}
 \begin{alignedat}{2}
-\bar{e}_{1} = \bar{e}_{y} A_{1}^{T} ,
+\bar{e}_{1} = \bar{e}_{y} A_{1}^{T},
 \bar{e}_{2} = 
 \bar{e} = 
 \bar{e}_{1}A_{2}^{T} = 
-e_{y}A_{1}^{T}A_{2}^{T} ,
+e_{y}A_{1}^{T}A_{2}^{T},
 \end{alignedat}
 \end{equation}
 
-Тогда\par
+Тогда 
 
 \begin{equation}
 \label{eq:p3:14}
@@ -408,7 +408,7 @@ e_{y}A_{1}^{T}A_{2}^{T} ,
 \end{alignedat}
 \end{equation}
 
-С учетом принятых обозначений (\labelcref{eq:p3:4}),(\labelcref{eq:p3:7}) и выражений (\labelcref{eq:p3:9}),(\labelcref{eq:p3:10}), после проведения действий в соответствии с (\labelcref{eq:p3:14}) получим\par
+С учетом принятых обозначений (\labelcref{eq:p3:4}),(\labelcref{eq:p3:7}) и выражений (\labelcref{eq:p3:9}),(\labelcref{eq:p3:10}), после проведения действий в соответствии с (\labelcref{eq:p3:14}) получим 
 
 \begin{equation}
 \label{eq:p3:15}
@@ -422,69 +422,69 @@ K_{z_{y}}^{r} \left( q,\dot{q} \right) \\
 \end{alignedat}
 \end{equation}
 
-где \par
+где 
 
 \( q= \left( \begin{matrix}
 \alpha \\
 \beta \\
 \end{matrix}
-\right)  \) ,\ \ \   \( \dot{q}= \left( \begin{matrix}
+\right) \),\ \ \ \( \dot{q}= \left( \begin{matrix}
 \dot{\alpha} \\
 \dot{\beta} \\
 \end{matrix}
-\right)  \) , \par
+\right) \), 
 \begin{equation}
 \begin{multlined}
 K_{x_{y}}^{r} ( q,\dot{q} ) = 
 [
 	-( 
-		F_{1}cos (  \alpha  ) +
-		D_{1}sin (  \alpha  )  
-	) +   \nonumber \\
+		F_{1}cos ( \alpha ) +
+		D_{1}sin ( \alpha ) 
+	) + \nonumber \\
 	( 
-		\frac{A_{2}-B_{2}}{2}sin ( 2 \beta  ) -
-		F_{2}cos ( 2 \beta  )  
-	) cos (  \alpha  ) \nonumber \\
+		\frac{A_{2}-B_{2}}{2}sin ( 2 \beta ) -
+		F_{2}cos ( 2 \beta ) 
+	) cos ( \alpha ) \nonumber \\
 	- ( 
-		E_{2}sin (  \beta  ) +
-		D_{2}cos (  \beta  )  
-	) sin (  \alpha  )  
+		E_{2}sin ( \beta ) +
+		D_{2}cos ( \beta ) 
+	) sin ( \alpha ) 
 ] \dot{\alpha} + \nonumber \\
 [
 	- ( 
-		E_{2}cos (  \beta  ) -
-		D_{2}sin (  \beta  )  
-	) cos (  \alpha  ) +
-	C_{2}sin (  \alpha  )  
-]  \dot{\beta}	,\nonumber
+		E_{2}cos ( \beta ) -
+		D_{2}sin ( \beta ) 
+	) cos ( \alpha ) +
+	C_{2}sin ( \alpha ) 
+] \dot{\beta}	,\nonumber
 \end{multlined}
 \end{equation}
 
 \begin{equation}
 \begin{multlined}
  K_{y_{y}}^{r} \left( q,\dot{q} \right) = 
- [ B_{1}+A_{2}sin^{2} (  \beta  ) +B_{2}cos^{2} (  \beta  ) -F_{2}sin ( 2 \beta  )  ]  \dot{\alpha} - \nonumber \\
- ( E_{2}sin (  \beta  ) +D_{2}cos (  \beta  )  )  \beta  ,  \nonumber
+ [ B_{1}+A_{2}sin^{2} ( \beta ) +B_{2}cos^{2} ( \beta ) -F_{2}sin ( 2 \beta ) ] \dot{\alpha} - \nonumber \\
+ ( E_{2}sin ( \beta ) +D_{2}cos ( \beta ) ) \beta, \nonumber
 \end{multlined}
 \end{equation}
 
 \begin{equation}
 \begin{multlined}
 K_{z_{y}}^{r} \left( q,\dot{q} \right) = 
-[  
-	\left( F_{1}sin (  \alpha  ) -D_{1}cos (  \alpha  )  \right) -  \nonumber \\
-	\left( \frac{A_{2}-B_{2}}{2}sin ( 2 \beta  ) -F_{2}cos ( 2 \beta  )  \right) sin (  \alpha  ) - \nonumber \\
-	\left( E_{2}sin (  \beta  ) +D_{2}cos (  \beta  )  \right) cos (  \alpha  )
+[ 
+	\left( F_{1}sin ( \alpha ) -D_{1}cos ( \alpha ) \right) - \nonumber \\
+	\left( \frac{A_{2}-B_{2}}{2}sin ( 2 \beta ) -F_{2}cos ( 2 \beta ) \right) sin ( \alpha ) - \nonumber \\
+	\left( E_{2}sin ( \beta ) +D_{2}cos ( \beta ) \right) cos ( \alpha )
 ]
 \dot{\alpha} + \nonumber \\
 [ 
-	- \left( E_{2}cos (  \beta  ) -D_{2}sin (  \beta  )  \right) sin (  \alpha  ) +C_{2}cos (  \alpha  )  
-]  
-\dot{\beta}  \nonumber
+	- \left( E_{2}cos ( \beta ) -D_{2}sin ( \beta ) \right) sin ( \alpha ) +C_{2}cos ( \alpha ) 
+] 
+\dot{\beta} \nonumber
 \end{multlined}
 \end{equation}
 
-Вектор угловой скорости установочной системы координат  \( O_{x_{y}y_{y}z_{y}} \)  в системе координат  \( O_{XYZ} \) \ (переносного движения) определяется суммой угловых скоростей ЛА  и вибрацией установочной системы координат:\par
+Вектор угловой скорости установочной системы координат \( O_{x_{y}y_{y}z_{y}} \) в системе координат \( O_{XYZ} \) \ (переносного движения) определяется суммой угловых скоростей ЛА и вибрацией установочной системы координат: 
 
 
 
@@ -499,12 +499,12 @@ K_{z_{y}}^{r} \left( q,\dot{q} \right) =
 \bar{e}_{c} \tilde{\omega}_{c}+\bar{e}_{\textit{y}} \tilde{\omega}_{\textit{вибр}}=
 \bar{e}_{y} \left( A_{y} \tilde{\omega}_{c}+ \tilde{\omega}_{\textit{вибр}} \right) = \\
 \bar{e}_{y} \omega =\bar{e}_{y} \left( \begin{matrix}
-\omega_{x_{y}}  &   \omega_{y_{y}}  &   \omega_{z_{y}}\\
+\omega_{x_{y}} & \omega_{y_{y}} & \omega_{z_{y}}\\
 \end{matrix}
 \right) ^{T}.
 \end{multlined}
 \end{equation}
-С учетом (\labelcref{eq:p3:15}) и (\labelcref{eq:p3:16}) определим кинетическую энергию\par
+С учетом (\labelcref{eq:p3:15}) и (\labelcref{eq:p3:16}) определим кинетическую энергию 
 
 
 \begin{equation} % %\tag{3.17}
@@ -515,107 +515,107 @@ T_{e}=
 \tilde{\omega}^{T}\tilde{K}_{O}^{r}= 
 \omega_{x_{y}}K_{x_{y}}^{r}+ \omega_{y_{y}}K_{y_{y}}^{r}+ \omega_{z_{y}}K_{z_{y}}^{r}
 \end{equation}
-Вычислим составляющую кинетической энергии \par
+Вычислим составляющую кинетической энергии 
 
 
 \begin{equation} % %\tag{3.18}
 \label{eq:p3:18}
 T^{\ast}= \sum_{j=1}^{2}\frac{1}{2} \tilde{\omega}_{j}^{T}J^{ \left( j \right) } \tilde{\omega}_{j}
 \end{equation}
-Запишем вектор угловой скорости переносного движения в базисах, связанных с 1–м, 2–м телами:\par
+Запишем вектор угловой скорости переносного движения в базисах, связанных с 1–м, 2–м телами: 
 
 
 \begin{equation} % %\tag{3.19}
 \label{eq:p3:19}
 \bar{\omega} =\bar{e}_{y} \tilde{\omega} =\bar{e}_{1}A_{1} \tilde{\omega} =\bar{e}_{2}A_{2} \tilde{\omega} 
 \end{equation}
-С учетом (\labelcref{eq:p3:19}) выражение (\labelcref{eq:p3:18}) запишется в следующем виде\par
+С учетом (\labelcref{eq:p3:19}) выражение (\labelcref{eq:p3:18}) запишется в следующем виде 
 
 
 \begin{equation} % %\tag{3.20}
 \label{eq:p3:20}
 T^{\ast}=
-\frac{1}{2} \tilde{\omega} ^{T} [ A_{1}^{T} ( J^{ ( 1 ) }+A_{2}^{T}J^{ ( 2 ) }A_{2} ) A_{1} ]  \tilde{\omega}
+\frac{1}{2} \tilde{\omega} ^{T} [ A_{1}^{T} ( J^{ ( 1 ) }+A_{2}^{T}J^{ ( 2 ) }A_{2} ) A_{1} ] \tilde{\omega}
 \end{equation}
-Обозначим\par
+Обозначим 
 
 
 \begin{equation} % %\tag{3.21}
 \label{eq:p3:21}
-J \left(  \beta  \right) = \left( J_{1}+A_{2}^{T}J_{2}A_{2} \right) 
+J \left( \beta \right) = \left( J_{1}+A_{2}^{T}J_{2}A_{2} \right) 
 \end{equation}
-Матрица  \( J \left(  \beta  \right)  \)  является симметрической, введем следующие обозначения для ее элементов\par
+Матрица \( J \left( \beta \right) \) является симметрической, введем следующие обозначения для ее элементов 
 
 
 \begin{equation} % %\tag{3.22}
 \label{eq:p3:22}
-J \left(  \beta  \right) = \left( \begin{matrix}
-A_{1}+A \left(  \beta  \right)   &  -F_{1}-F \left(  \beta  \right)   &  -E_{1}-E \left(  \beta  \right) \\
--F_{1}-F \left(  \beta  \right)   &  B_{1}+B \left(  \beta  \right)   &  -D_{1}-D \left(  \beta  \right) \\
--E_{1}-E \left(  \beta  \right)   &  -D_{1}-D \left(  \beta  \right)   &  C_{1}+C_{2}\\
+J \left( \beta \right) = \left( \begin{matrix}
+A_{1}+A \left( \beta \right) & -F_{1}-F \left( \beta \right) & -E_{1}-E \left( \beta \right) \\
+-F_{1}-F \left( \beta \right) & B_{1}+B \left( \beta \right) & -D_{1}-D \left( \beta \right) \\
+-E_{1}-E \left( \beta \right) & -D_{1}-D \left( \beta \right) & C_{1}+C_{2}\\
 \end{matrix}
 \right) 
 \end{equation}
-где\par
+где 
 
-\( A \left(  \beta  \right) =A_{2}cos^{2} \left(  \beta  \right) +B_{2}sin^{2} \left(  \beta  \right) +F_{2}sin \left( 2 \beta  \right)  \) ,\par
+\( A \left( \beta \right) =A_{2}cos^{2} \left( \beta \right) +B_{2}sin^{2} \left( \beta \right) +F_{2}sin \left( 2 \beta \right) \), 
 
-\( F \left(  \beta  \right) =F_{2}cos \left( 2 \beta  \right) -\frac{A_{2}-B_{2}}{2}sin \left( 2 \beta  \right)  \) ,\par
+\( F \left( \beta \right) =F_{2}cos \left( 2 \beta \right) -\frac{A_{2}-B_{2}}{2}sin \left( 2 \beta \right) \), 
 
-\( E \left(  \beta  \right) =E_{2}cos \left(  \beta  \right) -D_{2}sin \left(  \beta  \right)  \) ,\par
+\( E \left( \beta \right) =E_{2}cos \left( \beta \right) -D_{2}sin \left( \beta \right) \), 
 
-\( B \left(  \beta  \right) =B_{2}cos^{2} \left(  \beta  \right) +A_{2}sin^{2} \left(  \beta  \right) -F_{2}sin \left( 2 \beta  \right)  \) ,\par
+\( B \left( \beta \right) =B_{2}cos^{2} \left( \beta \right) +A_{2}sin^{2} \left( \beta \right) -F_{2}sin \left( 2 \beta \right) \), 
 
-\( D \left(  \beta  \right) =D_{2}cos \left(  \beta  \right) +E_{2}sin \left(  \beta  \right)  \) .\par
+\( D \left( \beta \right) =D_{2}cos \left( \beta \right) +E_{2}sin \left( \beta \right) \) . 
 
-Обозначим\par
+Обозначим 
 
 \begin{equation} % %\tag{3.23}
 \label{eq:p3:23}
-J \left(  \alpha , \beta  \right) =A_{1}^{T} \left( J_{1}+A_{2}^{T}J_{2}A_{2} \right) A_{1}
+J \left( \alpha, \beta \right) =A_{1}^{T} \left( J_{1}+A_{2}^{T}J_{2}A_{2} \right) A_{1}
 \end{equation}
-Матрица  \( J \left(  \alpha , \beta  \right)  \)  является симметрической, введем следующие обозначения для ее элементов\par
+Матрица \( J \left( \alpha, \beta \right) \) является симметрической, введем следующие обозначения для ее элементов 
 
 
 \begin{equation} % %\tag{3.24}
 \label{eq:p3:24}
-J \left(  \alpha , \beta  \right) = \left( \begin{matrix}
-A \left(  \alpha , \beta  \right)   &  -F \left(  \alpha , \beta  \right)   &  -E \left(  \alpha , \beta  \right) \\
--F \left(  \alpha , \beta  \right)   &  B_{1}+B \left(  \beta  \right)   &  -D \left(  \alpha , \beta  \right) \\
--E \left(  \alpha , \beta  \right)   &  -D \left(  \alpha , \beta  \right)   &  C \left(  \alpha , \beta  \right) \\
+J \left( \alpha, \beta \right) = \left( \begin{matrix}
+A \left( \alpha, \beta \right) & -F \left( \alpha, \beta \right) & -E \left( \alpha, \beta \right) \\
+-F \left( \alpha, \beta \right) & B_{1}+B \left( \beta \right) & -D \left( \alpha, \beta \right) \\
+-E \left( \alpha, \beta \right) & -D \left( \alpha, \beta \right) & C \left( \alpha, \beta \right) \\
 \end{matrix}
 \right) 
 \end{equation}
-где\par
+где 
 \begin{equation}
 \begin{multlined}
- A (  \alpha , \beta  ) = 
- ( A_{1}+A (  \beta  )  ) cos^{2} (  \alpha  ) + 
- ( C_{1}+C_{2} ) sin^{2} (  \alpha  ) - \nonumber \\
- ( E_{1}+E (  \beta  )  ) sin ( 2 \alpha  )    ,\nonumber \\
+ A ( \alpha, \beta ) = 
+ ( A_{1}+A ( \beta ) ) cos^{2} ( \alpha ) + 
+ ( C_{1}+C_{2} ) sin^{2} ( \alpha ) - \nonumber \\
+ ( E_{1}+E ( \beta ) ) sin ( 2 \alpha ),\nonumber \\
 \end{multlined}
 \end{equation}
 \begin{equation}
 \begin{multlined}
- F \left(  \alpha , \beta  \right) = \left( F_{1}+F \left(  \beta  \right)  \right) cos \left(  \alpha  \right) + \left( D_{1}+D \left(  \beta  \right)  \right) sin \left(  \alpha  \right)   ,\nonumber \\
+ F \left( \alpha, \beta \right) = \left( F_{1}+F \left( \beta \right) \right) cos \left( \alpha \right) + \left( D_{1}+D \left( \beta \right) \right) sin \left( \alpha \right),\nonumber \\
 \end{multlined}
 \end{equation}
 \begin{equation}
 \begin{multlined}
- E \left(  \alpha , \beta  \right) =\frac{A_{1}+A \left(  \beta  \right) -C_{1}-C_{2}}{2}sin \left( 2 \alpha  \right) + \left( E_{1}+E \left(  \beta  \right)  \right) cos \left( 2 \alpha  \right)  ,\nonumber \\
+ E \left( \alpha, \beta \right) =\frac{A_{1}+A \left( \beta \right) -C_{1}-C_{2}}{2}sin \left( 2 \alpha \right) + \left( E_{1}+E \left( \beta \right) \right) cos \left( 2 \alpha \right),\nonumber \\
 \end{multlined}
 \end{equation}
 \begin{equation}
 \begin{multlined}
- D \left(  \alpha , \beta  \right) = \left( D_{1}+D \left(  \beta  \right)  \right) cos \left(  \alpha  \right) - \left( F_{1}+F \left(  \beta  \right)  \right) sin \left(  \alpha  \right)   ,\ \nonumber \\
+ D \left( \alpha, \beta \right) = \left( D_{1}+D \left( \beta \right) \right) cos \left( \alpha \right) - \left( F_{1}+F \left( \beta \right) \right) sin \left( \alpha \right),\ \nonumber \\
 \end{multlined}
 \end{equation}
 \begin{equation}
 \begin{multlined}
- C \left(  \alpha , \beta  \right) = \left( C_{1}+C_{2} \right) cos^{2} \left(  \alpha  \right) + \left( A_{1}+A \left(  \beta  \right)  \right) sin^{2} \left(  \alpha  \right) + \left( E_{1}+E \left(  \beta  \right)  \right) sin \left( 2 \alpha  \right)   . \nonumber \\
+ C \left( \alpha, \beta \right) = \left( C_{1}+C_{2} \right) cos^{2} \left( \alpha \right) + \left( A_{1}+A \left( \beta \right) \right) sin^{2} \left( \alpha \right) + \left( E_{1}+E \left( \beta \right) \right) sin \left( 2 \alpha \right) . \nonumber \\
 \end{multlined}
 \end{equation}
-Используя обозначения (\labelcref{eq:p3:24}), выражение (\labelcref{eq:p3:20}) для кинетической энергии запишется в следующем виде:\par
+Используя обозначения (\labelcref{eq:p3:24}), выражение (\labelcref{eq:p3:20}) для кинетической энергии запишется в следующем виде: 
 
 
 \begin{equation} % %\tag{3.25}
@@ -624,16 +624,16 @@ A \left(  \alpha , \beta  \right)   &  -F \left(  \alpha , \beta  \right)   &  -
 T^{\ast}=
 \frac{1}{2} 
 [ 
-	A (  \alpha , \beta  )  \omega_{x_{y}}^{2} ( t ) + 
-	( B_{1}+B (  \beta  )  )  \omega_{y_{y}}^{2} ( t ) +
-	C (  \alpha , \beta  )  \omega_{z_{y}}^{2} ( t ) - \\
-	2F (  \alpha , \beta  )  \omega_{x_{y}} ( t )  \omega_{y_{y}} ( t ) -
-	2E (  \alpha , \beta  )  \omega_{x_{y}} ( t )  \omega_{z_{y}} ( t ) -
-	2D (  \alpha , \beta  )  \omega_{y_{y}} ( t )  \omega_{z_{y}} ( t )  
+	A ( \alpha, \beta ) \omega_{x_{y}}^{2} ( t ) + 
+	( B_{1}+B ( \beta ) ) \omega_{y_{y}}^{2} ( t ) +
+	C ( \alpha, \beta ) \omega_{z_{y}}^{2} ( t ) - \\
+	2F ( \alpha, \beta ) \omega_{x_{y}} ( t ) \omega_{y_{y}} ( t ) -
+	2E ( \alpha, \beta ) \omega_{x_{y}} ( t ) \omega_{z_{y}} ( t ) -
+	2D ( \alpha, \beta ) \omega_{y_{y}} ( t ) \omega_{z_{y}} ( t ) 
 ] .
 \end{multlined}
 \end{equation}
-С учетом введенных обозначений (\labelcref{eq:p3:22}) выражение для кинетической энергии (\labelcref{eq:p3:11}) запишется компактнее:\par
+С учетом введенных обозначений (\labelcref{eq:p3:22}) выражение для кинетической энергии (\labelcref{eq:p3:11}) запишется компактнее: 
 
 
 \begin{equation} % %\tag{3.26}
@@ -641,36 +641,36 @@ T^{\ast}=
 T_{r}=
 \frac{1}{2} 
 [ 
-	( B_{1}+B ( \beta )  )  \dot{\alpha}^{2}+
-	C_{2} \dot{\beta}^{2} -  
-	2D \left(  \beta  \right)  \dot{\alpha}  \dot{\beta}  
+	( B_{1}+B ( \beta ) ) \dot{\alpha}^{2}+
+	C_{2} \dot{\beta}^{2} - 
+	2D \left( \beta \right) \dot{\alpha} \dot{\beta} 
 ]
 \end{equation}
-С учетом обозначений (\labelcref{eq:p3:22}) и (\labelcref{eq:p3:24}) выражения для проекций кинетического момента  \( K_{O}^{r} \)  (\labelcref{eq:p3:15}) запишутся компактнее:\par
+С учетом обозначений (\labelcref{eq:p3:22}) и (\labelcref{eq:p3:24}) выражения для проекций кинетического момента \( K_{O}^{r} \) (\labelcref{eq:p3:15}) запишутся компактнее: 
 
 \( 
 K_{x_{y}}^{r} ( q,\dot{q} ) =
--F (  \alpha , \beta  )  \dot{\alpha} - 
+-F ( \alpha, \beta ) \dot{\alpha} - 
 [ 
-	E (  \beta  ) cos (  \alpha  ) - 
-	C_{2}sin (  \alpha  )  
-]  \dot{\beta}  
-\) ,\par
+	E ( \beta ) cos ( \alpha ) - 
+	C_{2}sin ( \alpha ) 
+] \dot{\beta} 
+\), 
 
 \( 
 K_{y_{y}}^{r} ( q,\dot{q} ) = 
-[ B_{1}+B \left(  \beta  \right)  ] \dot{\alpha} -
-D (  \beta  )  \dot{\beta}  
-\) ,\par
+[ B_{1}+B \left( \beta \right) ] \dot{\alpha} -
+D ( \beta ) \dot{\beta} 
+\), 
 
 \( 
 K_{z_{y}}^{r} ( q,\dot{q} ) =
--D (  \alpha , \beta  )  \dot{\alpha} + 
+-D ( \alpha, \beta ) \dot{\alpha} + 
 [ 
-E (  \beta  ) sin (  \alpha  ) +
-C_{2}cos (  \alpha  )  
-]  \dot{\beta}  
-\) ,\par
+E ( \beta ) sin ( \alpha ) +
+C_{2}cos ( \alpha ) 
+] \dot{\beta} 
+\), 
 
 и выражение для кинетической энергии (\labelcref{eq:p3:17}) запишется следующим образом:
 
@@ -678,30 +678,30 @@ C_{2}cos (  \alpha  )
 \begin{equation} % %\tag{3.27}
 \label{eq:p3:27}
 \begin{multlined}
-T_{e}=   
-	\omega_{x_{y}} ( t )  
+T_{e}= 
+	\omega_{x_{y}} ( t ) 
 	[ 
-		-F (  \alpha , \beta  )  \dot{\alpha} - 
+		-F ( \alpha, \beta ) \dot{\alpha} - 
 		( 
-			E (  \beta  ) cos (  \alpha  ) -
-			C_{2}sin (  \alpha  )  
-		)  
+			E ( \beta ) cos ( \alpha ) -
+			C_{2}sin ( \alpha ) 
+		) 
 		\dot{\beta } 
-	]  + \\
-	+ \omega_{y_{y}} ( t )  
-	[  
-		( B_{1}+B (  \beta  )  )  
-		\dot{\alpha} -
-		D (  \beta  )  \dot{\beta }   
 	] + \\
-	\omega_{z_{y}} ( t )  
+	+ \omega_{y_{y}} ( t ) 
 	[ 
-		-D (  \alpha , \beta  )  \dot{\alpha} + 
+		( B_{1}+B ( \beta ) ) 
+		\dot{\alpha} -
+		D ( \beta ) \dot{\beta } 
+	] + \\
+	\omega_{z_{y}} ( t ) 
+	[ 
+		-D ( \alpha, \beta ) \dot{\alpha} + 
 		( 
-			E (  \beta  ) sin (  \alpha  ) +
-			C_{2}cos (  \alpha  )  
-		)  \dot{\beta }   
-	]   
+			E ( \beta ) sin ( \alpha ) +
+			C_{2}cos ( \alpha ) 
+		) \dot{\beta } 
+	] 
 \end{multlined}
 \end{equation}
 
@@ -711,68 +711,68 @@ T_{e}=
 \label{eq:p3:28}
 \begin{multlined}
 T=\frac{1}{2} 
-\left\lbrace  
-	( B_{1}+B (  \beta  )  )  \dot{\alpha}^{2}+
+\left\lbrace 
+	( B_{1}+B ( \beta ) ) \dot{\alpha}^{2}+
 	C_{2} \dot{\beta} ^{2} - 
-	2D (  \beta  )  \dot{\alpha}  \dot{\beta}  
-\right\rbrace  + \\  
-\omega_{x_{y}} ( t )  
+	2D ( \beta ) \dot{\alpha} \dot{\beta} 
+\right\rbrace + \\ 
+\omega_{x_{y}} ( t ) 
 [ 
-	-F (  \alpha , \beta  )  \dot{\alpha} - 
+	-F ( \alpha, \beta ) \dot{\alpha} - 
 	(
-		E (  \beta  ) cos (  \alpha  ) -
-		C_{2}sin (  \alpha  )  
-	)  \beta  
-]  + \\
-\omega_{y_{y}} ( t )  
-[  
-	( B_{1}+B (  \beta  )  )  \dot{\alpha} -
-	D (  \beta  )  \dot{\beta}  
+		E ( \beta ) cos ( \alpha ) -
+		C_{2}sin ( \alpha ) 
+	) \beta 
+] + \\
+\omega_{y_{y}} ( t ) 
+[ 
+	( B_{1}+B ( \beta ) ) \dot{\alpha} -
+	D ( \beta ) \dot{\beta} 
 ] + \\
 \omega_{z_{y}} ( t ) 
 [ 
-	-D (  \alpha , \beta  )  \dot{\alpha} + 
-	( E (  \beta  ) sin (  \alpha  ) +C_{2}cos (  \alpha  )  )  \dot{\beta}  
+	-D ( \alpha, \beta ) \dot{\alpha} + 
+	( E ( \beta ) sin ( \alpha ) +C_{2}cos ( \alpha ) ) \dot{\beta} 
 ] + \\
 \frac{1}{2} 
 [
-	A (  \alpha , \beta  )  \omega_{x_{y}}^{2} ( t ) + 
-	( B_{1}+B (  \beta  )  )  \omega_{y_{y}}^{2} ( t ) + \\
-	C (  \alpha , \beta  )  \omega_{z_{y}}^{2} ( t ) - 
-	2F (  \alpha , \beta  )  \omega_{x_{y}} ( t )  \omega_{y_{y}} ( t ) - \\
-	2E (  \alpha , \beta  )  \omega_{x_{y}} ( t )  \omega_{z_{y}} ( t ) -
-	2D (  \alpha , \beta  )  \omega_{y_{y}} ( t )  \omega_{z_{y}} ( t )  
+	A ( \alpha, \beta ) \omega_{x_{y}}^{2} ( t ) + 
+	( B_{1}+B ( \beta ) ) \omega_{y_{y}}^{2} ( t ) + \\
+	C ( \alpha, \beta ) \omega_{z_{y}}^{2} ( t ) - 
+	2F ( \alpha, \beta ) \omega_{x_{y}} ( t ) \omega_{y_{y}} ( t ) - \\
+	2E ( \alpha, \beta ) \omega_{x_{y}} ( t ) \omega_{z_{y}} ( t ) -
+	2D ( \alpha, \beta ) \omega_{y_{y}} ( t ) \omega_{z_{y}} ( t ) 
 ].
 \end{multlined}
 \end{equation}
-Выражение (\labelcref{eq:p3:25,eq:p3:28}) определяет кинетическую энергию ОУ с учетом движения носителя и с учетом вибрации. \par
+Выражение (\labelcref{eq:p3:25,eq:p3:28}) определяет кинетическую энергию ОУ с учетом движения носителя и с учетом вибрации. 
 
 \subsection{Вычисление обобщенных сил} \label{sec:ch3/sec7}
 
-Для вычисления составляющих обобщенных сил, характеризующих действие переносных сил инерции (\labelcref{eq:p3:22}), нужно знать ускорение точки \textit{О}. Силы (\labelcref{eq:p3:22}) вызывают появление обобщенных сил\par
+Для вычисления составляющих обобщенных сил, характеризующих действие переносных сил инерции (\labelcref{eq:p3:22}), нужно знать ускорение точки \textit{О}. Силы (\labelcref{eq:p3:22}) вызывают появление обобщенных сил 
 
 \begin{equation} %\tag{3.29}
 \label{eq:p3:29}
 \begin{multlined}
 Q_{i}^{`}= 
-\sum _{j=1}^{2} \sum _{k=1}^{\infty} \left( -m_{k}^{ \left( j \right) }\bar{a}_{0} \frac{ \partial \bar{r}_{k}^{ \left( j \right) }}{ \partial q_{i}} \right) = 
-\sum _{j=1}^{2} \sum _{k=1}^{\infty} \left( -\bar{a}_{0} \frac{ \partial  \left( m_{k}^{ \left( j \right) }\bar{r}_{k}^{ \left( j \right) } \right) }{ \partial q_{i}} \right) = \\
-- \sum _{j=1}^{2}\bar{a}_{0}  \left( \frac{ \partial  \left(  \sum _{k=1}^{\infty} \left( m_{k}^{ \left( j \right) }\bar{r}_{k}^{ \left( j \right) } \right)  \right) }{ \partial q_{i}} \right) =
-- \sum _{j=1}^{2} \left( m_{j}\bar{a}_{0} \frac{ \partial \bar{r}_{C}^{ \left( j \right) }}{ \partial q_{i}} \right)  \left( i=1,2 \right) ,
+\sum _{j=1}^{2} \sum _{k=1}^{\infty} \left( -m_{k}^{ \left( j \right) }\bar{a}_{0} \frac{ tial \bar{r}_{k}^{ \left( j \right) }}{ tial q_{i}} \right) = 
+\sum _{j=1}^{2} \sum _{k=1}^{\infty} \left( -\bar{a}_{0} \frac{ tial \left( m_{k}^{ \left( j \right) }\bar{r}_{k}^{ \left( j \right) } \right) }{ tial q_{i}} \right) = \\
+- \sum _{j=1}^{2}\bar{a}_{0} \left( \frac{ tial \left( \sum _{k=1}^{\infty} \left( m_{k}^{ \left( j \right) }\bar{r}_{k}^{ \left( j \right) } \right) \right) }{ tial q_{i}} \right) =
+- \sum _{j=1}^{2} \left( m_{j}\bar{a}_{0} \frac{ tial \bar{r}_{C}^{ \left( j \right) }}{ tial q_{i}} \right) \left( i=1,2 \right),
 \end{multlined}
 \end{equation}
-здесь  \( \bar{r}_{C}^{ \left( j \right) } \) –\ радиус-вектор центра масс  \textit{j-}го\  тела в системе координат  \( Ox_{y}y_{y}z_{y} \) ,  \( m_{j} \) – масса \textit{j - }го тела,  \( q_{i} \) – \textit{i}–я обобщенная координата. \par
+здесь \( \bar{r}_{C}^{ \left( j \right) } \) –\ радиус-вектор центра масс \textit{j-}го\ тела в системе координат \( Ox_{y}y_{y}z_{y} \), \( m_{j} \) – масса \textit{j - }го тела, \( q_{i} \) – \textit{i}–я обобщенная координата. 
 
-Запишем радиусы-векторы центров масс 1–го и 2–го тел в базисе установочной системы координат: \par
+Запишем радиусы-векторы центров масс 1–го и 2–го тел в базисе установочной системы координат: 
 
 
 \begin{equation} %\tag{3.30}
 \label{eq:p3:30}
 \begin{multlined}
 \bar{r}_{C_{1}}=\bar{e}_{1}\tilde{r}_{C_{1}}=\bar{e}_{y}A_{1}^{T}\tilde{r}_{C_{1}}=\bar{e}_{y} \left( \begin{matrix}
-x_{C_{1}}cos \left(  \alpha  \right) +z_{C_{1}}sin \left(  \alpha  \right) \\
+x_{C_{1}}cos \left( \alpha \right) +z_{C_{1}}sin \left( \alpha \right) \\
 y_{C_{1}}\\
--x_{C_{1}}sin \left(  \alpha  \right) +z_{C_{1}}cos \left(  \alpha  \right) \\
+-x_{C_{1}}sin \left( \alpha \right) +z_{C_{1}}cos \left( \alpha \right) \\
 \end{matrix}
 \right) 
 \end{multlined}
@@ -782,9 +782,9 @@ y_{C_{1}}\\
 \label{eq:p3:31}
 \begin{multlined}
 \bar{r}_{C_{2}}=\bar{e}\tilde{r}_{C_{2}}=\bar{e}_{y}A_{1}^{T}A_{2}^{T}\tilde{r}_{C_{2}}=\bar{e}_{y} \left( \begin{matrix}
-\left( x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right)  \right) cos \left(  \alpha  \right) +z_{C_{2}}sin \left(  \alpha  \right) \\
-x_{C_{2}}sin \left(  \beta  \right) +y_{C_{2}}cos \left(  \beta  \right) \\
-- \left( x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right)  \right) sin \left(  \alpha  \right) +z_{C_{2}}cos \left(  \alpha  \right) \\
+\left( x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \right) cos \left( \alpha \right) +z_{C_{2}}sin \left( \alpha \right) \\
+x_{C_{2}}sin \left( \beta \right) +y_{C_{2}}cos \left( \beta \right) \\
+- \left( x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \right) sin \left( \alpha \right) +z_{C_{2}}cos \left( \alpha \right) \\
 \end{matrix}
 \right) 
 \end{multlined}
@@ -795,24 +795,24 @@ x_{C_{2}}sin \left(  \beta  \right) +y_{C_{2}}cos \left(  \beta  \right) \\
 \label{eq:p3:32}
 \begin{multlined}
 Q_{ \alpha }^{'}=
--\tilde{a}_{O}^{T} ( t )  
-[    
-m_{1} \left(  
+-\tilde{a}_{O}^{T} ( t ) 
+[ 
+m_{1} \left( 
 \begin{matrix}
-	-x_{C_{1}}sin (  \alpha  ) +z_{C_{1}}cos (  \alpha  ) \\
+	-x_{C_{1}}sin ( \alpha ) +z_{C_{1}}cos ( \alpha ) \\
 	0\\
-	-x_{C_{1}}cos \phi _{1}-z_{C_{1}}sin (  \alpha  ) \\
+	-x_{C_{1}}cos \phi _{1}-z_{C_{1}}sin ( \alpha ) \\
 \end{matrix}
-\right)  + \\ 
+\right) + \\ 
  m_{2} 
-\left(   
+\left( 
 \begin{matrix}
-	- ( x_{C_{2}}cos (  \beta  ) -y_{C_{2}}sin (  \beta  )  ) sin (  \alpha  ) +z_{C_{2}}cos (  \alpha  ) \\
+	- ( x_{C_{2}}cos ( \beta ) -y_{C_{2}}sin ( \beta ) ) sin ( \alpha ) +z_{C_{2}}cos ( \alpha ) \\
 	0 \\
-	- ( x_{C_{2}}cos (  \beta  ) -y_{C_{2}}sin (  \beta  )  ) cos (  \alpha  ) -z_{C_{2}}sin (  \alpha  ) \\
+	- ( x_{C_{2}}cos ( \beta ) -y_{C_{2}}sin ( \beta ) ) cos ( \alpha ) -z_{C_{2}}sin ( \alpha ) \\
 \end{matrix} 
-\right)   
-]      ,
+\right) 
+],
 \end{multlined}
 \end{equation}
 
@@ -820,24 +820,24 @@ m_{1} \left(
 \label{eq:p3:33}
 \begin{multlined}
 Q_{ \beta }^{'}=-\tilde{a}_{O}^{T} \left( t \right) m_{2} \left( \begin{matrix}
-\left( -x_{C_{2}}sin \left(  \beta  \right) -y_{C_{2}}cos \left(  \beta  \right)  \right) cos \left(  \alpha  \right) \\
-x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right) \\
-\left( x_{C_{2}}sin \left(  \beta  \right) +y_{C_{2}}cos \left(  \beta  \right)  \right) sin \left(  \alpha  \right) \\
+\left( -x_{C_{2}}sin \left( \beta \right) -y_{C_{2}}cos \left( \beta \right) \right) cos \left( \alpha \right) \\
+x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \\
+\left( x_{C_{2}}sin \left( \beta \right) +y_{C_{2}}cos \left( \beta \right) \right) sin \left( \alpha \right) \\
 \end{matrix}
 \right) 
 \end{multlined}
 \end{equation}
 
-Определим составляющие обобщенных сил, характеризующие действие сил тяжести, \par
+Определим составляющие обобщенных сил, характеризующие действие сил тяжести, 
 
 
 \begin{equation} %\tag{3.34}
 \label{eq:p3:34}
 \begin{multlined}
-Q_{i}^{ \left( p \right) }= \sum _{j=1}^{2} \left( m_{j}g \frac{ \partial \bar{r}_{C}^{ \left( j \right) }}{ \partial q_{i}} \right) ,
+Q_{i}^{ \left( p \right) }= \sum _{j=1}^{2} \left( m_{j}g \frac{ tial \bar{r}_{C}^{ \left( j \right) }}{ tial q_{i}} \right),
 \end{multlined}
 \end{equation}
-Здесь\par
+Здесь 
 
 
 \begin{equation} %\tag{3.35}
@@ -851,7 +851,7 @@ g\\
 \right) 
 \end{multlined}
 \end{equation}
-Используя выражения (\labelcref{eq:p3:30}),(\labelcref{eq:p3:31}),(\labelcref{eq:p3:35}), в соответствии с (\labelcref{eq:p3:34})  находим \par
+Используя выражения (\labelcref{eq:p3:30}),(\labelcref{eq:p3:31}),(\labelcref{eq:p3:35}), в соответствии с (\labelcref{eq:p3:34}) находим 
 
 
 \begin{equation} %\tag{3.36}
@@ -859,22 +859,22 @@ g\\
 \begin{multlined}
 Q_{ \alpha }^{ \left( p \right) }=
 -\tilde{g}^{T}A_{c}^{T}A_{y}^{T} 
-[  
+[ 
 m_{1} \left( 
 \begin{matrix}
-	-x_{C_{1}}sin \left(  \alpha  \right) +z_{C_{1}}cos \left(  \alpha  \right) \\
+	-x_{C_{1}}sin \left( \alpha \right) +z_{C_{1}}cos \left( \alpha \right) \\
 	0\\
-	-x_{C_{1}}cos \phi _{1}-z_{C_{1}}sin \left(  \alpha  \right) \\
+	-x_{C_{1}}cos \phi _{1}-z_{C_{1}}sin \left( \alpha \right) \\
 \end{matrix}
-\right) +  \\
+\right) + \\
 m_{2} \left( 
 \begin{matrix}
-	- \left( x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right)  \right) sin \left(  \alpha  \right) +z_{C_{2}}cos \left(  \alpha  \right) \\
+	- \left( x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \right) sin \left( \alpha \right) +z_{C_{2}}cos \left( \alpha \right) \\
 	0\\
-	- \left( x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right)  \right) cos \left(  \alpha  \right) -z_{C_{2}}sin \left(  \alpha  \right) \\
+	- \left( x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \right) cos \left( \alpha \right) -z_{C_{2}}sin \left( \alpha \right) \\
 \end{matrix}
-\right)  
-]  ,
+\right) 
+],
 \end{multlined}
 \end{equation}
 
@@ -884,78 +884,78 @@ m_{2} \left(
 \label{eq:p3:37}
 \begin{multlined}
 Q_{ \beta }^{ \left( p \right) }=-\tilde{g}^{T}A_{c}^{T}A_{y}^{T}m_{2} \left( \begin{matrix}
-\left( -x_{C_{2}}sin \left(  \beta  \right) -y_{C_{2}}cos \left(  \beta  \right)  \right) cos \left(  \alpha  \right) \\
-x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right) \\
-\left( x_{C_{2}}sin \left(  \beta  \right) +y_{C_{2}}cos \left(  \beta  \right)  \right) sin \left(  \alpha  \right) \\
+\left( -x_{C_{2}}sin \left( \beta \right) -y_{C_{2}}cos \left( \beta \right) \right) cos \left( \alpha \right) \\
+x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \\
+\left( x_{C_{2}}sin \left( \beta \right) +y_{C_{2}}cos \left( \beta \right) \right) sin \left( \alpha \right) \\
 \end{matrix}
 \right) 
 \end{multlined}
 \end{equation}
-Составляющие обобщенных сил, определяющие воздействие приводов и моментов трения, находим, используя метод замораживания:\par
+Составляющие обобщенных сил, определяющие воздействие приводов и моментов трения, находим, используя метод замораживания: 
 
 
 \begin{equation} %\tag{3.38}
 \label{eq:p3:38}
 \begin{multlined}
-Q_{ \alpha }^{ \left( M \right) }=\frac{ \delta A^{ \left(  \alpha  \right) }}{ \delta  \alpha }=M_{\textit{дв.1}}-M_{\textit{тр.1}}sign \left(  \alpha  \right) 
+Q_{ \alpha }^{ \left( M \right) }=\frac{ \delta A^{ \left( \alpha \right) }}{ \delta \alpha }=M_{\textit{дв.1}}-M_{\textit{тр.1}}sign \left( \alpha \right) 
 \end{multlined}
 \end{equation}
-здесь  \( M_{\textit{дв.1}} \) – момент двигателя азимутального привода,\par
+здесь \( M_{\textit{дв.1}} \) – момент двигателя азимутального привода, 
 
-\( M_{\textit{тр.1}} \) – величина момента трения относительно оси вращения \textit{АВ}.\par
+\( M_{\textit{тр.1}} \) – величина момента трения относительно оси вращения \textit{АВ}. 
 
 
 \begin{equation} %\tag{3.39}
 \label{eq:p3:39}
 \begin{multlined}
-Q_{ \beta }^{ \left( M \right) }=\frac{ \delta A^{ \left(  \beta  \right) }}{ \delta  \beta }=M_{\textit{дв.2}}-M_{\textit{тр.2}}sign \left(  \beta  \right) 
+Q_{ \beta }^{ \left( M \right) }=\frac{ \delta A^{ \left( \beta \right) }}{ \delta \beta }=M_{\textit{дв.2}}-M_{\textit{тр.2}}sign \left( \beta \right) 
 \end{multlined}
 \end{equation}
-здесь  \( M_{\textit{дв.2}} \) – момент двигателя угломестного привода,\par
+здесь \( M_{\textit{дв.2}} \) – момент двигателя угломестного привода, 
 
-\( M_{\textit{тр.2}} \) – величина момента трения относительно оси вращения \textit{CD}.\par
+\( M_{\textit{тр.2}} \) – величина момента трения относительно оси вращения \textit{CD}. 
 
-Складывая (\labelcref{eq:p3:32}),(\labelcref{eq:p3:36}),(\labelcref{eq:p3:38}), получим выражение для обобщенной силы  \( Q_{ \alpha } \) :\par
+Складывая (\labelcref{eq:p3:32}),(\labelcref{eq:p3:36}),(\labelcref{eq:p3:38}), получим выражение для обобщенной силы \( Q_{ \alpha } \): 
 
 
 \begin{equation} %\tag{3.40}
 \label{eq:p3:40}
 \begin{multlined}
-Q_{ \alpha }=- \left( \tilde{a}_{O}^{T} \left( t \right) +\tilde{g}^{T}A_{c}^{T}A_{y}^{T} \right)  
-\{   
+Q_{ \alpha }=- \left( \tilde{a}_{O}^{T} \left( t \right) +\tilde{g}^{T}A_{c}^{T}A_{y}^{T} \right) 
+\{ 
 	m_{1} \left( 
 	\begin{array}{c}
-		-x_{C_{1}}sin \left(  \alpha  \right) +z_{C_{1}}cos \left(  \alpha  \right)\\
+		-x_{C_{1}}sin \left( \alpha \right) +z_{C_{1}}cos \left( \alpha \right)\\
 		0\\
-		-x_{C_{1}}cos \left(  \alpha  \right) -z_{C_{1}}sin \left(  \alpha  \right) \\
+		-x_{C_{1}}cos \left( \alpha \right) -z_{C_{1}}sin \left( \alpha \right) \\
 	\end{array}
 	\right) + \\
 	m_{2} \left( 
 	\begin{array}{c}
-		- \left( x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right)  \right) sin \left(  \alpha  \right) +z_{C_{2}}cos \left(  \alpha  \right)\\
+		- \left( x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \right) sin \left( \alpha \right) +z_{C_{2}}cos \left( \alpha \right)\\
 		0\\
-		- \left( x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right)  \right) cos \left(  \alpha  \right) -z_{C_{2}}sin \left(  \alpha  \right)\\
+		- \left( x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \right) cos \left( \alpha \right) -z_{C_{2}}sin \left( \alpha \right)\\
 	\end{array}
-	\right)  
+	\right) 
 \} 
 + \\
 M_{\textit{дв.1}}-
-M_{\textit{тр.1}}sign \left(  \alpha  \right) .
+M_{\textit{тр.1}}sign \left( \alpha \right) .
 \end{multlined}
 \end{equation}
-Складывая (\labelcref{eq:p3:33}),(\labelcref{eq:p3:37}),(\labelcref{eq:p3:39}), получим выражение для обобщенной силы  \( Q_{ \beta } \) :\par
+Складывая (\labelcref{eq:p3:33}),(\labelcref{eq:p3:37}),(\labelcref{eq:p3:39}), получим выражение для обобщенной силы \( Q_{ \beta } \): 
 
 
 \begin{equation} %\tag{3.41}
 \label{eq:p3:41}
 \begin{multlined}
 Q_{ \beta }=- \left( a_{O}^{T} \left( t \right) +g^{T}A_{c}^{T}A_{y}^{T} \right) m_{2} \left( \begin{matrix}
-\left( -x_{C_{2}}sin \left(  \beta  \right) -y_{C_{2}}cos \left(  \beta  \right)  \right) cos \left(  \alpha  \right) \\
-x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right) \\
-\left( x_{C_{2}}sin \left(  \beta  \right) +y_{C_{2}}cos \left(  \beta  \right)  \right) sin \left(  \alpha  \right) \\
+\left( -x_{C_{2}}sin \left( \beta \right) -y_{C_{2}}cos \left( \beta \right) \right) cos \left( \alpha \right) \\
+x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \\
+\left( x_{C_{2}}sin \left( \beta \right) +y_{C_{2}}cos \left( \beta \right) \right) sin \left( \alpha \right) \\
 \end{matrix}
 \right) + \\
-M_{\textit{дв.2}}-M_{\textit{тр.2}}sign \left(  \beta  \right) 
+M_{\textit{дв.2}}-M_{\textit{тр.2}}sign \left( \beta \right) 
 \end{multlined}
 \end{equation}
 
@@ -966,66 +966,66 @@ M_{\textit{дв.2}}-M_{\textit{тр.2}}sign \left(  \beta  \right)
 При нахождении производных при составлении уравнений Лагранжа II-го рода будем учитывать следующие соотношения:
 
 
-\( A \left(  \beta  \right) =\frac{A_{2}+B_{2}}{2}+\frac{A_{2}-B_{2}}{2}cos \left( 2 \beta  \right) +F_{2}sin \left( 2 \beta  \right)  \) ,\par
+\( A \left( \beta \right) =\frac{A_{2}+B_{2}}{2}+\frac{A_{2}-B_{2}}{2}cos \left( 2 \beta \right) +F_{2}sin \left( 2 \beta \right) \), 
 
-\( B \left(  \beta  \right) =\frac{A_{2}+B_{2}}{2}-\frac{A_{2}-B_{2}}{2}cos \left( 2 \beta  \right) -F_{2}sin \left( 2 \beta  \right)  \) ,\par
+\( B \left( \beta \right) =\frac{A_{2}+B_{2}}{2}-\frac{A_{2}-B_{2}}{2}cos \left( 2 \beta \right) -F_{2}sin \left( 2 \beta \right) \), 
 
-\( A_{2} \left(  \beta  \right) =\frac{A_{2}-B_{2}}{2}cos \left( 2 \beta  \right) +F_{2}sin \left( 2 \beta  \right)  \) ,\par
+\( A_{2} \left( \beta \right) =\frac{A_{2}-B_{2}}{2}cos \left( 2 \beta \right) +F_{2}sin \left( 2 \beta \right) \), 
 
-\( \frac{dB \left(  \beta  \right) }{d \beta }=-2F \left(  \beta  \right)  \) ,\ \ \   \( \frac{dA \left(  \beta  \right) }{d \beta }=2F \left(  \beta  \right)  \) ,\ \ \   \( \frac{dF \left(  \beta  \right) }{d \beta }=-2A_{2} \left(  \beta  \right)  \) ,\par
+\( \frac{dB \left( \beta \right) }{d \beta }=-2F \left( \beta \right) \),\ \ \ \( \frac{dA \left( \beta \right) }{d \beta }=2F \left( \beta \right) \),\ \ \ \( \frac{dF \left( \beta \right) }{d \beta }=-2A_{2} \left( \beta \right) \), 
 
-\( \frac{dD \left(  \beta  \right) }{d \beta }=E \left(  \beta  \right)  \) ,\ \ \   \( \frac{dE \left(  \beta  \right) }{d \beta }=-D \left(  \beta  \right)  \) ,\par
+\( \frac{dD \left( \beta \right) }{d \beta }=E \left( \beta \right) \),\ \ \ \( \frac{dE \left( \beta \right) }{d \beta }=-D \left( \beta \right) \), 
 
 \( 
-A \left(  \alpha , \beta  \right) =
-\frac{A_{1}+A \left(  \beta  \right) +C_{1}+C_{2}}{2}+\frac{A_{1}+A \left(  \beta  \right) -C_{1}-C_{2}}{2}cos \left( 2 \alpha  \right) - \left( E_{1}+E \left(  \beta  \right)  \right) sin \left( 2 \alpha  \right)  \) ,\par
+A \left( \alpha, \beta \right) =
+\frac{A_{1}+A \left( \beta \right) +C_{1}+C_{2}}{2}+\frac{A_{1}+A \left( \beta \right) -C_{1}-C_{2}}{2}cos \left( 2 \alpha \right) - \left( E_{1}+E \left( \beta \right) \right) sin \left( 2 \alpha \right) \), 
 
-\( C \left(  \alpha , \beta  \right) =\frac{A_{1}+A \left(  \beta  \right) +C_{1}+C_{2}}{2}-\frac{A_{1}+A \left(  \beta  \right) -C_{1}+C_{2}}{2}cos \left( 2 \alpha  \right) + \left( E_{1}+E \left(  \beta  \right)  \right) sin \left( 2 \alpha  \right)  \) ,\par
+\( C \left( \alpha, \beta \right) =\frac{A_{1}+A \left( \beta \right) +C_{1}+C_{2}}{2}-\frac{A_{1}+A \left( \beta \right) -C_{1}+C_{2}}{2}cos \left( 2 \alpha \right) + \left( E_{1}+E \left( \beta \right) \right) sin \left( 2 \alpha \right) \), 
 
-\( A_{1} \left(  \alpha , \beta  \right) =\frac{A_{1}+A \left(  \beta  \right) -C_{1}-C_{2}}{2}cos \left( 2 \alpha  \right) - \left( E_{1}+E \left(  \beta  \right)  \right) sin \left( 2 \alpha  \right)  \) ,\par
+\( A_{1} \left( \alpha, \beta \right) =\frac{A_{1}+A \left( \beta \right) -C_{1}-C_{2}}{2}cos \left( 2 \alpha \right) - \left( E_{1}+E \left( \beta \right) \right) sin \left( 2 \alpha \right) \), 
 
-\( \frac{ \partial A \left(  \alpha , \beta  \right) }{ \partial  \alpha }=-2E \left(  \alpha , \beta  \right)  \) ,   \( \frac{ \partial С \left(  \alpha , \beta  \right) }{ \partial  \alpha }=2E \left(  \alpha , \beta  \right)  \) ,   \( \frac{ \partial E \left(  \alpha , \beta  \right) }{ \partial  \alpha }=2A_{1} \left(  \alpha , \beta  \right)  \) ,\par
+\( \frac{ tial A \left( \alpha, \beta \right) }{ tial \alpha }=-2E \left( \alpha, \beta \right) \), \( \frac{ tial С \left( \alpha, \beta \right) }{ tial \alpha }=2E \left( \alpha, \beta \right) \), \( \frac{ tial E \left( \alpha, \beta \right) }{ tial \alpha }=2A_{1} \left( \alpha, \beta \right) \), 
 
-\( \frac{ \partial F \left(  \alpha , \beta  \right) }{ \partial  \alpha }=D \left(  \alpha , \beta  \right)  \) ,   \( \frac{ \partial D \left(  \alpha , \beta  \right) }{ \partial  \alpha }=-F \left(  \alpha , \beta  \right)  \) ,\par
+\( \frac{ tial F \left( \alpha, \beta \right) }{ tial \alpha }=D \left( \alpha, \beta \right) \), \( \frac{ tial D \left( \alpha, \beta \right) }{ tial \alpha }=-F \left( \alpha, \beta \right) \), 
 
-\( \frac{ \partial A \left(  \alpha , \beta  \right) }{ \partial  \beta }=F \left(  \beta  \right)  \left( 1+cos \left( 2 \alpha  \right)  \right) +D \left(  \beta  \right) sin \left( 2 \alpha  \right)  \) ,\par
+\( \frac{ tial A \left( \alpha, \beta \right) }{ tial \beta }=F \left( \beta \right) \left( 1+cos \left( 2 \alpha \right) \right) +D \left( \beta \right) sin \left( 2 \alpha \right) \), 
 
-\( \frac{ \partial C \left(  \alpha , \beta  \right) }{ \partial  \beta }=F \left(  \beta  \right)  \left( 1-cos \left( 2 \alpha  \right)  \right) -D \left(  \beta  \right) sin \left( 2 \alpha  \right)  \) ,\par
+\( \frac{ tial C \left( \alpha, \beta \right) }{ tial \beta }=F \left( \beta \right) \left( 1-cos \left( 2 \alpha \right) \right) -D \left( \beta \right) sin \left( 2 \alpha \right) \), 
 
-\( \frac{ \partial E \left(  \alpha , \beta  \right) }{ \partial  \beta }=F \left(  \beta  \right) sin \left( 2 \alpha  \right) -D \left(  \beta  \right) cos \left( 2 \alpha  \right)  \) ,\par
+\( \frac{ tial E \left( \alpha, \beta \right) }{ tial \beta }=F \left( \beta \right) sin \left( 2 \alpha \right) -D \left( \beta \right) cos \left( 2 \alpha \right) \), 
 
-\( \frac{ \partial F \left(  \alpha , \beta  \right) }{ \partial  \beta }=-2A_{2} \left(  \beta  \right) cos \left(  \alpha  \right) +E \left(  \beta  \right) sin \left(  \alpha  \right)  \) ,\par
+\( \frac{ tial F \left( \alpha, \beta \right) }{ tial \beta }=-2A_{2} \left( \beta \right) cos \left( \alpha \right) +E \left( \beta \right) sin \left( \alpha \right) \), 
 
-\( \frac{ \partial D \left(  \alpha , \beta  \right) }{ \partial  \beta }=E \left(  \beta  \right) cos \left(  \alpha  \right) +2A_{2} \left(  \beta  \right) sin \left(  \alpha  \right)  \) .\par
+\( \frac{ tial D \left( \alpha, \beta \right) }{ tial \beta }=E \left( \beta \right) cos \left( \alpha \right) +2A_{2} \left( \beta \right) sin \left( \alpha \right) \) . 
 
-Кинетическая энергия ОУ определяется выражением (\labelcref{eq:p3:28}). Проведем над ней действия в соответствии с уравнениями Лагранжа II-го рода (\labelcref{eq:p3:24}) с учетом приведенных выше равенств:\par
+Кинетическая энергия ОУ определяется выражением (\labelcref{eq:p3:28}). Проведем над ней действия в соответствии с уравнениями Лагранжа II-го рода (\labelcref{eq:p3:24}) с учетом приведенных выше равенств: 
 
 % MESTA
 \begin{equation}%	\tag{3.42}
 \label{eq:p3:42}
 \begin{multlined}
-\frac{\partial T}{\partial \dot \alpha}= 
+\frac{ tial T}{ tial \dot \alpha}= 
 (B_1 + B(\beta)) \dot{\alpha} - 
  D(\beta) \dot{\beta} + \\
 (
 	-\omega_{x_y} (t) F(\alpha, \beta)
 	+\omega_{y_y} (t) (B_1 + B(\beta))
 	-\omega_{z_y} (t) D(\alpha, \beta)
-)  ,
+),
 \end{multlined}
 \end{equation}
 
 \begin{equation}%	\tag{3.42+}
 \label{eq:p3:42+}
 \begin{multlined}
-\frac{d}{d t}\left( \frac{\partial T}{\partial \dot \alpha}\right) = 
+\frac{d}{d t}\left( \frac{ tial T}{ tial \dot \alpha}\right) = 
 (B_1 + B(\beta)) \ddot{\alpha} - 
 D(\beta) \ddot{\beta} - 
 2F(\beta)\dot{\alpha}\dot{\beta} - 
 E(\beta)\dot{\beta}^2 
 +
 \\
-\{  
+\{ 
 	-\omega_{x_y} (t) \left[ D(\alpha, \beta)\dot{\alpha} + (-2A_2(\beta)cos(\alpha)+E(\beta)sin(\alpha))\dot{\beta} \right] -\\
 	\omega_{y_y} (t) 2F(\beta)\dot{\beta}-\\
 	\omega_{z_y} (t) 
@@ -1044,7 +1044,7 @@ E(\beta)\dot{\beta}^2
 	+\dot{\omega}_{y_y} (t) (B_1 + B(\beta))
 	-\dot{\omega}_{z_y} (t) D(\alpha, \beta)
 \}
-  ,
+,
 \end{multlined}
 \end{equation}
 
@@ -1052,7 +1052,7 @@ E(\beta)\dot{\beta}^2
 \begin{equation}%	\tag{3.43}
 \label{eq:p3:43}
 \begin{multlined}
-\frac{\partial T}{\partial \alpha}=
+\frac{ tial T}{ tial \alpha}=
 \{
 	\omega_{x_y} (t) 
 	\left[ 
@@ -1062,7 +1062,7 @@ E(\beta)\dot{\beta}^2
 			E(\beta) sin(\alpha) +
 			C_2 cos(\alpha)
 		\} \dot{\beta}
-	\right]  +\\
+	\right] +\\
 	\omega_{z_y} (t)
 	\left[ 
 		F(\alpha, \beta)\dot{\alpha}
@@ -1073,7 +1073,7 @@ E(\beta)\dot{\beta}^2
 		\} \dot{\beta}
 	\right] 
 \}
-  +\\
+ +\\
 \frac{1}{2}
 \{
  	-2E(\alpha, \beta)\omega^2_{x_y}(t) +
@@ -1082,7 +1082,7 @@ E(\beta)\dot{\beta}^2
  	4A_1(\alpha, \beta)\omega^2_{x_y}(t) \omega^2_{z_y}(t) +\\
  	2F(\alpha, \beta)\omega^2_{y_y}(t) \omega^2_{z_y}(t)
 \} 
-  ,
+,
 \end{multlined}
 \end{equation}
 
@@ -1091,26 +1091,26 @@ E(\beta)\dot{\beta}^2
 \begin{equation}%	\tag{3.44}
 \label{eq:p3:44}
 \begin{multlined}
-\frac{\partial T}{\partial \dot \beta}= 
+\frac{ tial T}{ tial \dot \beta}= 
 C_2 \dot{\beta} - D(\beta)\dot{\alpha} + 
 [ 
 	-\omega_{x_y} (t) (E(\beta)cos(\alpha) - C_2 sin(\alpha))
 	+\omega_{y_y} (t) D(\beta) - \\
 	\omega_{z_y} (t) (E(\beta)sin(\alpha) + C_2 cos(\alpha))
-]   ,
+],
 \end{multlined}
 \end{equation}
 
 \begin{equation}%	\tag{3.44+}
 \label{eq:p3:44+}
 \begin{multlined}
-\frac{d}{d t}\left( \frac{\partial T}{\partial \dot \beta}\right) = 
+\frac{d}{d t}\left( \frac{ tial T}{ tial \dot \beta}\right) = 
 C_2 \ddot{\beta} - 
 D(\beta) \ddot{\alpha} - 
 E(\beta)\dot{\alpha}\dot{\beta}+
 \\
-\{  
-	\omega_{x_y} (t) \left[  D(\beta) \dot{\beta} cos(\alpha) + ( E(\beta)sin(\alpha) + C_2 cos(\alpha) )\dot{\alpha}\right] -\\
+\{ 
+	\omega_{x_y} (t) \left[ D(\beta) \dot{\beta} cos(\alpha) + ( E(\beta)sin(\alpha) + C_2 cos(\alpha) )\dot{\alpha}\right] -\\
 	\omega_{y_y} (t) E(\beta)\dot{\beta}+
 	\omega_{z_y} (t) \left[ 
 		-D(\beta)\dot{\beta}sin(\alpha)
@@ -1134,29 +1134,29 @@ E(\beta)\dot{\alpha}\dot{\beta}+
 \begin{equation}%	\tag{3.45}
 \label{eq:p3:45}
 \begin{multlined}
-\frac{ \partial T}{ \partial  \beta }=-F \left(  \beta  \right) \dot \alpha ^{2}-E \left(  \beta  \right)  \dot \alpha \dot \beta +\\ 
-\{  
+\frac{ tial T}{ tial \beta }=-F \left( \beta \right) \dot \alpha ^{2}-E \left( \beta \right) \dot \alpha \dot \beta +\\ 
+\{ 
 	\omega _{x_{y}} 
-		\left( t \right)  \left[  \left( 2A_{2} \left(  \beta  \right) cos \left(  \alpha  \right) -E \left(  \beta  \right) sin \left(  \alpha  \right)  \right)  \dot \alpha +
-		D \left(  \beta  \right) cos \left(  \alpha  \right) \dot \beta  \right] - \\
+		\left( t \right) \left[ \left( 2A_{2} \left( \beta \right) cos \left( \alpha \right) -E \left( \beta \right) sin \left( \alpha \right) \right) \dot \alpha +
+		D \left( \beta \right) cos \left( \alpha \right) \dot \beta \right] - \\
  	\omega _{y_{y}} 
- 		\left( t \right)  \left[ 2F \left(  \beta  \right) \dot \alpha +E \left(  \beta  \right) \dot \beta  \right] - \\
+ 		\left( t \right) \left[ 2F \left( \beta \right) \dot \alpha +E \left( \beta \right) \dot \beta \right] - \\
  	\omega_{z_{y}} 
- 		\left( t \right)  \left[  \left( E \left(  \beta  \right) cos \left(  \alpha  \right) +2A_{2} \left(  \beta  \right) sin \left(  \alpha  \right)  \right) \dot \alpha +
- 		D \left(  \beta  \right) sin \left(  \alpha  \right) \dot \beta  \right]  
+ 		\left( t \right) \left[ \left( E \left( \beta \right) cos \left( \alpha \right) +2A_{2} \left( \beta \right) sin \left( \alpha \right) \right) \dot \alpha +
+ 		D \left( \beta \right) sin \left( \alpha \right) \dot \beta \right] 
 \} +\\ 
 \frac{1}{2} 
-\{  
+\{ 
 	\left[ 
-		F \left(  \beta  \right)  \left( 1+cos \left( 2 \alpha  \right)  \right) +D \left(  \beta  \right) sin \left( 2 \alpha  \right)  \right]  \omega _{x_{y}}^{2} \left( t \right) -2F \left(  \beta  \right)  \omega _{y_{y}}^{2} \left( t \right) + \\ 
+		F \left( \beta \right) \left( 1+cos \left( 2 \alpha \right) \right) +D \left( \beta \right) sin \left( 2 \alpha \right) \right] \omega _{x_{y}}^{2} \left( t \right) -2F \left( \beta \right) \omega _{y_{y}}^{2} \left( t \right) + \\ 
 	\left[ 
-		F \left(  \beta  \right)  \left( 1-cos \left( 2 \alpha  \right)  \right) -D \left(  \beta  \right) sin \left( 2 \alpha  \right)  \right]  \omega _{z_{y}}^{2} \left( t \right) +\\
+		F \left( \beta \right) \left( 1-cos \left( 2 \alpha \right) \right) -D \left( \beta \right) sin \left( 2 \alpha \right) \right] \omega _{z_{y}}^{2} \left( t \right) +\\
 	2 \left[ 
-		2A_{2} \left(  \beta  \right) cos \left(  \alpha  \right) -E \left(  \beta  \right) sin \left(  \alpha  \right)  \right]  \omega _{x_{y}} \left( t \right)  \omega _{y_{y}} \left( t \right) -\\
+		2A_{2} \left( \beta \right) cos \left( \alpha \right) -E \left( \beta \right) sin \left( \alpha \right) \right] \omega _{x_{y}} \left( t \right) \omega _{y_{y}} \left( t \right) -\\
 	2 \left[ 
-		F \left(  \beta  \right) sin \left( 2 \alpha  \right) -D \left(  \beta  \right) cos \left( 2 \alpha  \right)  \right]  \omega _{x_{y}} \left( t \right)  \omega _{z_{y}} \left( t \right) -\\
+		F \left( \beta \right) sin \left( 2 \alpha \right) -D \left( \beta \right) cos \left( 2 \alpha \right) \right] \omega _{x_{y}} \left( t \right) \omega _{z_{y}} \left( t \right) -\\
 	2 \left[ 
-		E \left(  \beta  \right) cos \left(  \alpha  \right) +2A_{2} \left(  \beta  \right) sin \left(  \alpha  \right)  \right]  \omega _{y_{y}} \left( t \right)  \omega _{z_{y}} \left( t \right)  
+		E \left( \beta \right) cos \left( \alpha \right) +2A_{2} \left( \beta \right) sin \left( \alpha \right) \right] \omega _{y_{y}} \left( t \right) \omega _{z_{y}} \left( t \right) 
 \} .
 \end{multlined}
 \end{equation}
@@ -1170,63 +1170,63 @@ E(\beta)\dot{\alpha}\dot{\beta}+
 \begin{multlined}
 	( 
 		B_{1}+
-		B (  \beta  )  
+		B ( \beta ) 
 	) \ddot \alpha -
-	D (  \beta  ) \ddot \beta -
-	2F (  \beta  ) \dot \alpha \dot \beta -
-	E (  \beta  )  \dot{\beta}^{2}+ \\
-	 \lbrace  
-	 	- \omega _{x_{y}} ( t )  
-	 		[  
-	 			( C_{2}-2A_{2} (  \beta  )  ) cos (  \alpha  ) +
-	 			2E (  \beta  ) sin (  \alpha  )    
-	 		]  - \\  
+	D ( \beta ) \ddot \beta -
+	2F ( \beta ) \dot \alpha \dot \beta -
+	E ( \beta ) \dot{\beta}^{2}+ \\
+	 \lbrace 
+	 	- \omega _{x_{y}} ( t ) 
+	 		[ 
+	 			( C_{2}-2A_{2} ( \beta ) ) cos ( \alpha ) +
+	 			2E ( \beta ) sin ( \alpha ) 
+	 		] - \\ 
 	 	\omega _{y_{y}} ( t ) 
-	 		2F (  \beta  ) - 
-	 	\omega _{z_{y}} ( t )  
-	 		[  
-	 			 2E (  \beta  ) cos (  \alpha  ) - 
-	 			 ( C_{2}-2A_{2} (  \beta  )  ) sin (  \alpha  )    
-	 		]  
-	 \rbrace   
+	 		2F ( \beta ) - 
+	 	\omega _{z_{y}} ( t ) 
+	 		[ 
+	 			 2E ( \beta ) cos ( \alpha ) - 
+	 			 ( C_{2}-2A_{2} ( \beta ) ) sin ( \alpha ) 
+	 		] 
+	 \rbrace 
 	 \dot \beta +\\ 
-	 \lbrace  
-	 	- \dot\omega _{x_{y}} ( t ) F (  \alpha , \beta  )  +   
-	 	\dot\omega _{y_{y}} ( t )  ( B_{1}+B (  \beta  )  ) - 
-	 	\dot\omega _{z_{y}} ( t ) D (  \alpha , \beta  )  
-	 \rbrace  
+	 \lbrace 
+	 	- \dot\omega _{x_{y}} ( t ) F ( \alpha, \beta ) + 
+	 	\dot\omega _{y_{y}} ( t ) ( B_{1}+B ( \beta ) ) - 
+	 	\dot\omega _{z_{y}} ( t ) D ( \alpha, \beta ) 
+	 \rbrace 
  	+\\
- 	\lbrace  
- 		E (  \alpha , \beta  )  \omega _{x_{y}}^{2} ( t ) -
- 		E (  \alpha , \beta  )  \omega _{z_{y}}^{2} ( t ) + \\
- 		D (  \alpha , \beta  )  \omega _{x_{y}} ( t )  \omega _{y_{y}} ( t ) +
- 		2A_{1} (  \alpha , \beta  )  \omega _{x_{y}} ( t )  \omega _{z_{y}} ( t ) -\\
- 		F (  \alpha , \beta  )  \omega _{y_{y}} ( t )  \omega _{z_{y}} ( t )  
- 	\rbrace  
+ 	\lbrace 
+ 		E ( \alpha, \beta ) \omega _{x_{y}}^{2} ( t ) -
+ 		E ( \alpha, \beta ) \omega _{z_{y}}^{2} ( t ) + \\
+ 		D ( \alpha, \beta ) \omega _{x_{y}} ( t ) \omega _{y_{y}} ( t ) +
+ 		2A_{1} ( \alpha, \beta ) \omega _{x_{y}} ( t ) \omega _{z_{y}} ( t ) -\\
+ 		F ( \alpha, \beta ) \omega _{y_{y}} ( t ) \omega _{z_{y}} ( t ) 
+ 	\rbrace 
  =-\\
 ( 
 	\tilde{a}_{O}^{T} ( t ) +\tilde{g}^{T}A_{c}^{T}A_{y}^{T} 
-)  
-\lbrace  
+) 
+\lbrace 
 	m_{1} 
 	\left( 
 	\begin{array}{c}
-		-x_{C_{1}}sin (  \alpha  ) +z_{C_{1}}cos (  \alpha  ) \\
+		-x_{C_{1}}sin ( \alpha ) +z_{C_{1}}cos ( \alpha ) \\
 		0\\
-		-x_{C_{1}}cos (  \alpha  ) -z_{C_{1}}sin (  \alpha  ) \\
+		-x_{C_{1}}cos ( \alpha ) -z_{C_{1}}sin ( \alpha ) \\
 	\end{array}
-	\right)  +\\
+	\right) +\\
 	m_2
 	\left( 
 	\begin{array}{c}
-	- \left( x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right)  \right) sin \left(  \alpha  \right) +z_{C_{2}}cos \left(  \alpha  \right)\\
+	- \left( x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \right) sin \left( \alpha \right) +z_{C_{2}}cos \left( \alpha \right)\\
 	0\\
-	- \left( x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right)  \right) cos \left(  \alpha  \right) -z_{C_{2}}sin \left(  \alpha  \right)\\
+	- \left( x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \right) cos \left( \alpha \right) -z_{C_{2}}sin \left( \alpha \right)\\
 	\end{array}
-	\right)  
+	\right) 
 \rbrace 
 +\\
-M_{\textit{дв.1}}-M_{\textit{тр.1}}sign (  \dot \alpha  )
+M_{\textit{дв.1}}-M_{\textit{тр.1}}sign ( \dot \alpha )
 \end{multlined}
 \end{equation}
 
@@ -1235,44 +1235,323 @@ M_{\textit{дв.1}}-M_{\textit{тр.1}}sign (  \dot \alpha  )
 \label{eq:p3:47}
 \begin{multlined}
 C_{2} \ddot \beta -
-D \left(  \beta  \right) \ddot \alpha +
-F \left(  \beta  \right)  \dot{\alpha}^{2}+ \\
-\lbrace  
-	\omega _{x_{y}} \left( t \right)  \left[  \left( 2E \left(  \beta  \right) sin \left(  \alpha  \right) + \left( C_{2}-2A_{2} \left(  \beta  \right)  \right) cos \left(  \alpha  \right)  \right)  \right]  + \\ 
-	\omega _{y_{y}} \left( t \right) 2F \left(  \beta  \right) + 
-	\omega _{z_{y}} \left( t \right)  \left[ 2E \left(  \beta  \right) cos \left(  \alpha  \right) - \left( C_{2}-2A_{2} \left(  \beta  \right)  \right) sin \left(  \alpha  \right)  \right]  
-\rbrace  
+D \left( \beta \right) \ddot \alpha +
+F \left( \beta \right) \dot{\alpha}^{2}+ \\
+\lbrace 
+	\omega _{x_{y}} \left( t \right) \left[ \left( 2E \left( \beta \right) sin \left( \alpha \right) + \left( C_{2}-2A_{2} \left( \beta \right) \right) cos \left( \alpha \right) \right) \right] + \\ 
+	\omega _{y_{y}} \left( t \right) 2F \left( \beta \right) + 
+	\omega _{z_{y}} \left( t \right) \left[ 2E \left( \beta \right) cos \left( \alpha \right) - \left( C_{2}-2A_{2} \left( \beta \right) \right) sin \left( \alpha \right) \right] 
+\rbrace 
 \dot \alpha +\\
 \lbrace 
-	- \dot \omega _{x_{y}} \left( t \right)  \left[ E \left(  \beta  \right) cos \left(  \alpha  \right) -C_{2}^{}sin \left(  \alpha  \right)  \right]  - \\ 
-	\dot \omega _{y_{y}} \left( t \right) D \left(  \beta  \right) + 
-	\dot \omega _{z_{y}} \left( t \right)  \left[ E \left(  \beta  \right) sin \left(  \alpha  \right) +C_{2}cos \left(  \alpha  \right)  \right]  
+	- \dot \omega _{x_{y}} \left( t \right) \left[ E \left( \beta \right) cos \left( \alpha \right) -C_{2}^{}sin \left( \alpha \right) \right] - \\ 
+	\dot \omega _{y_{y}} \left( t \right) D \left( \beta \right) + 
+	\dot \omega _{z_{y}} \left( t \right) \left[ E \left( \beta \right) sin \left( \alpha \right) +C_{2}cos \left( \alpha \right) \right] 
 \rbrace -\\
 \frac{1}{2} 
-\lbrace  
+\lbrace 
 	\left[ 
-		F \left(  \beta  \right)  \left( 1+cos \left( 2 \alpha  \right)  \right) +D \left(  \beta  \right) sin \left( 2 \alpha  \right)  \right]  \omega _{x_{y}}^{2} \left( t \right) -
-		2F \left(  \beta  \right)  \omega _{y_{y}}^{2} \left( t \right) +\\
-		\left[ F \left(  \beta  \right)  \left( 1-cos \left( 2 \alpha  \right)  \right) -D \left(  \beta  \right) sin \left( 2 \alpha  \right)  \right]  \omega _{z_{y}}^{2} \left( t \right) +
-		2 \left[ 2A_{2} \left(  \beta  \right) cos \left(  \alpha  \right) -E \left(  \beta  \right) sin \left(  \alpha  \right)  \right]  \omega _{x_{y}} \left( t \right)  \omega _{y_{y}} \left( t \right) -\\
-		2 \left[ F \left(  \beta  \right) sin \left( 2 \alpha  \right) -D \left(  \beta  \right) cos \left( 2 \alpha  \right)  \right]  \omega _{x_{y}} \left( t \right)  \omega _{z_{y}} \left( t \right) - 
-		\left( -2 \left[ E \left(  \beta  \right) cos \left(  \alpha  \right) +2A_{2} \left(  \beta  \right) sin \left(  \alpha  \right)  \right]  \omega _{y_{y}} \left( t \right)  \omega _{z_{y}} \left( t \right)  
+		F \left( \beta \right) \left( 1+cos \left( 2 \alpha \right) \right) +D \left( \beta \right) sin \left( 2 \alpha \right) \right] \omega _{x_{y}}^{2} \left( t \right) -
+		2F \left( \beta \right) \omega _{y_{y}}^{2} \left( t \right) +\\
+		\left[ F \left( \beta \right) \left( 1-cos \left( 2 \alpha \right) \right) -D \left( \beta \right) sin \left( 2 \alpha \right) \right] \omega _{z_{y}}^{2} \left( t \right) +\\
+		2 \left[ 2A_{2} \left( \beta \right) cos \left( \alpha \right) -E \left( \beta \right) sin \left( \alpha \right) \right] \omega _{x_{y}} \left( t \right) \omega _{y_{y}} \left( t \right) -\\
+		2 \left[ F \left( \beta \right) sin \left( 2 \alpha \right) -D \left( \beta \right) cos \left( 2 \alpha \right) \right] \omega _{x_{y}} \left( t \right) \omega _{z_{y}} \left( t \right) - \\
+		2 \left[ E \left( \beta \right) cos \left( \alpha \right) +2A_{2} \left( \beta \right) sin \left( \alpha \right) \right] \omega _{y_{y}} \left( t \right) \omega _{z_{y}} \left( t \right) 
 \rbrace 
 = -\\
-\left( a_{O}^{T} \left( t \right) +g^{T}A_{c}^{T}A_{y}^{T} \right) m_{2} 
+\left( \tilde{a}_{O}^{T} \left( t \right) +\tilde{g}^{T}A_{c}^{T}A_{y}^{T} \right) m_{2} 
 \left( \begin{array}{c}
-	\left( -x_{C_{2}}sin \left(  \beta  \right) -y_{C_{2}}cos \left(  \beta  \right)  \right) cos \left(  \alpha  \right) \\
-	x_{C_{2}}cos \left(  \beta  \right) -y_{C_{2}}sin \left(  \beta  \right) \\
-	\left( x_{C_{2}}sin \left(  \beta  \right) +y_{C_{2}}cos \left(  \beta  \right)  \right) sin \left(  \alpha  \right) \\
+	\left( -x_{C_{2}}sin \left( \beta \right) -y_{C_{2}}cos \left( \beta \right) \right) cos \left( \alpha \right) \\
+	x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \\
+	\left( x_{C_{2}}sin \left( \beta \right) +y_{C_{2}}cos \left( \beta \right) \right) sin \left( \alpha \right) \\
 \end{array}
-\right) +M_{\textit{дв.2}}-M_{\textit{тр.2}}sign \left(  \beta  \right) .
+\right) +\\
+M_{\textit{дв.2}}-M_{\textit{тр.2}}sign \left( \beta \right) .
 \end{multlined}
 \end{equation}
 
-Уравнения (3.46),(3.47) определяют движение ОУ, установленного на ЛА, совершающем любой маневр с учетом вибрации установочной системы координат. Представим эти уравнения в матричном виде:
+Уравнения (\labelcref{eq:p3:46}),(\labelcref{eq:p3:47}) определяют движение ОУ, установленного на ЛА, совершающем любой маневр с учетом вибрации установочной системы координат. Представим эти уравнения в матричном виде:
 
+\begin{equation}%\tag{3.48}
+\label{eq:p3:48}
+\begin{multlined}
+A \left( q \right) \ddot q+B \left( t,q \right) \dot q+F \left( q,\dot q \right) +W \left( t,q \right) +Q \left( t,q \right) =M_{\textit{дв}}-M_{\textit{тр}}
+\end{multlined}
+\end{equation}
+
+где \( q= \left( 
+\begin{matrix}
+\alpha & \beta \\
+\end{matrix}
+\right)^{T} 
+\), 
+
+\( A \left( q \right) = \left( \begin{matrix}
+B_{1}+B \left( \beta \right) & -D \left( \beta \right) \\
+-D \left( \beta \right) & C_{2}\\
+\end{matrix}
+\right) \),\ \ \ \ \( B \left( t,q \right) = \left( \begin{matrix}
+0 & b_{ \alpha \beta } \left( t, \alpha, \beta \right) \\
+-b_{ \alpha \beta } \left( t, \alpha, \beta \right) & 0\\
+\end{matrix}
+\right) \), 
+
+\( F \left( q,\dot q \right) = \left( \begin{matrix}
+-2 \alpha \beta F \left( \dot \alpha, \dot \beta \right) - {\dot \beta}^{2}E \left( \beta \right) \\
+\dot \alpha ^{2}F \left( \beta \right) \\
+\end{matrix}
+\right) \),\ \ \ \ \ \ \ \( W \left( t,q \right) = \left( \begin{matrix}
+w_{ \alpha } \left( t,q \right) \\
+w_{ \beta } \left( t,q \right) \\
+\end{matrix}
+\right) \), 
+
+\(
+Q(t,q)=
+\left( 
+\begin{matrix}
+r_{\alpha} (q) \\
+r_{\beta} (q) \\
+\end{matrix}
+\right)
+(\tilde{a}_O + A_y A_c \tilde{g})
+\),
+
+\( M_{\textit{дв}}= \left( \begin{matrix}
+M_{\textit{дв.1}}\\
+M_{\textit{дв.2}}\\
+\end{matrix}
+\right) \),\ \ \( M_{\textit{тр}}= \left( \begin{matrix}
+M_{\textit{тр.1}}sign \left( \dot \alpha \right) \\
+M_{\textit{тр.2}}sign \left( \dot \beta \right) \\
+\end{matrix}
+\right) \), 
+
+здесь 
+
+\begin{equation}
+\label{eq:p3:48+1}
+\begin{multlined}
+b_{ \alpha \beta } \left( t, \alpha, \beta \right) = \lbrace \left( 2A_{2} \left( \beta \right) -C_{2} \right) cos \alpha -2E \left( \beta \right) sin \alpha \rbrace \omega _{x_{y}} \left( t \right) -2F \left( \beta \right) \omega _{y_{y}} \left( t \right) - \\ 
+\lbrace \left( 2A_{2} \left( \beta \right) -C_{2} \right) sin \alpha +2E \left( \beta \right) cos \alpha \rbrace \omega _{z_{y}} \left( t \right) ;
+\end{multlined}
+\end{equation}
+
+\begin{equation}
+\label{eq:p3:48+2}
+\begin{multlined}
+w_{ \alpha } ( t,q ) = 
+\lbrace - \dot \omega _{x_{y}} ( t ) F ( \alpha, \beta ) + 
+\dot \omega _{y_{y}} ( t ) ( B_{1}+B ( \beta ) ) - 
+\dot \omega _{z_{y}} ( t ) D ( \alpha, \beta ) \rbrace +\\
+\lbrace E ( \alpha, \beta ) \omega _{x_{y}}^{2} ( t ) -E ( \alpha, \beta ) \omega _{z_{y}}^{2} ( t ) +\\
+D ( \alpha, \beta ) \omega ( t ) \omega _{y_{y}} ( t ) +2A_{1} ( \alpha, \beta ) \omega _{x_{y}} ( t ) \omega _{z_{y}} ( t ) -F ( \alpha, \beta ) \omega _{y_{y}} ( t ) \omega _{z_{y}} ( t ) \rbrace ;
+\end{multlined}
+\end{equation}
+
+\begin{equation}
+\label{eq:p3:48+3}
+\begin{multlined}
+w_{ \beta } \left( t,q \right) = 
+\lbrace 
+- \dot \omega _{x_{y}} \left( t \right) \left[ E \left( \beta \right) cos \left( \alpha \right) -C_{2}^{}sin \left( \alpha \right) \right] -\\
+\dot \omega _{y_{y}} \left( t \right) D \left( \beta \right) + \omega _{z_{y}} \left( t \right) \left[ E \left( \beta \right) sin \left( \alpha \right) +C_{2}cos \left( \alpha \right) \right] \rbrace -\\
+\frac{1}{2} \lbrace \left[ F \left( \beta \right) \left( 1+cos \left( 2 \alpha \right) \right) +D \left( \beta \right) sin \left( 2 \alpha \right) \right] \omega _{x_{y}}^{2} \left( t \right) -2F \left( \beta \right) \omega _{y_{y}}^{2} \left( t \right) +\\
+\left[ F \left( \beta \right) \left( 1-cos \left( 2 \alpha \right) \right) -D \left( \beta \right) sin \left( 2 \alpha \right) \right] \omega _{z_{y}}^{2} \left( t \right) +\\
+2 \left[ 2A_{2} \left( \beta \right) cos \left( \alpha \right) -E \left( \beta \right) sin \left( \alpha \right) \right] \omega _{x_{y}} \left( t \right) \omega _{y_{y}} \left( t \right) -\\
+2 \left[ F \left( \beta \right) sin \left( 2 \alpha \right) -D \left( \beta \right) cos \left( 2 \alpha \right) \right] \omega _{x_{y}} \left( t \right) \omega _{z_{y}} \left( t \right) -\\
+-2 \left[ E \left( \beta \right) cos \left( \alpha \right) +2A_{2} \left( \beta \right) sin \left( \alpha \right) \right] \omega _{y_{y}} \left( t \right) \omega _{z_{y}} \left( t \right) \rbrace ;
+\end{multlined}
+\end{equation}
+
+
+\begin{equation}
+\label{eq:p3:48+4}
+\begin{multlined}
+r_{ \alpha } \left( q \right) =m_{1} \left( \begin{matrix}
+-x_{C_{1}}sin \left( \alpha \right) +z_{C_{1}}cos \left( \alpha \right) \\
+0\\
+-x_{C_{1}}cos \left( \alpha \right) -z_{C_{1}}sin \left( \alpha \right) \\
+\end{matrix}
+\right) ^{T}+\\
+m_{2} \left( \begin{matrix}
+- \left( x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \right) sin \left( \alpha \right) +z_{C_{2}}cos \left( \alpha \right) \\
+0\\
+- \left( x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \right) cos \left( \alpha \right) -z_{C_{2}}sin \left( \alpha \right) \\
+\end{matrix}
+\right) ^{T};
+\end{multlined}
+\end{equation}
+
+\begin{equation}
+\label{eq:p3:48+5}
+\begin{multlined}
+r_{ \beta } \left( q \right) =m_{2} \left( \begin{matrix}
+\left( -x_{C_{2}}sin \left( \beta \right) -y_{C_{2}}cos \left( \beta \right) \right) cos \left( \alpha \right) \\
+x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \\
+\left( x_{C_{2}}sin \left( \beta \right) +y_{C_{2}}cos \left( \beta \right) \right) sin \left( \alpha \right) \\
+\end{matrix}
+\right) ^{T}.
+\end{multlined}
+\end{equation}
+
+При поступательном равномерном прямолинейном движении ЛА в горизонтальной плоскости и без учета вибрации при нулевых установочных углах уравнения (\labelcref{eq:p3:48}) принимают следующий вид: 
+
+
+\begin{equation}%\tag{3.49}
+A \left( q \right) \ddot q+F \left( q,\dot q \right) +Q^{\ast} \left( t,q \right) =M_{\textit{дв}}-M_{\textit{тр}}
+\end{equation}
+здесь 
+
+\( Q^{\ast} \left( t,q \right) = \left( \begin{matrix}
+0\\
+m_{2}g \left( x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \right) \\
+\end{matrix}
+\right) \) . 
 
 \section{Линеаризованная система} \label{ch:ch3/sect10}
+
+Ввиду сложности исследований нелинейных дифференциальных уравнений пространственного движения ОЭП, как объекта управления (ОУ), рассмотрим частный случай этих уравнений, когда объект управления установлен на неподвижном основании или на ЛА, совершающем поступательное равномерное прямолинейное движение в горизонтальной плоскости ( \( \psi =0, \vartheta =0, \gamma =0 \) ), установочные углы: \( \psi _{y}=0, \vartheta _{y}=0, \gamma _{y}=0 \) \ и вибрации не учитываются: 
+
+\begin{equation}%\tag{3.50}
+\label{eq:p3:50}
+\begin{multlined}
+\left( B_{1}+B \left( \beta \right) \right) \ddot \alpha -D \left( \beta \right) \ddot \beta -2F \left( \beta \right) \dot \alpha \dot \beta -E \left( \beta \right) \dot \beta ^{2}=\\
+k_{1}u_{1}-b_{1} \dot \alpha -M_{\textit{тр.1}}sign \left( \dot \alpha \right) 
+\end{multlined}
+\end{equation}
+
+\begin{equation}%\tag{3.51}
+\label{eq:p3:51}
+\begin{multlined}
+C_{2} \ddot \beta -D \left( \beta \right) \ddot \alpha +F \left( \beta \right) \dot \alpha ^{2}=\\
+-m_{2}g \left( 
+		x_{C_{2}}cos \left( \beta \right) -
+		y_{C_{2}}sin \left( \beta \right) 
+	\right) 
++k_{2}u_{2}-
+b_{2} \dot \beta _{2}-M_{\textit{тр.2}}sign \left( \dot \beta \right) 
+\end{multlined}
+\end{equation}
+Здесь и далее будем придерживаться обозначений, принятом в работе . 
+
+\begin{equation}%\tag{3.52}
+\label{eq:p3:52}
+\begin{multlined}
+B \left( \beta \right) =\frac{A_{2}+B_{2}}{2}-\frac{A_{2}-B_{2}}{2}cos \left( 2 \beta \right) -F_{2}sin \left( 2 \beta \right),\\
+F \left( \beta \right) =F_{2}cos \left( 2 \beta \right) -\frac{A_{2}-B_{2}}{2}sin \left( 2 \beta \right),\\
+E \left( \beta \right) =E_{2}cos \left( \beta \right) -D_{2}sin \left( \beta \right),\\
+D \left( \beta \right) =D_{2}cos \left( \beta \right) +E_{2}sin \left( \beta \right) .A_{2} \left( \beta \right) =\frac{A_{2}-B_{2}}{2}cos \left( 2 \beta \right) +F_{2}sin \left( 2 \beta \right),
+\end{multlined}
+\end{equation}
+Принятые уравнения (\labelcref{eq:p3:50}),(\labelcref{eq:p3:51}) все же являются нелинейными с нелинейными перекрестными связями. Для оценки динамических свойств ОУ проведем линеаризацию нелинейностей уравнений (\labelcref{eq:p3:50}),(\labelcref{eq:p3:51}) относительно установившегося процесса движения ОУ (примем его за невозмущенное движение), имеющего место при некоторых постоянных значениях: 
+
+\begin{equation}%\tag{3.53}
+\label{eq:p3:53}
+\begin{multlined}
+\alpha _{0}, \ \beta _{0}, \ \dot \alpha _{0}=\dot \beta _{0}=\ddot \alpha _{0}=\ddot \beta _{0}=0, \ u_{10}, \ u_{20}, \ M_{\textit{тр10}}, \ M_{\textit{тр20}}.
+\end{multlined}
+\end{equation}
+При линеаризации нелинейных уравнений предполагаем, что в динамическом процессе отклонения переменных относительно невозмущенного движения остаются все время малыми: 
+
+
+\begin{equation}%\tag{3.54}
+\label{eq:p3:54}
+\begin{multlined}
+\alpha = \alpha _{0}+ \Delta \alpha, \ 
+\beta = \beta _{0}+ \Delta \beta, \ 
+\dot \alpha = \Delta \dot \alpha, \ 
+\dot \beta = \Delta \dot \beta, \ 
+\ddot \alpha = \Delta \ddot \alpha, \ 
+\ddot \beta = \Delta \ddot \beta,\\
+u_{1}=u_{10}+ \Delta u_{1}, \ 
+u_{2}=u_{20}+ \Delta u_{2}, \ 
+M_{\textit{тр1}}=M_{\textit{тр10}}+ \Delta М_{1}, \ 
+M_{\textit{тр2}}=M_{тр20}+ \Delta М_{2}.
+\end{multlined}
+\end{equation}
+Разложив нелинейные функции уравнений (\labelcref{eq:p3:50}),(\labelcref{eq:p3:51}) в ряд по степеням малых отклонений переменных и оставив только члены ряда первого порядка малости, получим линейные дифференциальные уравнения в отклонениях: 
+\begin{equation}
+\label{eq:p3:55}
+\begin{multlined}
+\left( B_{1}+B \left( \beta _{0} \right) \right) \Delta \ddot \alpha -
+2F \left( \beta _{0} \right)\ddot \alpha _{0} \Delta \beta -
+D \left( \beta _{0} \right) \Delta \ddot \beta +
+E \left( \beta _{0} \right) \ddot \beta _{0} \Delta \beta -\\
+2F \left( \beta _{0} \right) \dot \alpha _{0} \Delta \dot \beta -
+2F \left( \beta _{0} \right) \dot \beta _{0} \Delta \dot \alpha -\\
+2A_{2} \left( \beta _{0} \right) \dot \beta _{0} \dot \alpha _{0} \Delta \beta -
+2E \left( \beta _{0} \right) \dot \beta _{0} \Delta \dot \beta -
+D \left( \beta _{0} \right) \dot \beta _{0}^{2} \Delta \beta =\\
+k_{1} \Delta u-
+b_{1} \Delta \dot \alpha - \Delta M_{1}sign \left( \Delta \dot \alpha \right)
+\end{multlined}
+\end{equation}
+\begin{equation}
+\label{eq:p3:56}
+\begin{multlined}
+ C_{2} \Delta \ddot \beta -
+ D \left( \beta _{0} \right) \Delta \ddot \alpha +
+ E \left( \beta _{0} \right) \ddot \alpha _{0} \Delta \beta +
+ 2F \left( \beta _{0} \right) \dot \alpha _{0} \Delta \dot \alpha +
+ 2A_{2} \left( \beta _{0} \right) \dot \alpha _{0}^{2} \Delta \beta -\\
+ m_{2}g \left( 
+ 	x_{C_{2}}sin \left( \beta _{0} \right) -
+ 	y_{C_{2}}cos \left( \beta _{0} \right) 
+ \right) =
+ k_{2} \Delta u_{2}-
+ b_{2} \Delta \dot \beta - 
+ \Delta M_{2}sign \left( \Delta \dot \beta \right) 
+\end{multlined}
+\end{equation}
+где \( \alpha _{0}, \beta _{0} \) \ могут принимать любые значения в области, заданных ТЗ. 
+
+С учетом (\labelcref{eq:p3:53}) уравнения (\labelcref{eq:p3:55}),(\labelcref{eq:p3:56}) упростятся: 
+\begin{equation}
+\label{eq:p3:57}
+\begin{multlined}
+\left( B_{1}+B \left( \beta _{0} \right) \right) \Delta \ddot \alpha -
+D \left( \beta _{0} \right) \Delta \ddot \beta 
+=
+k_{1} \Delta u_{1} -
+b_{1} \Delta \dot \alpha - 
+\Delta M_{1}sign \left( \Delta \dot \alpha \right) 
+\end{multlined}
+\end{equation}
+\begin{equation}
+\label{eq:p3:58}
+\begin{multlined}
+ C_{2} \Delta \ddot \beta -
+ D \left( \beta _{0} \right) \Delta \ddot \alpha -
+ m_{2}g \left( x_{C_{2}}sin \left( \beta _{0} \right) -
+ y_{C_{2}}cos \left( \beta _{0} \right) \right) 
+ =\\
+ k_{2} \Delta u_{2}-
+ b_{2} \Delta \dot \beta - 
+ \Delta M_{2}sign \left( \Delta \dot \beta \right) 
+\end{multlined}
+\end{equation}
+Перепишем уравнения (\labelcref{eq:p3:57}),(\labelcref{eq:p3:58}) в операторной форме: 
+
+
+%\tag{3.59}
+\begin{equation}
+\label{eq:p3:59}
+\begin{multlined}
+\left( a_{11}p^{2}+b_{11}p \right) \Delta \alpha -
+a_{12}p^{2} \Delta \beta 
+=
+k_{1} \Delta u_{1}- 
+\Delta M_{1}sign \left( p \Delta \alpha \right),\\
+-a_{21}p^{2} \Delta \alpha + 
+\left( a_{22}p^{2}+b_{22}p+c_{22} \right) \Delta \beta =\\
+k_{2} \Delta u_{2}- \Delta M_{2}sign \left( p \Delta \beta \right),
+\end{multlined}
+\end{equation}
+
+где \( a_{11}=B_{1}+B \left( \beta _{0} \right), \ a_{12}=D \left( \beta _{0} \right), \ b_{11}=b_{1}, \) \[ a_{22}=C_{2}, \ a_{21}=D \left( \beta _{0} \right), \ c_{22}=-m_{2}g \left( x_{C_{2}}sin \left( \beta _{0} \right) -y_{C_{2}}cos \left( \beta _{0} \right) \right), \ b_{22}=b_{2}, \] 
+
+Из уравнений (\labelcref{eq:p3:59}) видно, что существуют перекрестные связи пропорциональные центробежным моментам инерции ОЭП по углу места. Далее для синтеза регуляторов изолированных каналов управления воспользуемся результатами работы, где проведена в частотной области оценка влияния динамических перекрестных связей на устойчивость и качество регулирования ОЭП, и показано, что перекрестные связи между каналами управления влияют друг на друга незначительно. В связи с этим синтез регуляторов по азимуту и углу места можно проводить независимо друг от друга. 
 
 \section{Модель привода} \label{ch:ch3/sect9}
 
@@ -1308,7 +1587,7 @@ u_ca = R (i_c - i_a) + L \dfrac{d}{dt} (i_c - i_a) + e_c - e_a
 \end{equation}
 где 
 $U$ - межфазнеое напряжение, 
-$e$ - обратнонаведенное ЭДС,  
+$e$ - обратнонаведенное ЭДС, 
 $i$ - фазовый ток, 
 $R$ - сопротивление фазы постоянному току, 
 $L$ - индуктивность приведенная к фазе.
@@ -1328,7 +1607,7 @@ $\dot{\alpha}_m$ - угловая скорость вращения ротора
 $\textit{P}$ - количество пар полюсов электродвигателя, 
 вектор-функция распределения магнитного между фазами описывается следующим образом
  [https://www.mathworks.com/help/physmod/sps/ref/pmsm.html]
- :
+:
 
 \begin{equation}
 \label{eq:p3:9.3}
@@ -1377,7 +1656,7 @@ $\ddot{\alpha}_m $ - угловое ускорение вращения рото
 \begin{equation}
 \label{eq:p3:9.6}
 \begin{alignedat}{2}
-M_{\textit{тр}} = M_{\textit{тр}}^{\textit{max}} sign( \dot{\alpha}_m ) ,
+M_{\textit{тр}} = M_{\textit{тр}}^{\textit{max}} sign( \dot{\alpha}_m ),
 \end{alignedat}
 \end{equation}
 где
