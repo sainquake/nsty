@@ -755,10 +755,10 @@ T=\frac{1}{2}
 \label{eq:p3:29}
 \begin{multlined}
 Q_{i}^{`}= 
-\sum _{j=1}^{2} \sum _{k=1}^{\infty} \left( -m_{k}^{ \left( j \right) }\bar{a}_{0} \frac{ tial \bar{r}_{k}^{ \left( j \right) }}{ tial q_{i}} \right) = 
-\sum _{j=1}^{2} \sum _{k=1}^{\infty} \left( -\bar{a}_{0} \frac{ tial \left( m_{k}^{ \left( j \right) }\bar{r}_{k}^{ \left( j \right) } \right) }{ tial q_{i}} \right) = \\
-- \sum _{j=1}^{2}\bar{a}_{0} \left( \frac{ tial \left( \sum _{k=1}^{\infty} \left( m_{k}^{ \left( j \right) }\bar{r}_{k}^{ \left( j \right) } \right) \right) }{ tial q_{i}} \right) =
-- \sum _{j=1}^{2} \left( m_{j}\bar{a}_{0} \frac{ tial \bar{r}_{C}^{ \left( j \right) }}{ tial q_{i}} \right) \left( i=1,2 \right),
+\sum _{j=1}^{2} \sum _{k=1}^{\infty} \left( -m_{k}^{ \left( j \right) }\bar{a}_{0} \frac{ \partial \bar{r}_{k}^{ \left( j \right) }}{ \partial q_{i}} \right) = 
+\sum _{j=1}^{2} \sum _{k=1}^{\infty} \left( -\bar{a}_{0} \frac{ \partial \left( m_{k}^{ \left( j \right) }\bar{r}_{k}^{ \left( j \right) } \right) }{ \partial q_{i}} \right) = \\
+- \sum _{j=1}^{2}\bar{a}_{0} \left( \frac{ \partial \left( \sum _{k=1}^{\infty} \left( m_{k}^{ \left( j \right) }\bar{r}_{k}^{ \left( j \right) } \right) \right) }{ \partial q_{i}} \right) =
+- \sum _{j=1}^{2} \left( m_{j}\bar{a}_{0} \frac{ \partial \bar{r}_{C}^{ \left( j \right) }}{ \partial q_{i}} \right) \left( i=1,2 \right),
 \end{multlined}
 \end{equation}
 здесь \( \bar{r}_{C}^{ \left( j \right) } \) –\ радиус-вектор центра масс \textit{j-}го\ тела в системе координат \( Ox_{y}y_{y}z_{y} \), \( m_{j} \) – масса \textit{j - }го тела, \( q_{i} \) – \textit{i}–я обобщенная координата. 
@@ -834,7 +834,7 @@ x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \\
 \begin{equation} %\tag{3.34}
 \label{eq:p3:34}
 \begin{multlined}
-Q_{i}^{ \left( p \right) }= \sum _{j=1}^{2} \left( m_{j}g \frac{ tial \bar{r}_{C}^{ \left( j \right) }}{ tial q_{i}} \right),
+Q_{i}^{ \left( p \right) }= \sum _{j=1}^{2} \left( m_{j}g \frac{ \partial \bar{r}_{C}^{ \left( j \right) }}{ \partial q_{i}} \right),
 \end{multlined}
 \end{equation}
 Здесь 
@@ -984,19 +984,19 @@ A \left( \alpha, \beta \right) =
 
 \( A_{1} \left( \alpha, \beta \right) =\frac{A_{1}+A \left( \beta \right) -C_{1}-C_{2}}{2}cos \left( 2 \alpha \right) - \left( E_{1}+E \left( \beta \right) \right) sin \left( 2 \alpha \right) \), 
 
-\( \frac{ tial A \left( \alpha, \beta \right) }{ tial \alpha }=-2E \left( \alpha, \beta \right) \), \( \frac{ tial С \left( \alpha, \beta \right) }{ tial \alpha }=2E \left( \alpha, \beta \right) \), \( \frac{ tial E \left( \alpha, \beta \right) }{ tial \alpha }=2A_{1} \left( \alpha, \beta \right) \), 
+\( \frac{ \partial A \left( \alpha, \beta \right) }{ \partial \alpha }=-2E \left( \alpha, \beta \right) \), \( \frac{ \partial С \left( \alpha, \beta \right) }{ \partial \alpha }=2E \left( \alpha, \beta \right) \), \( \frac{ \partial E \left( \alpha, \beta \right) }{ \partial \alpha }=2A_{1} \left( \alpha, \beta \right) \), 
 
-\( \frac{ tial F \left( \alpha, \beta \right) }{ tial \alpha }=D \left( \alpha, \beta \right) \), \( \frac{ tial D \left( \alpha, \beta \right) }{ tial \alpha }=-F \left( \alpha, \beta \right) \), 
+\( \frac{ \partial F \left( \alpha, \beta \right) }{ \partial \alpha }=D \left( \alpha, \beta \right) \), \( \frac{ \partial D \left( \alpha, \beta \right) }{ \partial \alpha }=-F \left( \alpha, \beta \right) \), 
 
-\( \frac{ tial A \left( \alpha, \beta \right) }{ tial \beta }=F \left( \beta \right) \left( 1+cos \left( 2 \alpha \right) \right) +D \left( \beta \right) sin \left( 2 \alpha \right) \), 
+\( \frac{ \partial A \left( \alpha, \beta \right) }{ \partial \beta }=F \left( \beta \right) \left( 1+cos \left( 2 \alpha \right) \right) +D \left( \beta \right) sin \left( 2 \alpha \right) \), 
 
-\( \frac{ tial C \left( \alpha, \beta \right) }{ tial \beta }=F \left( \beta \right) \left( 1-cos \left( 2 \alpha \right) \right) -D \left( \beta \right) sin \left( 2 \alpha \right) \), 
+\( \frac{ \partial C \left( \alpha, \beta \right) }{ \partial \beta }=F \left( \beta \right) \left( 1-cos \left( 2 \alpha \right) \right) -D \left( \beta \right) sin \left( 2 \alpha \right) \), 
 
-\( \frac{ tial E \left( \alpha, \beta \right) }{ tial \beta }=F \left( \beta \right) sin \left( 2 \alpha \right) -D \left( \beta \right) cos \left( 2 \alpha \right) \), 
+\( \frac{ \partial E \left( \alpha, \beta \right) }{ \partial \beta }=F \left( \beta \right) sin \left( 2 \alpha \right) -D \left( \beta \right) cos \left( 2 \alpha \right) \), 
 
-\( \frac{ tial F \left( \alpha, \beta \right) }{ tial \beta }=-2A_{2} \left( \beta \right) cos \left( \alpha \right) +E \left( \beta \right) sin \left( \alpha \right) \), 
+\( \frac{ \partial F \left( \alpha, \beta \right) }{ \partial \beta }=-2A_{2} \left( \beta \right) cos \left( \alpha \right) +E \left( \beta \right) sin \left( \alpha \right) \), 
 
-\( \frac{ tial D \left( \alpha, \beta \right) }{ tial \beta }=E \left( \beta \right) cos \left( \alpha \right) +2A_{2} \left( \beta \right) sin \left( \alpha \right) \) . 
+\( \frac{ \partial D \left( \alpha, \beta \right) }{ \partial \beta }=E \left( \beta \right) cos \left( \alpha \right) +2A_{2} \left( \beta \right) sin \left( \alpha \right) \) . 
 
 Кинетическая энергия ОУ определяется выражением (\labelcref{eq:p3:28}). Проведем над ней действия в соответствии с уравнениями Лагранжа II-го рода (\labelcref{eq:p3:24}) с учетом приведенных выше равенств: 
 
@@ -1004,7 +1004,7 @@ A \left( \alpha, \beta \right) =
 \begin{equation}%	\tag{3.42}
 \label{eq:p3:42}
 \begin{multlined}
-\frac{ tial T}{ tial \dot \alpha}= 
+\frac{ \partial T}{ \partial \dot \alpha}= 
 (B_1 + B(\beta)) \dot{\alpha} - 
  D(\beta) \dot{\beta} + \\
 (
@@ -1018,7 +1018,7 @@ A \left( \alpha, \beta \right) =
 \begin{equation}%	\tag{3.42+}
 \label{eq:p3:42+}
 \begin{multlined}
-\frac{d}{d t}\left( \frac{ tial T}{ tial \dot \alpha}\right) = 
+\frac{d}{d t}\left( \frac{ \partial T}{ \partial \dot \alpha}\right) = 
 (B_1 + B(\beta)) \ddot{\alpha} - 
 D(\beta) \ddot{\beta} - 
 2F(\beta)\dot{\alpha}\dot{\beta} - 
@@ -1052,7 +1052,7 @@ E(\beta)\dot{\beta}^2
 \begin{equation}%	\tag{3.43}
 \label{eq:p3:43}
 \begin{multlined}
-\frac{ tial T}{ tial \alpha}=
+\frac{ \partial T}{ \partial \alpha}=
 \{
 	\omega_{x_y} (t) 
 	\left[ 
@@ -1091,7 +1091,7 @@ E(\beta)\dot{\beta}^2
 \begin{equation}%	\tag{3.44}
 \label{eq:p3:44}
 \begin{multlined}
-\frac{ tial T}{ tial \dot \beta}= 
+\frac{ \partial T}{ \partial \dot \beta}= 
 C_2 \dot{\beta} - D(\beta)\dot{\alpha} + 
 [ 
 	-\omega_{x_y} (t) (E(\beta)cos(\alpha) - C_2 sin(\alpha))
@@ -1104,7 +1104,7 @@ C_2 \dot{\beta} - D(\beta)\dot{\alpha} +
 \begin{equation}%	\tag{3.44+}
 \label{eq:p3:44+}
 \begin{multlined}
-\frac{d}{d t}\left( \frac{ tial T}{ tial \dot \beta}\right) = 
+\frac{d}{d t}\left( \frac{ \partial T}{ \partial \dot \beta}\right) = 
 C_2 \ddot{\beta} - 
 D(\beta) \ddot{\alpha} - 
 E(\beta)\dot{\alpha}\dot{\beta}+
@@ -1134,7 +1134,7 @@ E(\beta)\dot{\alpha}\dot{\beta}+
 \begin{equation}%	\tag{3.45}
 \label{eq:p3:45}
 \begin{multlined}
-\frac{ tial T}{ tial \beta }=-F \left( \beta \right) \dot \alpha ^{2}-E \left( \beta \right) \dot \alpha \dot \beta +\\ 
+\frac{ \partial T}{ \partial \beta }=-F \left( \beta \right) \dot \alpha ^{2}-E \left( \beta \right) \dot \alpha \dot \beta +\\ 
 \{ 
 	\omega _{x_{y}} 
 		\left( t \right) \left[ \left( 2A_{2} \left( \beta \right) cos \left( \alpha \right) -E \left( \beta \right) sin \left( \alpha \right) \right) \dot \alpha +
