@@ -1345,7 +1345,7 @@ w_{ \alpha } ( t,q ) =
 \dot \omega _{y_{y}} ( t ) ( B_{1}+B ( \beta ) ) - 
 \dot \omega _{z_{y}} ( t ) D ( \alpha, \beta ) \rbrace +\\
 \lbrace E ( \alpha, \beta ) \omega _{x_{y}}^{2} ( t ) -E ( \alpha, \beta ) \omega _{z_{y}}^{2} ( t ) +\\
-D ( \alpha, \beta ) \omega ( t ) \omega _{y_{y}} ( t ) +2A_{1} ( \alpha, \beta ) \omega _{x_{y}} ( t ) \omega _{z_{y}} ( t ) -F ( \alpha, \beta ) \omega _{y_{y}} ( t ) \omega _{z_{y}} ( t ) \rbrace ;
+D ( \alpha, \beta ) \omega _{x_{y}} ( t ) \omega _{y_{y}} ( t ) +2A_{1} ( \alpha, \beta ) \omega _{x_{y}} ( t ) \omega _{z_{y}} ( t ) -F ( \alpha, \beta ) \omega _{y_{y}} ( t ) \omega _{z_{y}} ( t ) \rbrace ;
 \end{multlined}
 \end{equation}
 
@@ -1355,7 +1355,8 @@ D ( \alpha, \beta ) \omega ( t ) \omega _{y_{y}} ( t ) +2A_{1} ( \alpha, \beta )
 w_{ \beta } \left( t,q \right) = 
 \lbrace 
 - \dot \omega _{x_{y}} \left( t \right) \left[ E \left( \beta \right) cos \left( \alpha \right) -C_{2}^{}sin \left( \alpha \right) \right] -\\
-\dot \omega _{y_{y}} \left( t \right) D \left( \beta \right) + \omega _{z_{y}} \left( t \right) \left[ E \left( \beta \right) sin \left( \alpha \right) +C_{2}cos \left( \alpha \right) \right] \rbrace -\\
+\dot \omega _{y_{y}} \left( t \right) D \left( \beta \right) + 
+\dot \omega _{z_{y}} \left( t \right) \left[ E \left( \beta \right) sin \left( \alpha \right) +C_{2}cos \left( \alpha \right) \right] \rbrace -\\
 \frac{1}{2} \lbrace \left[ F \left( \beta \right) \left( 1+cos \left( 2 \alpha \right) \right) +D \left( \beta \right) sin \left( 2 \alpha \right) \right] \omega _{x_{y}}^{2} \left( t \right) -2F \left( \beta \right) \omega _{y_{y}}^{2} \left( t \right) +\\
 \left[ F \left( \beta \right) \left( 1-cos \left( 2 \alpha \right) \right) -D \left( \beta \right) sin \left( 2 \alpha \right) \right] \omega _{z_{y}}^{2} \left( t \right) +\\
 2 \left[ 2A_{2} \left( \beta \right) cos \left( \alpha \right) -E \left( \beta \right) sin \left( \alpha \right) \right] \omega _{x_{y}} \left( t \right) \omega _{y_{y}} \left( t \right) -\\
@@ -1401,7 +1402,7 @@ x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \\
 \begin{equation}%\tag{3.49}
 \label{eq:p3:49}
 \begin{multlined}
-A \left( q \right) \ddot q+F \left( q,\dot q \right) +Q^{\ast} \left( t,q \right) =M_{\textit{дв}}-M_{\textit{тр}}
+A \left( q \right) \ddot q+F \left( q,\dot q \right) + W^{\ast}(t,q) +Q^{\ast} \left( t,q \right) = M_{\textit{дв}}-M_{\textit{тр}}
 \end{multlined}
 \end{equation}
 здесь 
@@ -1410,7 +1411,15 @@ A \left( q \right) \ddot q+F \left( q,\dot q \right) +Q^{\ast} \left( t,q \right
 0\\
 m_{2}g \left( x_{C_{2}}cos \left( \beta \right) -y_{C_{2}}sin \left( \beta \right) \right) \\
 \end{matrix}
-\right) \) . 
+\right) \) , 
+
+$W^{\ast}(t,q) = 
+\left( \begin{matrix}
+\dot \omega _{y_{y}} ( t ) ( B_{1}+B ( \beta ) )\\
+\dot \omega _{z_{y}} \left( t \right) \left[ E \left( \beta \right) sin \left( \alpha \right) +C_{2}cos \left( \alpha \right) \right] \\
+\end{matrix}
+\right)
+$
 
 \section{Модель привода} \label{ch:ch3/sect9}
 
@@ -1622,9 +1631,32 @@ M_{\textit{н}} = J \ddot{\alpha_{\textit{ла}}}
 $\ddot{\alpha_{\textit{ла}}}$ - угловое ускорение носителя
 \end{comment}
 
+\section{Методика линеаризации} \label{ch:ch3/linerization}
+
+https://ru.wikipedia.org/wiki/Ряд_Тейлора
+
+
+Для получения формулы Тейлора функции n переменных $f(x) = f(x_1, x_2, ... x_n)$, которая в некоторой окрестности точки  
+$ x_0 = (a_{1},a_{2},...,a_{n})$ имеет непрерывные производные до  $(m+1)$ - го порядка включительно, введём дифференциальный оператор
+
+$ \mathrm {T} =(x_{1}-a_{1}){\dfrac {\partial }{\partial x_{1}}}+(x_{2}-a_{2}){\dfrac {\partial }{\partial x_{2}}}+...+(x_{n}-a_{n}){\dfrac {\partial }{\partial x_{n}}}.$ 
+Тогда разложение (формула Тейлора) функции по степеням  $ (x_{i}-a_{i})^{k_{i}}$ в окрестности точки   $(a_{1},a_{2},...,a_{n})$ имеет вид
+
+ $ f(x_{1},x_{2},...x_{n})=\sum \limits _{k=0}^{m}{\dfrac {\mathrm {T} ^{k}f(a_{1},a_{2},...,a_{n})}{k!}}+R_{m}(x_{1},x_{2},...x_{n}),$
+ 
+где $ R_m(x_1, x_2, ... x_n)$ — остаточный член порядка $(m+1)$.
+
+При линеаризации нелинейных уравнений предполагаем, что в динамическом процессе отклонения переменных относительно невозмущенного движения остаются все время малыми:
+
+$x_i = {x_0}_i + \Delta x_i$
+
+Разложив функцию в ряд по степеням малых отклонений () переменных и оставив только члены ряда первого порядка малости, получим линейное дифференциальное уравнение в отклонениях:
+
+$ f(x) = f(x_0) + T f(x_0) (\Delta x)$
+
 \section{Линеаризованная система} \label{ch:ch3/sect10}
 
-Ввиду сложности исследований нелинейных дифференциальных уравнений пространственного движения ОЭП, как объекта управления (ОУ), рассмотрим частный случай этих уравнений, когда объект управления установлен на неподвижном основании или на ЛА, совершающем поступательное равномерное прямолинейное движение в горизонтальной плоскости ( \( \psi =0, \vartheta =0, \gamma =0 \) ), установочные углы: \( \psi _{y}=0, \vartheta _{y}=0, \gamma _{y}=0 \) \ и вибрации не учитываются. В уравнение (\labelcref{eq:p3:49}) подставим (\labelcref{eq:p3:lin4})
+Ввиду сложности исследований нелинейных дифференциальных уравнений пространственного движения ОЭП, как объекта управления (ОУ), рассмотрим частный случай этих уравнений, когда объект управления установлен на неподвижном основании или на ЛА, совершающем поступательное равномерное прямолинейное движение в горизонтальной плоскости ( \( \psi =0, \vartheta =0, \gamma =0 \) ), установочные углы: \( \psi _{y}=0, \vartheta _{y}=0, \gamma _{y}=0 \) \ и вибрации не учитываются. В уравнение (\labelcref{eq:p3:49}) подставим (\labelcref{eq:p3:lin4}):
 
 \begin{equation}%\tag{3.50}
 \label{eq:p3:50}
@@ -1682,18 +1714,20 @@ M_{\textit{тр2}}=M_{тр20}+ \Delta М_{2}.
 \end{multlined}
 \end{equation}
 Разложив нелинейные функции уравнений (\labelcref{eq:p3:50}),(\labelcref{eq:p3:51}) в ряд по степеням малых отклонений переменных и оставив только члены ряда первого порядка малости, получим линейные дифференциальные уравнения в отклонениях: 
+
 \begin{equation}
 \label{eq:p3:55}
 \begin{multlined}
 \left( B_{1}+B \left( \beta _{0} \right) \right) \Delta \ddot \alpha -
-2F \left( \beta _{0} \right)\ddot \alpha _{0} \Delta \beta -
+2F \left( \beta _{0} \right)\dot \alpha _{0} \Delta \beta -
 D \left( \beta _{0} \right) \Delta \ddot \beta +
 E \left( \beta _{0} \right) \ddot \beta _{0} \Delta \beta -\\
 2F \left( \beta _{0} \right) \dot \alpha _{0} \Delta \dot \beta -
 2F \left( \beta _{0} \right) \dot \beta _{0} \Delta \dot \alpha -\\
 2A_{2} \left( \beta _{0} \right) \dot \beta _{0} \dot \alpha _{0} \Delta \beta -
 2E \left( \beta _{0} \right) \dot \beta _{0} \Delta \dot \beta -
-D \left( \beta _{0} \right) \dot \beta _{0}^{2} \Delta \beta =\\
+D \left( \beta _{0} \right) \dot \beta _{0}^{2} \Delta \beta \\
+\dot \omega _{y_{y}} ( t ) ( B_{1}+B ( \beta_0 ) )=\\
 k_{1} \Delta u-
 b_{1} \Delta \dot \alpha - \Delta M_{1}sign \left( \Delta \dot \alpha \right)
 \end{multlined}
@@ -1705,7 +1739,8 @@ C_{2} \Delta \ddot \beta -
 D \left( \beta _{0} \right) \Delta \ddot \alpha +
 E \left( \beta _{0} \right) \ddot \alpha _{0} \Delta \beta +
 2F \left( \beta _{0} \right) \dot \alpha _{0} \Delta \dot \alpha +
-2A_{2} \left( \beta _{0} \right) \dot \alpha _{0}^{2} \Delta \beta -\\
+2A_{2} \left( \beta _{0} \right) \dot \alpha _{0}^{2} \Delta \beta \\
+\dot \omega _{z_{y}} \left( t \right) \left[ E \left( \beta_0 \right) sin \left( \alpha_0 \right) +C_{2}cos \left( \alpha_0 \right) \right]-\\
 m_{2}g \left( 
 x_{C_{2}}sin \left( \beta _{0} \right) -
 y_{C_{2}}cos \left( \beta _{0} \right) 
@@ -1722,7 +1757,8 @@ b_{2} \Delta \dot \beta -
 \label{eq:p3:57}
 \begin{multlined}
 \left( B_{1}+B \left( \beta _{0} \right) \right) \Delta \ddot \alpha -
-D \left( \beta _{0} \right) \Delta \ddot \beta 
+D \left( \beta _{0} \right) \Delta \ddot \beta +\\
+\dot \omega _{y_{y}} ( t ) ( B_{1}+B ( \beta_0 ) )
 =
 k_{1} \Delta u_{1} -
 b_{1} \Delta \dot \alpha - 
@@ -1733,7 +1769,8 @@ b_{1} \Delta \dot \alpha -
 \label{eq:p3:58}
 \begin{multlined}
 C_{2} \Delta \ddot \beta -
-D \left( \beta _{0} \right) \Delta \ddot \alpha -
+D \left( \beta _{0} \right) \Delta \ddot \alpha +
+\dot \omega _{z_{y}} \left( t \right) \left[ E \left( \beta_0 \right) sin \left( \alpha_0 \right) +C_{2}cos \left( \alpha_0 \right) \right]-\\
 m_{2}g \left( x_{C_{2}}sin \left( \beta _{0} \right) -
 y_{C_{2}}cos \left( \beta _{0} \right) \right) 
 =\\
@@ -1742,7 +1779,7 @@ b_{2} \Delta \dot \beta -
 \Delta M_{2}sign \left( \Delta \dot \beta \right) 
 \end{multlined}
 \end{equation}
-Перепишем уравнения (\labelcref{eq:p3:57}),(\labelcref{eq:p3:58}) в операторной форме: 
+Учитывая $\dot \omega _{y_{y}} ( t ) = \ddot \psi, \dot \omega _{z_{y}} ( t ) = \ddot \vartheta$, перепишем уравнения (\labelcref{eq:p3:57}),(\labelcref{eq:p3:58}) в операторной форме: 
 
 
 %\tag{3.59}
@@ -1750,17 +1787,29 @@ b_{2} \Delta \dot \beta -
 \label{eq:p3:59}
 \begin{multlined}
 \left( a_{11}p^{2}+b_{11}p \right) \Delta \alpha -
-a_{12}p^{2} \Delta \beta 
-=
+a_{12}p^{2} \Delta \beta + 
+a_{11} p^2 \Delta \psi 
+=\\
 k_{1} \Delta u_{1}- 
 \Delta M_{1}sign \left( p \Delta \alpha \right),\\
 -a_{21}p^{2} \Delta \alpha + 
-\left( a_{22}p^{2}+b_{22}p+c_{22} \right) \Delta \beta =\\
+\left( a_{22}p^{2}+b_{22}p \right) \Delta \beta +c_{22}+
+ d_{23} p^2 \Delta \vartheta
+=\\
 k_{2} \Delta u_{2}- \Delta M_{2}sign \left( p \Delta \beta \right),
 \end{multlined}
 \end{equation}
 
-где \( a_{11}=B_{1}+B \left( \beta _{0} \right), \ a_{12}=D \left( \beta _{0} \right), \ b_{11}=b_{1}, \) \[ a_{22}=C_{2}, \ a_{21}=D \left( \beta _{0} \right), \ c_{22}=-m_{2}g \left( x_{C_{2}}sin \left( \beta _{0} \right) -y_{C_{2}}cos \left( \beta _{0} \right) \right), \ b_{22}=b_{2}, \] 
+где 
+\( a_{11}=B_{1}+B \left( \beta _{0} \right), 
+\ a_{12}=D \left( \beta _{0} \right), 
+\ b_{11}=b_{1}, 
+\) \[ a_{22}=C_{2}, 
+\ a_{21}=D \left( \beta _{0} \right), 
+\ c_{22}=-m_{2}g \left( x_{C_{2}}sin \left( \beta _{0} \right) -y_{C_{2}}cos \left( \beta _{0} \right) \right), \
+ b_{22}=b_{2}, \] 
+
+$d_{23} = \left[ E \left( \beta_0 \right) sin \left( \alpha_0 \right) +C_{2}cos \left( \alpha_0 \right) \right]$.
 
 Из уравнений (\labelcref{eq:p3:59}) видно, что существуют перекрестные связи пропорциональные центробежным моментам инерции ОЭП по углу места. Далее для синтеза регуляторов изолированных каналов управления воспользуемся результатами работы [], где проведена в частотной области оценка влияния динамических перекрестных связей на устойчивость и качество регулирования ОЭП, и показано, что перекрестные связи между каналами управления влияют друг на друга незначительно. В связи с этим синтез регуляторов по азимуту и углу места можно проводить независимо друг от друга. 
 
