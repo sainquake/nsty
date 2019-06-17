@@ -165,11 +165,11 @@ M_{\textit{ТР2}} = 5 \cdot 10^{-3}\cdot 1.131 = 0.005755 \textit{Нм}
 \begin{equation}%\tag{44}
 \label{eq:p4:4+1}
 \begin{multlined}
-М_{\textit{дб1}} = 
+M_{\textit{дб1}} = 
 m_{1} \left( a+g \right) \sqrt[]{x_{c1}^{2}+y_{c1}^{2}} =
 15.7 \left( 4.8 + 9.8 \right) \cdot 9 \cdot 10^{-3}=2.06 \textit{Нм},\\
-М_{\textit{дб2}}=
-m_{2} \left( a+g \right) у_{с2}=
+M_{\textit{дб2}}=
+m_{2} \left( a+g \right) y_{c2}=
 1.131 \cdot 14.8 \cdot 10^{-3} = 0.245 \textit{Нм},
 \end{multlined}
 \end{equation}
@@ -469,56 +469,68 @@ k_{2}  u_{2} - M_{\textit{тр.2}},
 
 \begin{equation}
 \label{eq:p4:s3.3}
-\begin{multlined}
+\begin{aligned}
 \alpha= 
 W_{n1}(p) u_{1} - 
 W_{f1}(p) M_{\textit{тр.1}} - 
-W_{\psi 1}(p)  \psi  ,\\
+W_{\psi 1}(p) \dot \psi  ,\\
 \beta=
 W_{n2}(p) u_{2} - 
 W_{f2}(p) (M_{\textit{дб}} + M_{\textit{тр.2}}) - 
-W_{\vartheta}(p) \vartheta,
-\end{multlined}
+W_{\vartheta}(p) \dot \vartheta,
+\end{aligned}
 \end{equation}
 где
 ПФ азимута по управлению:
 \begin{equation}
 \label{eq:p4:s3.4}
 \begin{multlined}
-W_{n1}(p) = \frac{k_{1}}{a_{11}p^{2}+b_{11}p} = \frac{1}{C_{e1}} \frac{1}{(a_1 p^2 + b_1 p +1)p};
+W_{n1}(p) = \frac{k_{1}}{a_{11}p^{2}+b_{11}p} = \frac{K_{n1}}{(T_{M1} T_{e1} p^2 + T_{M1} p +1)p};
 \end{multlined}
 \end{equation}
 ПФ азимута по возмущению:
 \begin{equation}
 \label{eq:p4:s3.5}
 \begin{multlined}
-W_{f1}(p) = \frac{1}{a_{11}p^{2}+b_{11}p} = \frac{R_1}{C_{m1}C_{e1}} \frac{(T_1 p +1)}{(a_1 p^2 + b_1 p +1)p};
+W_{f1}(p) = \frac{1}{a_{11}p^{2}+b_{11}p} =  \frac{K_{m1} (T_{e1} p +1)}{(T_{M1} T_{e1} p^2 + T_{M1} p +1)p};
 \end{multlined}
 \end{equation}
 ПФ азимута от движения носителя:
 \begin{equation}
 \label{eq:p4:s3.6}
 \begin{multlined}
-W_{\psi}(p) = \frac{a_{11} p^2}{a_{11}p^{2}+b_{11}p} = b_1 \frac{(T_1 p +1)p}{(a_1 p^2 + b_1 p +1)};
+W_{\psi}(p) = \frac{a_{11} p^2}{a_{11}p^{2}+b_{11}p} =  \frac{T_{M1}(T_{e1} p +1)}{(T_{M1} T_{e1} p^2 + T_{M1} p +1)};
 \end{multlined}
 \end{equation}
 где 
-$a_1 = \frac{L_1 (B_1 + B(\beta_0))}{C_{m1}C_{e1}} $,
-$b_1 = \frac{R_1 (B_1 + B(\beta_0))}{C_{m1}C_{e1}} $,
-$T_1 = R_1/L_1$
+\begin{equation}
+\label{eq:p4:tt1}
+\begin{aligned}
+T_{M1} =\frac{R_1 (B_1 + B(\beta_0))}{C_{m1}C_{e1}},
+T_{e1} = L_1/R_1,
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\label{eq:p4:kk1}
+\begin{aligned}
+K_{n1}=\frac{1}{C_{e1}},
+K_{m1}= \frac{R_1}{C_{m1}C_{e1}}.
+\end{aligned}
+\end{equation}
 
 ПФ угла места по управлению:
 \begin{equation}
 \label{eq:p4:s3.7}
 \begin{multlined}
-W_{n2}(p) = \frac{k_{2}}{a_{22}p^{2}+b_{22}p} = \frac{1}{C_{e1}} \frac{1}{(a_2 p^2 + b_2 p +1)p};
+W_{n2}(p) = \frac{k_{2}}{a_{22}p^{2}+b_{22}p} = \frac{K_{n2}}{(T_{M2} T_{e2} p^2 + T_{M2} p +1)p};
 \end{multlined}
 \end{equation}
 ПФ угла места по возмущению:
 \begin{equation}
 \label{eq:p4:s3.8}
 \begin{multlined}
-W_{f2}(p) = \frac{1}{a_{22}p^{2}+b_{22}p} = \frac{R_2}{C_{m2}C_{e2}} \frac{T_2 p + 1}{(a_2 p^2 + b_2 p +1)p};
+W_{f2}(p) = \frac{1}{a_{22}p^{2}+b_{22}p} =  \frac{K_{m2}(T_{e2} p + 1)}{(T_{M2} T_{e2} p^2 + T_{M2} p +1)p};
 \end{multlined}
 \end{equation}
 ПФ угла места от движения носителя:
@@ -526,13 +538,25 @@ W_{f2}(p) = \frac{1}{a_{22}p^{2}+b_{22}p} = \frac{R_2}{C_{m2}C_{e2}} \frac{T_2 p
 \label{eq:p4:s3.9}
 \begin{multlined}
 W_{\vartheta}(p) = \frac{d_{23} p^2}{a_{22}p^{2}+b_{22}p} = 
-\frac{R_2 d_{23}}{C_{m2}C_{e2}} \frac{(T_2 p + 1)p}{(a_2 p^2 + b_2 p +1)};
+\frac{d_{23} T_{M2}(T_{e2} p + 1)}{(T_{M2} T_{e2} p^2 + T_{M2} p +1)};
 \end{multlined}
 \end{equation}
 где 
-$a_2 = \frac{L_2 C_2}{C_{m2}C_{e2}} $,
-$b_2 = \frac{R_1 C_2}{C_{m2}C_{e2}} $,
-$T_2 = R_2/L_2$
+\begin{equation}
+\label{eq:p4:tt2}
+\begin{aligned}
+T_{M2} =\frac{R_1 C_2}{C_{m2}C_{e2}},
+T_{e2} = L_2/R_2,
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\label{eq:p4:kk2}
+\begin{aligned}
+K_{n2}=\frac{2}{C_{e2}},
+K_{m2}= \frac{R_2}{C_{m2}C_{e2}}.
+\end{aligned}
+\end{equation}
 
 \begin{comment}
 \subsection{Уравнения движения привода по азимуту} \label{subsec:ch4/sect3/sub1}
@@ -607,11 +631,11 @@ $T_2 = R_2/L_2$
 
 \subsection{Азимут} \label{ch:ch4/sect4-/sub1}
 
-В соответствии с уравнением (\ref{eq:p4:s3.2}) и параметрами МД 5ДБМ 120-5-2-3 (новая разработка) оценим наиболее приемлемые параметры привода необходимые для дальнейших расчетов:
+В соответствии с уравнением (\ref{eq:p4:s3.3}) и параметрами МД 5ДБМ 120-5-2-3 (новая разработка) оценим наиболее приемлемые параметры привода необходимые для дальнейших расчетов:
 
 при 
 \[  R_1 = 0.32 \textit{Ом}, 
-T_\textit{Э1} = 0.1 \textit{мс}, 
+T_{e1} = 0.1 \textit{мс}, 
 J_p = 0.75 \cdot 10^{-5} \textit{кг м}^2,  
 u_\textit{н} = 27 \textit{В},
 i_\textit{н} = 75 \textit{А} \]
@@ -629,17 +653,17 @@ i_\textit{н} = 75 \textit{А} \]
 \begin{equation}
 \label{eq:p4:sec4/2}
 \begin{multlined}
-C_{E1}=
+C_{e1}=
 \frac{u_\textit{н}-i_{\textit{н}}R_{1}}{ \omega _{\textit{н}}}=
 \frac{27-75 \cdot 0.32}{11.1}=
-0.27В \textit{с/рад},
+0.27 \textit{Вс/рад},
 \end{multlined}
 \end{equation}
 
 \begin{equation}
 \label{eq:p4:sec4/3}
 \begin{multlined}
-C_{M1}=
+C_{m1}=
 \frac{M_{\textit{н}}}{i_{\textit{н}}}=
 \frac{27.11}{75}=0.36 \textit{Нм/А},
 \end{multlined}
@@ -651,10 +675,10 @@ C_{M1}=
 \label{eq:p4:sec4/4}
 \begin{alignedat}{2}
 T_{M1}=
-\frac{ \left( I_{\textit{н}}+I_{0} \right) R_{1}}{C_{M1}C_{E1}}=\frac{ \left( 0.327 + 0. 75 \cdot 10^{-5} \right) 0.32}{0.36 \cdot 0.27}=
-1.08 \textit{c} ,
-K_\textit{П1} = \frac{1}{С_{E1}} = \frac{1}{0.27} = 3.7 \textit{рад/Вс},
-K_\textit{М1} = \frac{R_1}{С_{E1} C_{M1}} = \frac{0.32}{0.27 \cdot 0.36} = 3.29 \textit{рад/Нмс},
+\frac{ \left( J_{\textit{н}}+J_{0} \right) R_{1}}{C_{m1}C_{e1}}=\frac{ \left( 0.327 + 0.75 \cdot 10^{-5} \right) 0.32}{0.36 \cdot 0.27}=
+1.08 \textit{c} ,\\
+K_{n1} = \frac{1}{C_{e1}} = \frac{1}{0.27} = 3.7 \textit{рад/Вс},\\
+K_{m1} = \frac{R_1}{C_{e1} C_{m1}} = \frac{0.32}{0.27 \cdot 0.36} = 3.29 \textit{рад/Нмс},
 \end{alignedat}
 \end{equation}
 
@@ -662,7 +686,7 @@ K_\textit{М1} = \frac{R_1}{С_{E1} C_{M1}} = \frac{0.32}{0.27 \cdot 0.36} = 3.2
 
 
 \begin{equation}%\tag{414}
-\label{eq:p4:sec4/5}
+\label{eq:p4:414}
 \begin{alignedat}{2}
 \left. \begin{array}{ll}
 \alpha =W_{n1} \left( p \right) U_{1}-W_{f1} \left( p \right) M_{H1}-W_{ \psi } \left( p \right) \dot \psi\\
@@ -671,13 +695,44 @@ U_{1}=K_{\textit{д1}}\cdot K_{y1} \cdot W_{k1} \left( p \right)  \Delta  \alpha
 \end{array}  \right\rbrace  
 \end{alignedat}
 \end{equation}
-Из уравнений (\ref{eq:p4:sec4/5}) с учетом 417 получим\par
-
+где
+$K_{\textit{д1}}$ - коэффициент усиления датчика
+$K_{\textit{y1}}$ - коэффициент усиления преобразователя
+$W_{k1} \left( p \right)$ - передаточная функция регулятора
+Из уравнений (\ref{eq:p4:414}) получим
 
 \begin{equation}%\tag{415}
-\Delta  \alpha =\frac{1}{1+W_{1} \left( p \right) } \alpha _{\textit{пр}}-\frac{W_{f1} \left( p \right) }{1+W_{1} \left( p \right) }M_{H1}-\frac{W_{ \psi } \left( p \right) }{1+W_{1} \left( p \right) } \dot \psi 
+\label{eq:p4:415}
+\begin{alignedat}{2}
+\Delta  \alpha =\frac{1}{1+W_{1} \left( p \right) } \alpha _{\textit{пр}}-\frac{W_{f1} \left( p \right) }{1+W_{1} \left( p \right) }M_{H1}-\frac{W_{ \psi } \left( p \right) }{1+W_{1} \left( p \right) } \dot \psi,
+\end{alignedat}
 \end{equation}
 
+где 
+\begin{equation}
+\label{eq:p4:415+}
+\begin{alignedat}{2}
+ W_{1} \left( p \right) =
+ K_{\textit{д1}}K_{\textit{у1}}W_{k1} \left( p \right) W_{n1} \left( p \right) =
+ W_{k1} \left( p \right) \frac{K_{c1}}{ \left( T_{M1}T_{e1}p^{2}+T_{M1}p+1 \right) p}; \\
+  K_{c1}=K_{\textit{д1}}K_{\textit{у1}}K_{k1}K_{n1}.
+\end{alignedat}
+\end{equation}
+
+В установившемся режиме ($t\rightarrow0, p\rightarrow0$) имеем\par
+
+\begin{equation}
+\label{eq:p4:415+2}
+\begin{alignedat}{2}
+\Delta  \alpha =
+\frac{1}{K_{c1}} \dot \alpha_{\textit{пр}} + \frac{K_{m1}}{K_{c1}}M_{H1} - \frac{T_{M1}}{K_{c1}} \dot \psi ,
+M_{Н1}=M_{\textit{ТР1}}+M_{\textit{дб1}}=2.1425\textit{Нм}
+\end{alignedat}
+\end{equation}
+
+\[  \] \par
+
+Из решения уравнений 413 следует, что в конечной координате наведения (при \textit{t} = 0,6c) (Рисунок 4.3)  \(  \alpha _{пр}=0 \) , тогда коэффициент усиления разомкнутой системы можно определить по формуле \par
 
 \section{Синтез алгоритмов управления ОЭП, моделирование и исследование динамики САУ по азимуту в режиме наведения} \label{ch:ch4/sect4}
 
