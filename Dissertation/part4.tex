@@ -693,56 +693,90 @@ W_{\psi}(p) & 0 \\
 
 \subsection{Азимут} \label{ch:ch4/sect4-/sub1}
 
-В соответствии с уравнением (\ref{eq:p4:s3.3}) и параметрами МД 5ДБМ 120-5-2-3 (новая разработка) оценим наиболее приемлемые параметры привода необходимые для дальнейших расчетов:
+В соответствии с уравнением (\ref{eq:p4:s3.3+}) и параметрами (таблица \ref{tab:DBM}) приводов выбраных ранее в разделе \ref{ch:ch4/sect2} МД 5ДБМ 120-5-2-3 (новая разработка) для азимута и МД ДБМ 70-1,1-1,3-3 для угла места оценим параметры приводов необходимые для дальнейших расчетов при исходных данных для:
+\begin{itemize}
+	\item \textit{канала азимута (1)}
+	
+	\[  R_1 = 0.32 \textit{Ом}, 
+	T_{e1} = 0.1 \textit{мс}, 
+	J_{p1} = 0.75 \cdot 10^{-5} \textit{кг м}^2,  
+	u_\textit{н1} = 27 \textit{В},
+	i_\textit{н1} = 75 \textit{А} \]
+	
+	\begin{equation}
+	\label{eq:p4:sec4/2}
+	\begin{multlined}
+	C_{e1}=
+	\frac{u_\textit{н1}-i_{\textit{н1}}R_{1}}{ \omega _{\textit{н}}}=
+	\frac{27-75 \cdot 0.32}{11.1}=
+	0.27 \textit{Вс/рад},
+	\end{multlined}
+	\end{equation}
+	
+	\begin{equation}
+	\label{eq:p4:sec4/3}
+	\begin{multlined}
+	C_{m1}=
+	\frac{M_{\textit{н}}}{i_{\textit{н}}}=
+	\frac{27.11}{75}=0.36 \textit{Нм/А},
+	\end{multlined}
+	\end{equation}
+	
+	\item \textit{канала угла места (2)}
+	
+	\[  R_2 = 0.485 \textit{Ом}, 
+	T_{e2} = 0.4 \textit{мс}, 
+	J_{p2} = 0.2510 \cdot 10^{-5} \textit{кг м}^2,  
+	u_\textit{н2} = 27 \textit{В},\]
+	
+	\[C_{e2} = 0.12 \textit{Вс/рад}, 
+	C_{m2} = 0.12 \textit{Нм/А},
+	\]
+	
+	\item \textit{внешних возмущениях} (таблица \ref{tab:SAU_PARAM})
+	
+	\begin{equation}
+	\label{eq:p4:sec4/1}
+	\begin{multlined}
+	\omega _{\textit{н}}=
+	\alpha _{\textit{пр}} + A_{1} \omega _{1} + A_{2} \omega _{2} + \alpha _{0} =\\
+	10.47 + 0.21 \cdot 1 + 0.035 \cdot 6.28 + 0.21 = 11.1 \textit{рад/с},
+	\end{multlined}
+	\end{equation}
 
-при 
-\[  R_1 = 0.32 \textit{Ом}, 
-T_{e1} = 0.1 \textit{мс}, 
-J_p = 0.75 \cdot 10^{-5} \textit{кг м}^2,  
-u_\textit{н} = 27 \textit{В},
-i_\textit{н} = 75 \textit{А} \]
+\end{itemize}
+где  \(  \omega _{\textit{н}}- \) максимальное значение номинальной угловой скорости прибора, А\textsubscript{1} , А\textsubscript{2 }- амплитуды колебаний на частотах 0.16 Гц и 1Гц,  \( \dot \alpha _{0} \)  - угловая скорость носителя,  \( \dot \alpha _{\textit{пр}} \) - программный поворот прибора.
+
+\begin{itemize}
+	\item \textit{канала азимута (1)}
+	
+	\begin{equation}
+	\label{eq:p4:sec4/4}
+	\begin{alignedat}{2}
+	T_{M1}=
+	\frac{ \left( J_{\textit{н1}}+J_{01} \right) R_{1}}{C_{m1}C_{e1}}=\frac{ \left( 0.327 + 0.75 \cdot 10^{-5} \right) 0.32}{0.36 \cdot 0.27}=
+	1.08 \textit{c} ,\\
+	K_{n1} = \frac{1}{C_{e1}} = \frac{1}{0.27} = 3.7 \textit{рад/Вс},\\
+	K_{m1} = \frac{R_1}{C_{e1} C_{m1}} = \frac{0.32}{0.27 \cdot 0.36} = 3.29 \textit{рад/Нмс},
+	\end{alignedat}
+	\end{equation}
+	
+	\item \textit{канала угла места (2)}
+	
+	\begin{equation}
+	\label{eq:p4:sec4/4+}
+	\begin{alignedat}{2}
+	T_{M2}=
+	\frac{ \left( J_{\textit{н2}}+J_{02} \right) R_{2}}{C_{m2}C_{e2}}=\frac{ \left( 0.2510 \cdot 10^{-5} + 8.4 \cdot 10^{-3} \right) 0.485}{0.12 \cdot 0.12}=
+	0.2913 \textit{c} ,\\
+	K_{n2} = \frac{1}{C_{e2}} = \frac{1}{0.12} = 8.33 \textit{рад/Вс},\\
+	K_{m2} = \frac{R_2}{C_{e2} C_{m2}} = \frac{0.485}{0.12 \cdot 0.12} = 33.68 \textit{рад/Нмс},
+	\end{alignedat}
+	\end{equation}
+	
+\end{itemize}
 
 
-\begin{equation}
-\label{eq:p4:sec4/1}
-\begin{multlined}
-\omega _{\textit{н}}=
-\alpha _{\textit{пр}} + A_{1} \omega _{1} + A_{2} \omega _{2} + \alpha _{0} =\\
-10.47 + 0.21 \cdot 1 + 0.035 \cdot 6.28 + 0.21 = 11.1 \textit{рад/с},
-\end{multlined}
-\end{equation}
-
-\begin{equation}
-\label{eq:p4:sec4/2}
-\begin{multlined}
-C_{e1}=
-\frac{u_\textit{н}-i_{\textit{н}}R_{1}}{ \omega _{\textit{н}}}=
-\frac{27-75 \cdot 0.32}{11.1}=
-0.27 \textit{Вс/рад},
-\end{multlined}
-\end{equation}
-
-\begin{equation}
-\label{eq:p4:sec4/3}
-\begin{multlined}
-C_{m1}=
-\frac{M_{\textit{н}}}{i_{\textit{н}}}=
-\frac{27.11}{75}=0.36 \textit{Нм/А},
-\end{multlined}
-\end{equation}
-
-где  \(  \omega _{\textit{н}}- \) максимальное значение номинальной угловой скорости прибора, А\textsubscript{1} , А\textsubscript{2 }- амплитуды колебаний на частотах 0.16 Гц и 1Гц,  \( \dot \alpha _{0} \)  - угловая скорость носителя,  \( \dot \alpha _{\textit{пр}} \) - программный поворот прибора.\par
-
-\begin{equation}
-\label{eq:p4:sec4/4}
-\begin{alignedat}{2}
-T_{M1}=
-\frac{ \left( J_{\textit{н}}+J_{0} \right) R_{1}}{C_{m1}C_{e1}}=\frac{ \left( 0.327 + 0.75 \cdot 10^{-5} \right) 0.32}{0.36 \cdot 0.27}=
-1.08 \textit{c} ,\\
-K_{n1} = \frac{1}{C_{e1}} = \frac{1}{0.27} = 3.7 \textit{рад/Вс},\\
-K_{m1} = \frac{R_1}{C_{e1} C_{m1}} = \frac{0.32}{0.27 \cdot 0.36} = 3.29 \textit{рад/Нмс},
-\end{alignedat}
-\end{equation}
 
 Для оценки требуемой добротности САУ по скорости запишем передаточную функцию по ошибке в соответствии с уравнениями:\par
 
@@ -750,27 +784,68 @@ K_{m1} = \frac{R_1}{C_{e1} C_{m1}} = \frac{0.32}{0.27 \cdot 0.36} = 3.29 \textit
 \begin{equation}%\tag{414}
 \label{eq:p4:414}
 \begin{alignedat}{2}
+\begin{comment}
 \left. \begin{array}{ll}
 \alpha =W_{n1} \left( p \right) U_{1}-W_{f1} \left( p \right) M_{H1}-W_{ \psi } \left( p \right) \dot \psi\\
 \Delta  \alpha = \alpha _{\textit{пр}}- \alpha\\
 U_{1}=K_{\textit{д1}}\cdot K_{y1} \cdot W_{k1} \left( p \right)  \Delta  \alpha \\
+\end{array}  \right\rbrace \\ 
+\end{comment}
+\left. \begin{array}{ll}
+q = W_n(p) u - W_f(p) M_{\textit{н}} - W_{\textit{ла}} (p)\omega\\
+\Delta  q = q_{\textit{пр}}- q\\
+U = K_{\textit{д}}\cdot K_{y} \cdot W_{k} \left( p \right)  \Delta  q \\
 \end{array}  \right\rbrace  
 \end{alignedat}
 \end{equation}
 где
-$K_{\textit{д1}}$ - коэффициент усиления датчика
-$K_{\textit{y1}}$ - коэффициент усиления преобразователя
-$W_{k1} \left( p \right)$ - передаточная функция регулятора
-Из уравнений (\ref{eq:p4:414}) получим
+$ \Delta  q = \left( \begin{array}{l}
+\Delta \alpha\\
+\Delta \beta
+\end{array} \right)  $ - рассогласование,
 
+$ q_{\textit{пр}} = \left( \begin{array}{l}
+\alpha_{\textit{пр}}\\
+\beta_{\textit{пр}}
+\end{array} \right)  $ - программное управление,
+
+$K_{\textit{д}} = \left( \begin{array}{cc}
+K_{\textit{д1}} &0\\
+0&K_{\textit{д2}}
+\end{array} \right)  $ - коэффициенты усиления датчиков,
+
+$K_{\textit{y}} = \left( \begin{array}{cc}
+ K_{y1}  &0\\
+0& K_{y2} 
+\end{array} \right)  $ - коэффициенты усиления преобразователей,
+
+$W_{k} \left( p \right) = \left( \begin{array}{cc}
+ W_{k1} \left( p \right) &0\\
+0& W_{k2} \left( p \right)
+\end{array} \right)  $ - передаточные функции регуляторов.
+Из уравнений (\ref{eq:p4:414}) получим:
+
+\begin{comment}
 \begin{equation}%\tag{415}
 \label{eq:p4:415}
 \begin{alignedat}{2}
 \Delta  \alpha =\frac{1}{1+W_{1} \left( p \right) } \alpha _{\textit{пр}}-\frac{W_{f1} \left( p \right) }{1+W_{1} \left( p \right) }M_{H1}-\frac{W_{ \psi } \left( p \right) }{1+W_{1} \left( p \right) } \dot \psi,
 \end{alignedat}
 \end{equation}
+\end{comment}
+
+\begin{equation}%\tag{415}
+\label{eq:p4:415}
+\begin{alignedat}{2}
+\Delta  q = 
+(W(p)+E_2)^{-1} q _{\textit{пр}}-
+(W(p)+E_2)^{-1} W_{f1} \left( p \right) M_{H}-\\
+(W(p)+E_2)^{-1} W_{\textit{ла}} (p) \omega,
+\end{alignedat}
+\end{equation}
 
 где 
+\begin{comment}
 \begin{equation}
 \label{eq:p4:415+}
 \begin{alignedat}{2}
@@ -778,6 +853,17 @@ $W_{k1} \left( p \right)$ - передаточная функция регуля
  K_{\textit{д1}}K_{\textit{у1}}W_{k1} \left( p \right) W_{n1} \left( p \right) =
  W_{k1} \left( p \right) \frac{K_{c1}}{ \left( T_{M1}T_{e1}p^{2}+T_{M1}p+1 \right) p}; \\
   K_{c1}=K_{\textit{д1}}K_{\textit{у1}}K_{k1}K_{n1}.
+\end{alignedat}
+\end{equation}
+\end{comment}
+
+\begin{equation}
+\label{eq:p4:415+}
+\begin{alignedat}{2}
+W \left( p \right) =
+K_{\textit{д}}K_{\textit{у}}W_{k} \left( p \right) W_{n} \left( p \right) =
+W_{k} \left( p \right) \frac{K_{c}}{ \left( T_{M1}T_{e1}p^{2}+T_{M1}p+1 \right) p}; \\
+K_{c}=K_{\textit{д}}K_{\textit{у}}K_{k}K_{n}.
 \end{alignedat}
 \end{equation}
 
