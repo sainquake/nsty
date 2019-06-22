@@ -486,21 +486,28 @@ W_{\vartheta}(p) \dot \vartheta,
 \begin{equation}
 \label{eq:p4:s3.4}
 \begin{multlined}
-W_{n1}(p) = \frac{k_{1}}{a_{11}p^{2}+b_{11}p} = \frac{K_{n1}}{(T_{M1} T_{e1} p^2 + T_{M1} p +1)p};
+W_{n1}(p) = 
+\frac{k_{1}}{a_{11}p^{2}+b_{11}p} = 
+\frac{K_{n1}}{(T_{M1} T_{e1} p^2 + T_{M1} p +1)p} = 
+\frac{K_{n1}}{R_1(p) p};
 \end{multlined}
 \end{equation}
 ПФ азимута по возмущению:
 \begin{equation}
 \label{eq:p4:s3.5}
 \begin{multlined}
-W_{f1}(p) = \frac{1}{a_{11}p^{2}+b_{11}p} =  \frac{K_{m1} (T_{e1} p +1)}{(T_{M1} T_{e1} p^2 + T_{M1} p +1)p};
+W_{f1}(p) = \frac{1}{a_{11}p^{2}+b_{11}p} =  
+\frac{K_{m1} (T_{e1} p +1)}{(T_{M1} T_{e1} p^2 + T_{M1} p +1)p} = 
+\frac{K_{m1} R_{e1}(p)}{R_1(p)p};
 \end{multlined}
 \end{equation}
 ПФ азимута от движения носителя:
 \begin{equation}
 \label{eq:p4:s3.6}
 \begin{multlined}
-W_{\psi}(p) = \frac{a_{11} p^2}{a_{11}p^{2}+b_{11}p} =  \frac{T_{M1}(T_{e1} p +1)}{(T_{M1} T_{e1} p^2 + T_{M1} p +1)};
+W_{\psi}(p) = \frac{a_{11} p^2}{a_{11}p^{2}+b_{11}p} = 
+\frac{T_{M1}(T_{e1} p +1)}{(T_{M1} T_{e1} p^2 + T_{M1} p +1)} = 
+\frac{T_{M1}R_{e1}(p)}{R_1(p)};
 \end{multlined}
 \end{equation}
 где 
@@ -524,14 +531,18 @@ K_{m1}= \frac{R_1}{C_{m1}C_{e1}}.
 \begin{equation}
 \label{eq:p4:s3.7}
 \begin{multlined}
-W_{n2}(p) = \frac{k_{2}}{a_{22}p^{2}+b_{22}p} = \frac{K_{n2}}{(T_{M2} T_{e2} p^2 + T_{M2} p +1)p};
+W_{n2}(p) = \frac{k_{2}}{a_{22}p^{2}+b_{22}p} = 
+\frac{K_{n2}}{(T_{M2} T_{e2} p^2 + T_{M2} p +1)p} = 
+\frac{K_{n2}}{R_2(p)p};
 \end{multlined}
 \end{equation}
 ПФ угла места по возмущению:
 \begin{equation}
 \label{eq:p4:s3.8}
 \begin{multlined}
-W_{f2}(p) = \frac{1}{a_{22}p^{2}+b_{22}p} =  \frac{K_{m2}(T_{e2} p + 1)}{(T_{M2} T_{e2} p^2 + T_{M2} p +1)p};
+W_{f2}(p) = \frac{1}{a_{22}p^{2}+b_{22}p} =  
+\frac{K_{m2}(T_{e2} p + 1)}{(T_{M2} T_{e2} p^2 + T_{M2} p +1)p} = 
+\frac{K_{m2}R_{e2}(p)}{R_2(p)p};
 \end{multlined}
 \end{equation}
 ПФ угла места от движения носителя:
@@ -539,7 +550,8 @@ W_{f2}(p) = \frac{1}{a_{22}p^{2}+b_{22}p} =  \frac{K_{m2}(T_{e2} p + 1)}{(T_{M2}
 \label{eq:p4:s3.9}
 \begin{multlined}
 W_{\vartheta}(p) = \frac{d_{23} p^2}{a_{22}p^{2}+b_{22}p} = 
-\frac{d_{23} T_{M2}(T_{e2} p + 1)}{(T_{M2} T_{e2} p^2 + T_{M2} p +1)};
+\frac{d_{23} T_{M2}(T_{e2} p + 1)}{(T_{M2} T_{e2} p^2 + T_{M2} p +1)} = 
+\frac{d_{23} T_{M2}R_{e2}(p)}{R_2(p)};
 \end{multlined}
 \end{equation}
 где 
@@ -571,7 +583,7 @@ q = W_n(p) u - W_f(p) M_{\textit{н}} - W_{\textit{ла}} (p)\omega,
 \begin{equation}
 \label{eq:p4:s3.4+}
 \begin{aligned}
-W_n(p) = \left( \begin{array}{c c}
+W_n(p) = K_n R(p)^{-1} \dfrac{1}{p}= \left( \begin{array}{c c}
 W_{n1}(p) & 0 \\
 0 & W_{n2}(p)
 \end{array}\right),
@@ -579,7 +591,7 @@ u = \left( \begin{array}{c}
 u_1 \\
 u_2
 \end{array}\right),\\
-W_f(p) = \left( \begin{array}{c c}
+W_f(p) = K_m R_e(p) R(p)^{-1} \dfrac{1}{p}= \left( \begin{array}{c c}
 W_{f1}(p) & 0 \\
 0 & W_{f2}(p)
 \end{array}\right),
@@ -587,7 +599,7 @@ M_{\textit{н}} = \left( \begin{array}{c}
 M_{\textit{н1}} \\
 M_{\textit{н2}}
 \end{array}\right),\\
-W_{\textit{ла}}(p) = \left( \begin{array}{c c}
+W_{\textit{ла}}(p) = T_m R_e(p) R(p)^{-1} = \left( \begin{array}{c c}
 W_{\psi}(p) & 0 \\
 0 & W_{\vartheta}(p)
 \end{array}\right),
@@ -597,7 +609,32 @@ W_{\psi}(p) & 0 \\
 \end{array}\right),           
 \end{aligned}
 \end{equation}
-
+здесь
+\begin{equation}
+\label{eq:p4:s3.10}
+\begin{aligned}
+K_n = \left( \begin{array}{c c}
+K_{n1} & 0 \\
+0 & K_{n2}
+\end{array}\right),
+K_m = \left( \begin{array}{c c}
+K_{m1} & 0 \\
+0 & K_{m2}
+\end{array}\right), 
+T_m = \left( \begin{array}{c c}
+T_{m1} & 0 \\
+0 & T_{m2}
+\end{array}\right), \\
+R(p) = \left( \begin{array}{c c}
+T_{M1} T_{e1} p^2 + T_{M1} p +1 & 0 \\
+0 & T_{M2} T_{e2} p^2 + T_{M2} p +1
+\end{array}\right), 
+R_e(p) = \left( \begin{array}{c c}
+T_{e1} p + 1 & 0 \\
+0 & T_{e2} p + 1
+\end{array}\right).
+\end{aligned}
+\end{equation}
 
 \section{Моделирование объекта управления} \label{ch:ch4/sect3+}
 
