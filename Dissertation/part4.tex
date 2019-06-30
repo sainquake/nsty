@@ -1041,7 +1041,7 @@ K_{c}=
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1.0\linewidth]{az_} 
+	\includegraphics[width=1.0\linewidth]{um_} 
 	\caption{Процессы наведения ОЭП по каналу угла места}
 	\label{fig:um_}
 \end{figure}
@@ -1191,44 +1191,69 @@ T_{k11} = 0.05 c, T_{k21} = 0.00005 c, T_{k12} = 0.05 c, T_{k22} = 0.00005 c,
 
 \subsection{Моделирование и исследование динамики ЦСАУ} \label{subsec:ch4/sect4/sub4}
 
-На основе синтезированных регуляторов САУ и с учетом указанных нелинейностей разработаны КИМ ЦСАУ (Рисунок 4.10). Модели с учетом нелинейностей КИМ позволяют изменять величины дискретности датчика, частоту ШИМ усилителя и насыщения в УМ и проводить исследования динамики нелинейной САУ при заданных пределах этих параметров. 
+На основе синтезированных регуляторов САУ и с учетом указанных нелинейностей разработаны КИМ ЦСАУ (рисунок \ref{fig:digital_az}). Модели с учетом нелинейностей КИМ позволяют изменять величины дискретности датчика, частоту ШИМ усилителя и насыщения в УМ и проводить исследования динамики нелинейной САУ при заданных пределах этих параметров. 
 
 
-КИМ 2 нелинейной ЦСАУ по азимуту в режиме наведения
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\linewidth]{digital_az} 
+	\caption{КИМ 3,4 нелинейной ЦСАУ в режиме наведения}
+	\label{fig:digital_az}
+\end{figure}
 
+Исходные данные для моделирования азимутального канала указаны в листинге \ref{lst:digital_az}, для канала угла места в листинге \ref{lst:digital_um}. 
+
+\begingroup
+\captiondelim{ } % разделитель идентификатора с номером от наименования
+\lstinputlisting[caption={Исходные данные для КИМ3 (канал азимута)},label={lst:digital_az}]{listings/az_d.m}
+\endgroup
+
+\begingroup
+\captiondelim{ } % разделитель идентификатора с номером от наименования
+\lstinputlisting[caption={Исходные данные для КИМ4 (канал угла места)},label={lst:digital_um}]{listings/um_d.m}
+\endgroup
 
 На Рис.11 –15 приведены результаты моделирования динамики наведения ОЭП с учетом указанных нелинейностей в канале азимута на угол  2\textsubscript{1}= 180\textsuperscript{0}, а на рис 24-27 в канале угла места на угол  2\textsubscript{1}= 90\textsuperscript{0}. Из анализа процессов наведения следует, что:\par
 
+\textbf{Азимут}
+-при совместном учете насыщения УМ, дискретности ДУ и ШИМ УМ, погрешность наведения на угол 180\textsuperscript{0}\  равна\   = 0,2\textsuperscript{0} (рисунок \ref{fig:az_digital}).\par
 
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\linewidth]{az_digital1} 
+	\caption{КИМ 3, Процессы наведения ОЭП с учетом насыщения УМ, дискретности ДУ и ШИМ УМ (Кд1Ку1 Кк1=700 В/рад)}
+	\label{fig:az_digital}
+\end{figure}
 
+-При этом изменение напряжения на выходе УМ в процессе наведения приведены на рисунке ниже (Рисунок \ref{fig:az_digita2}). Период переключений напряжений: (0,12 $  \div $  1,25) мс.\par
 
-
--при совместном учете насыщения УМ, дискретности ДУ и ШИМ УМ, погрешность наведения на угол 180\textsuperscript{0}\  равна\   = 0,2\textsuperscript{0} (Рисунок 4.11).\par
-
-
-сунок 4.11. Рис.11. Процессы наведения ОЭП с учетом насыщения УМ, дискретности ДУ и ШИМ УМ (Кд1Ку1 Кк1=700 В/рад)
-
-
--При этом изменение напряжения на выходе УМ в процессе наведения приведены на рисунке ниже (Рисунок 4.12). Период переключений напряжений: (0,12 $  \div $  1,25) мс.\par
-
-
-
-
-сунок 4.12. Рис.12. Изменение напряжения на выходе усилителя мощности в процессе наведения
-
-
-
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\linewidth]{az_digital2} 
+	\caption{Изменение напряжения на выходе усилителя мощности в процессе наведения}
+	\label{fig:az_digital2}
+\end{figure}
 
 - учет только насыщения УМ (\textit{U\textsubscript{max} =  27В})\  приводит к увеличению времени переходного процесса, погрешность наведения достигает величины  =0,65\textsuperscript{0}\  (Рис.13).\ При\ \   К\textsubscript{д1}К\textsubscript{у1} К\textsubscript{к1}=1000\ В/рад  погрешность наведения можно уменьшить до величины  =0,46\textsuperscript{0} . \par
 
 
-
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\linewidth]{az_digital3_saturation} 
+	\caption{Процессы наведения ОЭП с учетом насыщения УМ}
+	\label{fig:az_digital3}
+\end{figure}
 сунок 4.13. Рис.13. Процессы наведения ОЭП с учетом насыщения УМ
 
 
 - при учете только ШИМ УМ (\textit{f\textsubscript{у }}= 8000Гц) и насыщения УМ погрешность наведения существенно не изменилась ( =0.65\textsuperscript{0} ) (Рисунок 4.14);\par
 
-
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\linewidth]{az_digital4_pwm} 
+	\caption{Процессы наведения ОЭП с учетом ШИМ УМ}
+	\label{fig:az_digital4}
+\end{figure}
 сунок 4.14. Рис.14. Процессы наведения ОЭП с учетом ШИМ УМ
 
 
@@ -1236,8 +1261,84 @@ T_{k11} = 0.05 c, T_{k21} = 0.00005 c, T_{k12} = 0.05 c, T_{k22} = 0.00005 c,
 
 - учет только дискретности датчика угла (\textsubscript{ду}= 5,2724 угл. мин ) приводит к появлению пульсаций (\textsubscript{пул} = 0,08\textsuperscript{0 }) прибора из-за дискретности датчика угла, при этом погрешность наведения равна =0,38\textsuperscript{0} (Рисунок 4.15).\par
 
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\linewidth]{az_digital5_sensor} 
+	\caption{Процессы наведения ОЭП с учетом дискретности ДУ (14 разрядов)}
+	\label{fig:az_digital5}
+\end{figure}
 сунок 4.15. Рис.15. Процессы наведения ОЭП с учетом дискретности ДУ 12 разряда
 
+- уменьшение времени в ПУ до 0.5 секунд
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\linewidth]{az_digital6_05sec} 
+	\caption{Процессы наведения ОЭП с корректировкой ПУ}
+	\label{fig:az_digital6}
+\end{figure}
+
+
+
+
+
+
+
+
+
+\textbf{Угол места}
+-при совместном учете насыщения УМ, дискретности ДУ и ШИМ УМ, погрешность наведения на угол 180\textsuperscript{0}\  равна\   = 0,2\textsuperscript{0} (рисунок \ref{fig:um_digital}).\par
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\linewidth]{um_digital1} 
+	\caption{КИМ 3, Процессы наведения ОЭП с учетом насыщения УМ, дискретности ДУ и ШИМ УМ (Кд1Ку1 Кк1=700 В/рад)}
+	\label{fig:um_digital}
+\end{figure}
+
+-При этом изменение напряжения на выходе УМ в процессе наведения приведены на рисунке ниже (Рисунок \ref{fig:um_digita2}). Период переключений напряжений: (0,12 $  \div $  1,25) мс.\par
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\linewidth]{um_digital2} 
+	\caption{Изменение напряжения на выходе усилителя мощности в процессе наведения}
+	\label{fig:um_digital2}
+\end{figure}
+
+- учет только насыщения УМ (\textit{U\textsubscript{max} =  27В})\  приводит к увеличению времени переходного процесса, погрешность наведения достигает величины  =0,65\textsuperscript{0}\  (Рис.13).\ При\ \   К\textsubscript{д1}К\textsubscript{у1} К\textsubscript{к1}=1000\ В/рад  погрешность наведения можно уменьшить до величины  =0,46\textsuperscript{0} . \par
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\linewidth]{um_digital3_saturation} 
+	\caption{Процессы наведения ОЭП с учетом насыщения УМ}
+	\label{fig:um_digital3}
+\end{figure}
+сунок 4.13. Рис.13. Процессы наведения ОЭП с учетом насыщения УМ
+
+
+- при учете только ШИМ УМ (\textit{f\textsubscript{у }}= 8000Гц) и насыщения УМ погрешность наведения существенно не изменилась ( =0.65\textsuperscript{0} ) (Рисунок 4.14);\par
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\linewidth]{um_digital4_pwm} 
+	\caption{Процессы наведения ОЭП с учетом ШИМ УМ}
+	\label{fig:um_digital4}
+\end{figure}
+сунок 4.14. Рис.14. Процессы наведения ОЭП с учетом ШИМ УМ
+
+
+
+
+- учет только дискретности датчика угла (\textsubscript{ду}= 5,2724 угл. мин ) приводит к появлению пульсаций (\textsubscript{пул} = 0,08\textsuperscript{0 }) прибора из-за дискретности датчика угла, при этом погрешность наведения равна =0,38\textsuperscript{0} (Рисунок 4.15).\par
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\linewidth]{um_digital5_sensor} 
+	\caption{Процессы наведения ОЭП с учетом дискретности ДУ (14 разрядов)}
+	\label{fig:um_digital5}
+\end{figure}
+сунок 4.15. Рис.15. Процессы наведения ОЭП с учетом дискретности ДУ 12 разряда
 
 \subsection{Моделирование и исследование динамики изолированных каналов управления ОЭП в режиме стабилизации} \label{ch:ch4/sect6}
 
