@@ -621,9 +621,9 @@ K_m = \left( \begin{array}{c c}
 K_{m1} & 0 \\
 0 & K_{m2}
 \end{array}\right), 
-T_m = \left( \begin{array}{c c}
-T_{m1} & 0 \\
-0 & T_{m2}
+T_M = \left( \begin{array}{c c}
+T_{M1} & 0 \\
+0 & T_{M2}
 \end{array}\right), \\
 R(p) = \left( \begin{array}{c c}
 T_{M1} T_{e1} p^2 + T_{M1} p +1 & 0 \\
@@ -1150,6 +1150,7 @@ K_{c}=
 На основе проведенных расчетов синтезируем частотным методом \cite{Bessekerski} корректирующее звено (\ref{eq:p4:417}) с новыми параметрами: \par
 
 \begin{equation}
+\label{eq:p4:xx}
 T_{k11} = 0.05 c, T_{k21} = 0.00005 c, T_{k12} = 0.05 c, T_{k22} = 0.00005 c, 
 \end{equation}\par
 
@@ -1419,15 +1420,16 @@ T_{k11} = 0.05 c, T_{k21} = 0.00005 c, T_{k12} = 0.05 c, T_{k22} = 0.00005 c,
 Колебания носителя (варианты 1, 2 с частотами 0.16 Гц и 1Гц соответственно моделируют остаточные колебания САУ носителем) учитывались при исследовании САУ в режиме наведения как постоянно действующие возмущения. Поэтому в режиме стабилизации эти колебания будем также рассматривать как постоянно действующими возмущениями при всех других вариантах эволюций носителя.
 
 Кроме того, при больших эволюциях ОЭП совместно с носителем ($\pm180^0$) исследование влияние дисбаланса на динамику управления будем проводить при исследовании пространственной модели объекта управления.
- 
-\subsubsection{Моделирование и исследование динамики нелинейной САУ по азимуту} \label{subsec:ch4/sect6/sub1}
+
 
 В отличие от САУ в режиме наведения (рисунок \ref{fig:structured_SAU}) структурная схема в режиме стабилизации будет иметь программное устройство с другим алгоритмом.
 
 Исходные данные для расчета:
+
+\begin{comment}
 \begin{equation}
 \label{eq:p4:425}
-\begin{multlined}
+\begin{array}{ll}
 \alpha_{\textit{вх1}}(t) = \psi_{01}(t) + \psi_{1}(t) + \psi_{2}(t),\\
 \psi_{01}(t) =0.21 t, 
 \psi_{1}(t) = 0.035 sin(6.28 t),
@@ -1436,14 +1438,65 @@ T_{k11} = 0.05 c, T_{k21} = 0.00005 c, T_{k12} = 0.05 c, T_{k22} = 0.00005 c,
 \psi_{0i}(t) = A_i sin(\omega_i t), (i=3,4,5),\\
 \alpha_{\textit{вх}} =\alpha_{\textit{вх1}}+\alpha_{\textit{вх2}},\\
 M_{\textit{тр}} = 0.08 sign( \dot \alpha ) \textit{Нм},\\
-T_{m1} = 1.08 c, T_{e1} = 0.1 mc, T_{k1} = 0.05 c, T_{k1} = 0.5 mc,\\
+T_{M1} = 1.08 c, T_{e1} = 0.1 mc, T_{k1} = 0.05 c, T_{k2} = 0.5 mc,\\
 K_{p1} = 3.7 \textit{рад/Вс}, K_{m1} = 3.29 \textit{рад/Нмс}, 
 K_{с1} = 3700 \textit{с}^{-1},\\
- K_{d1}K_{u1}K_{k1} = 1000 \textit{В/рад},\\
+K_{d1}K_{u1}K_{k1} = 1000 \textit{В/рад},\\
 U_{max} = \pm 27 \textit{В}, \varDelta_{\textit{ду}} = 1.3183 \textit{угл.мин}, 
 f_y = 16 \textit{кГц}
-\end{multlined}
+\end{array}
 \end{equation}
+ kkkkkkk
+\end{comment}
+
+\begin{equation}
+ \label{eq:p4:425+}
+ \begin{array}{ll}
+ q_{\textit{вх}}(t) = \Omega_{01}(t) + \Omega_{1}(t) + \Omega_{2}(t),\\
+ \Omega_{01}(t) = e_2\cdot 0.21 t, 
+ \Omega_{1}(t) = e_2\cdot 0.035 sin(6.28 t),
+ \Omega_{2}(t) = e_2\cdot 0.21 sin(t),\\
+ q_{\textit{вх2}} = \Omega_{0i}(t) + \Omega_{1}(t) + \Omega_{2}(t),\\
+ \Omega_{0i}(t) = \left( \begin{array}{c}
+ {A^\psi}_i sin({\omega^\psi}_i t)  \\
+ {A^\vartheta}_i sin({\omega^\vartheta}_i t) 
+ \end{array}\right)
+ , (i=3,4,5),\\
+ q_{\textit{вх}} = q_{\textit{вх1}}+ q_{\textit{вх2}},\\
+ M_{\textit{тр}}(q) = M_{\textit{тр}} sign( \dot q ) \textit{Нм} = ,\\
+ T_{M} = \left( \begin{array}{c c}
+ 1.08 & 0 \\
+ 0 & 0.29
+ \end{array}\right) c, 
+ T_{e} = \left( \begin{array}{c c}
+ 0.1 &0  \\
+ 0&0.4
+ \end{array}\right) mc,\\
+ T_{k1} = e_2\cdot 0.05 \ c, T_{k2} = e_2\cdot 0.05 \ mc \ (\ref{eq:p4:xx}),\\
+ K_{n} = \left( \begin{array}{c c}
+ 3.7&0  \\
+ 0&8.33
+ \end{array}\right) \textit{рад/Вс}, 
+ K_{m} = \left( \begin{array}{c c}
+ 3.29&0  \\
+ 0&33.68
+ \end{array}\right) \textit{рад/Нмс} (\ref{eq:p4:sec4/4},\ \ref{eq:p4:sec4/4+}),\\ 
+ K_{c} = \left( \begin{array}{c c}
+ 3700&0  \\
+ 0&3000
+ \end{array}\right) \textit{с}^{-1},
+ K_{\textit{д}}K_{\textit{у}}K_{k} = \left( \begin{array}{c c}
+ 1000&0  \\
+ 0&360
+ \end{array}\right) \textit{В/рад},\\
+ U_{max} = \pm 27 \textit{В}, \varDelta_{\textit{ду}} = 1.3183 \textit{угл.мин}, 
+ f_y = 16 \textit{кГц}
+ \end{array}
+\end{equation}
+
+
+\subsubsection{Моделирование и исследование динамики нелинейной САУ по азимуту} \label{subsec:ch4/sect6/sub1}
+
 
 Уравнения движения системы с учетом 46,47,(\ref{eq:p4:414}) и принятых ранее нелинейностей представим в виде :\par
 
@@ -1456,8 +1509,8 @@ f_y = 16 \textit{кГц}
 \widetilde{U}_{1}=f_{1} \left( U_{1} \right) \\
 U_{1}=K_{\textit{у1}} \cdot W_{k1} \left( p \right) U_{\textit{д1}} \\
 U_{\textit{д1}}=K_{\textit{д1}} \cdot \Delta \alpha \\
-\Delta  \alpha = \alpha _{\textit{вх}}- \alpha \\
-\alpha = \mu _{1} \left(  \alpha  \right) \\
+\Delta  \alpha = \alpha _{\textit{вх}}- \widetilde \alpha \\
+\widetilde \alpha = \mu _{1} \left(  \alpha  \right) \\
 \end{array}  \right\rbrace  
 \end{alignedat}
 \end{equation}
@@ -1480,7 +1533,18 @@ $\mu_{1}(\alpha)$ - нелинейная функция дискретизаци
 \end{equation}
 
 где
+\begin{equation}
+\label{eq:p4:427+}
+\begin{array}{ll}
+W_{1} \left( p \right) = K_{\textit{д1}} \mu_{1}(\alpha) K_{\textit{у1}} f_1(U_1) F_{1}(\widetilde{U}_{1}) W_{k1} (p) = W_{k1} (p) \frac{K_{C1} K_{\textit{н1}}}{(T_{m1} T_{e1} p^2 + T_{m1} p + 1)p},\\
+\overline K_{C1} = K_{C1} K_{\textit{к1}} K_{\textit{н1}}, K_{C1} = K_{\textit{д1}},\\ K_{\textit{у1}} K_{\textit{n1}},\\
+K_{\textit{н1}} = K_{\mu 1} K_{f1} K_{F1},\\
+W_{ \psi 1 } \left( p \right) = \frac{T_{m1} (T_{e1} p +1)}{(T_{m1} T_{e1} p^2 + T_{m1} p + 1)},\\
+W_{f1} \left( p \right) =  \frac{K_{m1} (T_{e1} p +1)}{(T_{m1} T_{e1} p^2 + T_{m1} p + 1) p}
+\end{array}
+\end{equation}
 
+$K_{\textit{н1}}$ - линеаризованные коэффициенты нелинейностей,
 
 из которой следует (как и в линейной системе), что погрешность стабилизации зависит от трех составляющих: угловой скорости входного сигнала, момента нагрузки и ускорений колебаний носителя.\par
 
@@ -1502,7 +1566,7 @@ $\mu_{1}(\alpha)$ - нелинейная функция дискретизаци
 
 \TODO{fig}
 
-Из анализа полученных процессов управления \  ОЭП по азимуту следует:\par
+Из анализа полученных процессов управления ОЭП по азимуту следует:\par
 
 1)\ \ при развороте носителя с постоянной угловой скоростью  \textsubscript{вх1}(t) 425 по азимуту процессы управления ОЭП приведены на рис.31, где погрешность стабилизации не превышает  =0,18 град,\textit{ }\par
 
