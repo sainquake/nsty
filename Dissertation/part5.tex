@@ -53,7 +53,7 @@
 
 
 
-\ref{eq:p3:48}
+
 
 \begingroup
 \captiondelim{ } % разделитель идентификатора с номером от наименования
@@ -72,9 +72,9 @@
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1.0\linewidth]{A23P} 
-	\caption{Процессы наведения ОЭП по каналу азимута}
-	\label{fig:az_true}
+	\includegraphics[width=0.6\linewidth]{A23P} 
+	\caption{Блок преобразования угла в управляющие сигналы трех фаз}
+	\label{fig:a2p}
 \end{figure}
 
 
@@ -96,11 +96,13 @@
 
 \section{КИМ САУ ОЭП (схема, обозначения и…) } \label{ch:ch5/sect2}
 
+Используя  уравнения из глав \ref{ch:ch3} и \ref{ch:ch4} составим структурную схему системы управления с объектом управления.
+ 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1.0\linewidth]{C5_1} 
-	\caption{Процессы наведения ОЭП по каналу азимута}
-	\label{fig:az_true}
+	\caption{Структурная схема САУ ОЭП}
+	\label{fig:structure}
 \end{figure}
 
 
@@ -122,14 +124,17 @@
 	\label{fig:az_true}
 \end{figure}
 
-
+ Модель объекта управления описывается уравнением (\ref{eq:p3:48}). Воплащение данного уравнения в модели осуществляется блоком "Object". На рисунке \ref{fig:object} показан состав этого блока.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1.0\linewidth]{C5_4} 
-	\caption{Процессы наведения ОЭП по каналу азимута}
-	\label{fig:az_true}
+	\caption{Модель объекта управления в соответствии с (\ref{eq:p3:48})}
+	\label{fig:object}
 \end{figure}
 
+
+
+\section{Исследование динамики наведения и стабилизации ОЭП} \label{ch:ch5/sect4}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1.0\linewidth]{C5_G1} 
@@ -142,9 +147,6 @@
 	\caption{Процессы наведения ОЭП по каналу азимута}
 	\label{fig:az_true}
 \end{figure}
-
-\section{Исследование динамики наведения и стабилизации ОЭП} \label{ch:ch5/sect4}
-
 \section{Выводы} \label{ch:ch5/sect5}
 	
 
