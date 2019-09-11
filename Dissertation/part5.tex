@@ -59,16 +59,17 @@
 \captiondelim{ } % разделитель идентификатора с номером от наименования
 \lstinputlisting[caption={Исходные данные для КИМ9},label={lst:az_motor}]{listings/az_true.m}
 \endgroup
- 
+
+Для проверки модели привода и сравнения результатов моделирования с упрощенной моделью составлена КИМ10 (рисунок \ref{fig:KIM10}). Уравнения привода дополнены блоком "Inertia + Friction" (рисунок \ref{fig:motor}) описывающем механическую составляющую модели привода.
  
 \begin{figure}[ht]
  	\centering
  	\includegraphics[width=1.0\linewidth]{system} 
  	\caption{Процессы наведения ОЭП по каналу азимута}
- 	\label{fig:az_true}
+ 	\label{fig:KIM10}
 \end{figure}
 
-
+Реальный привод управляется тремя сигналами, для моделирования изолированного канала системы в целом необходимо добавить блок "Angle to 3 phase" (рисунок \ref{fig:a2p}).
 
 \begin{figure}[ht]
 	\centering
